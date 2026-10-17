@@ -25,6 +25,7 @@ This repo runs Jazzy's Instagram account **@compandgrow**. Claude has full contr
   - adapt `scenes/_gen_film.py` (layout + camera; helpers in `studio/tools/helpers.py`); keep the right third (x > 2700) unseen until the final pull-back; key content inside the 9:16 safe area, above the subtitle strip.
 - Storyboard: `node core/render/still.mjs films/<n> <t1> <t2> ... --size 1080x1920` from `$LIB`; tile, look, fix collisions/crops.
 - Render: `node core/render/video.mjs films/<n> --fps 24 --workers 2 --size 1080x1920 --out films/<n>/out/video.mp4` (index.html sets `window.MBCAP = 8` — keeps renders ~45 min on 2 cores). If a run is cut short, `studio/tools/tail.mjs` / `fwd.mjs` render frame ranges to JPEGs.
+- Cutdowns / full-film upload encode: `python3 studio/tools/cutdown.py <film.mp4> <out.mp4> a:b [c:d ...]` and `--full <film.mp4> <out.mp4>`.
 - Mix: `"$LIB/.venv/bin/python" films/<n>/audio/mix.py` (edit section times + section keys); `sh core/render/mux.sh video.mp4 mix.wav <n>.mp4 24 1`.
 - Check: contact sheet (`fps=0.5,tile`), loudness ≈ −14 LUFS, no black frames, subtitles readable.
 
