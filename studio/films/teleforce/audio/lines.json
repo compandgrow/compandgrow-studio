@@ -1,0 +1,236 @@
+[
+ {
+  "id": "a1",
+  "text": "Two hundred and fifty miles.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "a2",
+  "text": "Ten thousand aircraft.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "a3",
+  "text": "One beam.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "b1",
+  "text": "July eleventh, nineteen thirty-four.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "b2",
+  "text": "On his seventy-eighth birthday,",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "b3",
+  "text": "Nikola Tesla told reporters about a beam",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "b4",
+  "text": "that could bring down ten thousand planes",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "b5",
+  "text": "two hundred and fifty miles away.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c1",
+  "text": "In nineteen thirty-seven, he sent the plans",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c2",
+  "text": "to six governments.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c3",
+  "text": "No working beam was ever shown.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "d1",
+  "text": "Tesla died in January, nineteen forty-three.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "d2",
+  "text": "His papers were seized and reviewed.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "d3",
+  "text": "The verdict: nothing workable.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "e1",
+  "text": "The idea itself is real.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "e2",
+  "text": "Push charged particles with enough voltage,",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "e3",
+  "text": "and they fly at nearly the speed of light.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "e4",
+  "text": "Every particle accelerator does it.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "e5",
+  "text": "The problem is air.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "e6",
+  "text": "In open air, the beam scatters and fades.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "f1",
+  "text": "Longshot asks how to fix that.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "f2",
+  "text": "The first pulse heats a thin channel of air.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "f3",
+  "text": "The air inside it thins out.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "f4",
+  "text": "The next pulse rides that channel,",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "f5",
+  "text": "and pushes it further.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "f6",
+  "text": "Pulse after pulse, the beam stays tight.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "g1",
+  "text": "Width at the target: four centimeters.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "h1",
+  "text": "Trial one. Fifty kilometers.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "h2",
+  "text": "Down.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "h3",
+  "text": "Two hundred kilometers.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "h4",
+  "text": "Down.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "h5",
+  "text": "Four hundred kilometers.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "h6",
+  "text": "Down.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "i1",
+  "text": "One side effect.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "i2",
+  "text": "Every shot ends in a thunderclap,",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "i3",
+  "text": "and radios fail for ten kilometers.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "j1",
+  "text": "Longshot is cleared for field trials.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "j2",
+  "text": "Tesla promised two hundred and fifty miles.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "j3",
+  "text": "That's four hundred kilometers.",
+  "voice": "bm_george",
+  "speed": 0.95
+ }
+]

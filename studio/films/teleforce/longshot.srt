@@ -1,0 +1,151 @@
+1
+00:00:00,288 --> 00:00:03,392
+250 miles.
+
+2
+00:00:03,462 --> 00:00:05,928
+10,000 aircraft.
+
+3
+00:00:06,058 --> 00:00:07,858
+One beam.
+
+4
+00:00:07,933 --> 00:00:11,374
+July 11, 1934.
+
+5
+00:00:11,394 --> 00:00:13,962
+On his 78th birthday,
+
+6
+00:00:13,990 --> 00:00:17,704
+Nikola Tesla told reporters about a beam
+
+7
+00:00:17,740 --> 00:00:21,069
+that could bring down 10,000 planes
+
+8
+00:00:21,202 --> 00:00:24,643
+250 miles away.
+
+9
+00:00:24,663 --> 00:00:28,381
+In 1937, he sent the plans
+
+10
+00:00:28,413 --> 00:00:30,435
+to six governments.
+
+11
+00:00:30,577 --> 00:00:33,724
+No working beam was ever shown.
+
+12
+00:00:33,750 --> 00:00:37,801
+Tesla died in January 1943.
+
+13
+00:00:37,933 --> 00:00:41,260
+His papers were seized and reviewed.
+
+14
+00:00:41,394 --> 00:00:44,195
+The verdict: nothing workable.
+
+15
+00:00:44,279 --> 00:00:47,941
+Push charged particles with enough voltage,
+
+16
+00:00:48,029 --> 00:00:51,237
+and they fly at nearly the speed of light.
+
+17
+00:00:51,346 --> 00:00:54,424
+Every particle accelerator does it.
+
+18
+00:00:54,519 --> 00:00:56,921
+The problem is air.
+
+19
+00:00:56,971 --> 00:01:00,656
+In open air, the beam scatters and fades.
+
+20
+00:01:00,721 --> 00:01:03,653
+Longshot asks how to fix that.
+
+21
+00:01:03,750 --> 00:01:07,440
+The first pulse heats a thin channel of air.
+
+22
+00:01:07,500 --> 00:01:10,346
+The air inside it thins out.
+
+23
+00:01:10,385 --> 00:01:13,295
+The next pulse rides that channel,
+
+24
+00:01:13,413 --> 00:01:15,510
+and pushes it further.
+
+25
+00:01:15,577 --> 00:01:18,999
+Pulse after pulse, the beam stays tight.
+
+26
+00:01:19,038 --> 00:01:22,425
+Width at the target: 4 cm.
+
+27
+00:01:22,500 --> 00:01:25,592
+Trial one. 50 km.
+
+28
+00:01:25,673 --> 00:01:27,473
+Down.
+
+29
+00:01:27,548 --> 00:01:29,964
+200 km.
+
+30
+00:01:30,000 --> 00:01:31,800
+Down.
+
+31
+00:01:31,875 --> 00:01:34,307
+400 km.
+
+32
+00:01:34,327 --> 00:01:36,127
+Down.
+
+33
+00:01:36,779 --> 00:01:38,976
+One side effect.
+
+34
+00:01:39,087 --> 00:01:42,267
+Every shot ends in a thunderclap,
+
+35
+00:01:42,404 --> 00:01:45,880
+and radios fail for 10 km.
+
+36
+00:01:46,154 --> 00:01:49,420
+Longshot is cleared for field trials.
+
+37
+00:01:49,615 --> 00:01:53,199
+Tesla promised 250 miles.
+
+38
+00:01:53,221 --> 00:01:55,947
+That's 400 km.

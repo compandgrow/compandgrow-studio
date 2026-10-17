@@ -1,0 +1,18 @@
+TREMOR — third-party assets used in this film
+
+Music samples
+Drums: "MuldjordKit" by Lars Muldjord (drumgizmo.org), FreePats version, licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+Samples (CC0): FreePats project (freepats.zenvoid.org), VS Chamber Orchestra: Community Edition (Versilian Studios), Versilian Community Sample Library (Versilian Studios)
+
+Fonts (SIL Open Font License 1.1, from github.com/google/fonts)
+LXGW Marker Gothic — marker lettering
+Archivo — tags, cards, subtitles
+IBM Plex Mono — card labels
+
+Voice
+Kokoro-82M text-to-speech (Apache 2.0), voice bm_george, via kokoro-onnx
+
+Engine and tools
+Lemo-Opuscar library (MIT) by Lemomo — Engineering Briefing Board style kit (board.js, adapted for 1080×1920, English subtitles and a motion-blur cap) and core render / audio tools
+
+No photographs, stock footage or AI-generated video are used: every object is drawn in code as marker ink.
