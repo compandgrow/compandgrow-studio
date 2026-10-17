@@ -14,6 +14,8 @@ This repo runs Jazzy's Instagram account **@compandgrow**. Claude has full contr
 6. **Schedule** 5 posts with `posts_create` (`account_id` above, `schedule_minutes`), default 4:28 pm PT; adjust with `analytics_get_best_time_to_post` once there is data.
 7. **Log** every post in the post log, commit, push.
 
+**Before producing anything:** check the post log and `posts_list` for slots already filled in the coming week. Never double-book a slot. If this week's Sunday film is already scheduled, use the run to fill open cutdown slots and get ahead on next week's film.
+
 ## Producing a film
 - `sh studio/setup.sh` → prints `LIB=` and `PLAYWRIGHT_CHROME=`; export both.
 - New film = copy the closest `studio/films/<film>/` to a new folder, then:
