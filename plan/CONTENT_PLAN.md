@@ -11,6 +11,18 @@
 - **Sun:** full film (90–120 s).
 - **Tue / Thu / Fri / Sat:** 15–35 s cutdowns from the latest film, each with a different hook (question, shocking number, "this was real", the stamp moment). End card: "FULL BRIEFING on @compandgrow".
 
+## Style testing (Jazzy handed style decisions to Claude, Oct 16)
+- Anchor style: **Engineering Briefing Board** (films 1–3).
+- Alternate a test style every other film; keep 2D styles (≈45 min render on 2 cores). Avoid 3D/painterly styles unless a run has time to spare.
+- Test order: #4 **Halftone Dossier** (magnet motor) → #5 board → #6 **Exploded Teardown** (lifter) → #7 board → #8 **Satellite Briefing** (weather array, fictional) → then by data.
+- Judge a style on its full film + 4 cutdowns vs the board's average: avg watch time, skip rate, shares + saves per 1k views, follows per 1k views. After 2 tests per style, keep the winner as the new anchor; drop styles that lose twice.
+- Hooks are tested inside each week's 4 cutdowns (question / number / "this was real" / stamp moment); record which hook type wins in the post log notes.
+
+## Course corrections (check every Monday)
+- Behind pace 2 weeks running → switch the losing element first (hook type, length, posting time), then style, then topic family.
+- A Reel beats 5× the median → within 7 days post 2 follow-ups on the same topic and a "part 2" cutdown; pin it.
+- Week 6 (≈ Nov 27): if under 500 followers, rethink the format with Jazzy before continuing.
+
 ## Topic queue (reorder by performance)
 1. ~~HULL 7 — cloaking hull~~ (posted Oct 16)
 2. ~~LONGSHOT — Tesla teleforce~~ (scheduled Oct 18)

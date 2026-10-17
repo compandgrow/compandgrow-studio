@@ -18,6 +18,7 @@ This repo runs Jazzy's Instagram account **@compandgrow**. Claude has full contr
 
 ## Producing a film
 - `sh studio/setup.sh` → prints `LIB=` and `PLAYWRIGHT_CHROME=`; export both.
+- Style for the film: see "Style testing" in CONTENT_PLAN.md. For a new Lemo-Opuscar style, read `$LIB/styles/<slug>/STYLE.md` (and its demo only after writing the treatment), adapt the demo engine to 1080×1920 the way `studio/kit/board.js` was adapted (W/H constants, Latin fonts, English one-line subtitles, `window.MBCAP`), and save the adapted kit as `studio/kits/<slug>/` so later runs reuse it.
 - New film = copy the closest `studio/films/<film>/` to a new folder, then:
   - fact-check every historical claim on the web and write `FACTS.md` (claim → source URL);
   - write `audio/lines.json` (TTS text, numbers spelled out, voice `bm_george`, speed .95) and `audio/subs.json` (subtitle text, digits);
