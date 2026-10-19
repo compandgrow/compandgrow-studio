@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lodestone</title>
+</head>
+<body>
+<script type="module">
+import * as K from './kit/dossier.js';
+const { W, H, C, F, el, txt, tf, op, show, clamp, seg, lerp, E, pop, rng, measure, chars, charsPop, halftone, radial, edge, ramp, bg, mul,
+        bigNum, stampEl, stampAnim, scene, sfx, SHAKES, FLASHES, WIPES, GROOVE, DARK, BOIL } = K;
+
+const TL = await (await fetch('scenes/timeline.json')).json();
+const T = TL.T, VO = TL.VO, DUR = TL.DUR;
+const END = k => T[k] + VO[k];
+const TAU = Math.PI * 2;
+
+// ================================================================ props
+const LW = 7;
+// a rotor: rim, spokes, hub, n bar magnets (red N outward, blue S inward); rotate .rot
+function rotor(parent, { r = 300, n = 12, teeth = false } = {}) {
+  const g = el('g', {}, parent);
+  const body = el('g', { filter: BOIL }, g);
+  if (teeth) {
+    let d = '';
+    const nt = 36;
+    for (let i = 0; i < nt; i++) {
+      const a0 = i / nt * TAU, a1 = (i + .5) / nt * TAU;
+      const p = (a, rr) => `${(Math.cos(a) * rr).toFixed(1)} ${(Math.sin(a) * rr).toFixed(1)}`;
+      d += (i ? 'L' : 'M') + p(a0, r * 1.08) + 'L' + p(a0 + .04, r * 1.08) + 'L' + p(a1 - .04, r) + 'L' + p(a1 + TAU / nt / 2 - .04, r);
+    }
+    el('path', { d: d + 'Z', fill: C.cream, stroke: C.navy, 'stroke-width': LW, 'stroke-linejoin': 'round' }, body);
+  }
+  el('circle', { r, fill: C.cream, stroke: C.navy, 'stroke-width': LW + 2 }, body);
+  const rot = el('g', {}, body);
+  el('circle', { r: r * .9, fill: 'none', stroke: C.navy, 'stroke-width': 3, 'stroke-dasharray': '10 12', opacity: .5 }, rot);
+  for (let i = 0; i < 6; i++) {
+    const a = i / 6 * TAU;
+    el('line', { x1: Math.cos(a) * r * .14, y1: Math.sin(a) * r * .14, x2: Math.cos(a) * r * .58, y2: Math.sin(a) * r * .58, stroke: C.navy, 'stroke-width': 9, 'stroke-linecap': 'round' }, rot);
+  }
+  const mags = el('g', {}, rot);
+  const L = r * .3, Wd = Math.min(r * .14, r * .76 * TAU / n * .55);
+  for (let i = 0; i < n; i++) {
+    const m = el('g', { transform: `rotate(${(i / n * 360).toFixed(2)}) translate(${r * .76} 0)` }, mags);
+    el('rect', { x: -L / 2, y: -Wd / 2, width: L / 2, height: Wd, fill: C.blue, stroke: C.navy, 'stroke-width': 4 }, m);
+    el('rect', { x: 0, y: -Wd / 2, width: L / 2, height: Wd, fill: C.red, stroke: C.navy, 'stroke-width': 4 }, m);
+  }
+  el('circle', { r: r * .16, fill: C.navy }, rot);
+  el('circle', { r: r * .06, fill: C.cream }, rot);
+  // motion blur ring for fast spins (crossfades with the magnets)
+  const blur = el('g', { opacity: 0 }, g);
+  for (const [rr, col, w] of [[r * .76 + L * .25, C.red, Wd * .9], [r * .76 - L * .25, C.blue, Wd * .9]]) {
+    el('circle', { r: rr, fill: 'none', stroke: col, 'stroke-width': w, opacity: .8 }, blur);
+  }
+  for (let i = 0; i < 4; i++) {
+    const a0 = i / 4 * TAU + .3, a1 = a0 + 1.0, rr = r * 1.14;
+    el('path', { d: `M${Math.cos(a0) * rr} ${Math.sin(a0) * rr} A${rr} ${rr} 0 0 1 ${Math.cos(a1) * rr} ${Math.sin(a1) * rr}`, fill: 'none', stroke: C.navy, 'stroke-width': 6, 'stroke-linecap': 'round' }, blur);
+  }
+  return { g, rot, mags, blur, r,
+    set(theta, w = 0) {   // theta in radians, w = angular speed (rad/s)
+      rot.setAttribute('transform', `rotate(${(theta * 180 / Math.PI).toFixed(2)})`);
+      const b = clamp((Math.abs(w) - 5) / 5);
+      op(mags, 1 - b * .85); op(blur, b);
+      blur.setAttribute('transform', `rotate(${(theta * 180 / Math.PI).toFixed(2)})`);
+    } };
+}
+// horseshoe magnet, opening along +x, at (x,y)
+function horseshoe(parent, { s = 1, color = C.red } = {}) {
+  const g = el('g', { filter: BOIL }, parent);
+  const d = `M ${70 * s} ${-55 * s} L ${-10 * s} ${-55 * s} A ${55 * s} ${55 * s} 0 0 0 ${-10 * s} ${55 * s} L ${70 * s} ${55 * s}`;
+  el('path', { d, fill: 'none', stroke: C.navy, 'stroke-width': 46 * s, 'stroke-linejoin': 'round' }, g);
+  el('path', { d, fill: 'none', stroke: color, 'stroke-width': 32 * s }, g);
+  for (const yy of [-55, 55]) el('rect', { x: 58 * s, y: (yy - 16) * s, width: 30 * s, height: 32 * s, fill: C.steel, stroke: C.navy, 'stroke-width': 5 }, g);
+  return g;
+}
+// rotation laws
+const coastStop = (t, t0, turns, dur) => {     // uniform deceleration to rest after `turns` full turns in `dur` s
+  const tot = turns * TAU, w0 = 2 * tot / dur, a = w0 / dur, u = clamp(t - t0, 0, dur);
+  return { th: w0 * u - .5 * a * u * u, w: t < t0 || t > t0 + dur ? 0 : w0 - a * u };
+};
+function wobble(t, t1) { const a = Math.max(0, t - t1); return t < t1 ? 0 : .09 * Math.exp(-a * 5) * Math.sin(a * 18); }
+function tag(parent, str, { size = 40, fill = C.yellow, ink = C.navy, rot = -2, family = F.sans } = {}) {
+  const g = el('g', {}, parent);
+  const w = measure(str, size, family, 900) + 44, h = size * 1.5;
+  el('rect', { x: -w / 2 + 7, y: -h / 2 + 7, width: w, height: h, rx: 8, fill: C.pink, class: 'mul' }, g);
+  el('rect', { x: -w / 2, y: -h / 2, width: w, height: h, rx: 8, fill, stroke: ink, 'stroke-width': 5 }, g);
+  txt(g, str, { x: 0, y: size * .36, 'font-size': size, 'font-family': family, 'font-weight': 900, fill: ink, 'text-anchor': 'middle', 'letter-spacing': 1 });
+  return { g, rot, w };
+}
+function tagAnim(tg, t, t0, x, y) { if (t < t0) { op(tg.g, 0); return; } op(tg.g, 1); tf(tg.g, x, y, pop(t, t0, .35), tg.rot); }
+function rise(e, t, t0, x, y, d = .4, from = 1300, s = 1, r = 0) { op(e, t >= t0 ? 1 : 0); tf(e, x, lerp(from, y, E.back(seg(t, t0, t0 + d))), s, r); }
+function popAt(e, t, t0, x, y, s = 1, r = 0, d = .35) { op(e, t >= t0 ? 1 : 0); tf(e, x, y, s * pop(t, t0, d), r); }
+// headline group: small mono kicker + big slab line with misregistration shadow
+function headline(g, kicker, big, { y = 430, size = 190, shadow = C.pink, fill = C.navy, sub, subFill } = {}) {
+  const k = kicker ? chars(g, kicker, { x: 72, y: y - size * .98 - 14, size: 32, family: F.mono, weight: 800, fill: C.pink, ls: 3 }) : null;
+  const b = chars(g, big, { x: 66, y, size, family: F.slab, fill, shadow: { fill: shadow, dx: 9, dy: 9 } });
+  const s = sub ? chars(g, sub, { x: 72, y: y + 76, size: 46, family: F.sans, weight: 900, fill: subFill || fill, ls: 1 }) : null;
+  return (t, t0) => { if (k) charsPop(k, t, t0, .015, .25, 20); charsPop(b, t, t0 + .1, .05, .36, 70); if (s) charsPop(s, t, t0 + .45, .012, .26, 24); };
+}
+function wipeAt(t, col) { WIPES.push([t, col]); sfx(t - .2, 'whoosh', .35); }
+function stampCue(t, size = 'mid', shake = 14) { SHAKES.push([t, shake, size === 'big' ? .45 : .3]); sfx(t, 'stamp', size === 'big' ? 1 : .75, { big: size === 'big' }); }
+
+// ================================================================ cut points
+const CUT = {
+  s1: T.b1 - .125, s2: T.c1 - .15, s3: T.d1 - .15, s4: T.d3 - .1, s5: T.e1 - .125, s6: T.f2 - .15, s7: T.g1 - .125,
+  s8: T.g2 - .15, s9: T.g4 - .1, s10: T.g6 - .125, s11: T.h1 - .125, s12: T.i1 - .125, s13: T.j1 - .125,
+};
+
+async function build() {
+  // ------------------------------------------------ S0 hook: the wheel that never stops (night)
+  scene(0, CUT.s1, (g) => {
+    bg(g, C.night);
+    halftone(g, { color: C.night2, step: 24, angle: 20, f: radial(540, 860, 760, .9), maxK: .7 });
+    mul(halftone(g, { color: C.blue, step: 22, angle: 70, f: radial(1080, 1900, 700, 1.1), maxK: .62 }));
+    halftone(g, { color: C.yellow, step: 22, angle: 45, f: radial(0, 1750, 420, 1.3), maxK: .55 });
+    const h = headline(g, 'CASE FILE CG-004', 'THE WHEEL', { y: 450, size: 128, shadow: C.pink, fill: C.cream });
+    const wg = el('g', {}, g); const R = rotor(wg, { r: 300 });
+    const st = horseshoe(g, { s: 1.15 });
+    // NO FUEL / NO PLUG chips with red strike
+    const mk = (s) => { const t = tag(g, s, { size: 46, fill: C.cream, rot: 0 }); el('line', { x1: -t.w / 2 - 10, y1: 6, x2: t.w / 2 + 10, y2: -6, stroke: C.red, 'stroke-width': 12, 'stroke-linecap': 'round' }, t.g); return t; };
+    const f1 = mk('NO FUEL'), f2 = mk('NO PLUG');
+    const s = stampEl(g, 'NEVER STOPS?', { size: 84, color: C.red });
+    const ta = T.a2 + .15, tb = T.a2 + 1.05, ts = T.a3 + .45;
+    sfx(T.a1, 'pop', .3); sfx(ta, 'pop', .4); sfx(tb, 'pop', .4); stampCue(ts, 'big', 18); FLASHES.push([ts, .45, .14]);
+    return (t) => {
+      h(t, -1.2);
+      rise(wg, t, -.6, 540, 900, .45, 1700);
+      R.set(t * 7.3 + .2, 7.3);
+      popAt(st, t, -.4, 540 + 300 + 70, 900, 1, 180);
+      tagAnim(f1, t, ta, 290, 1300); tagAnim(f2, t, tb, 780, 1300);
+      stampAnim(s, t, ts, 540, 900, -9);
+    };
+  });
+  wipeAt(CUT.s1, C.yellow);
+
+  // ------------------------------------------------ S1 exhibit 01: 1269, Peregrinus' letter and wheel
+  scene(CUT.s1, CUT.s2, (g) => {
+    bg(g, C.paper);
+    const n = bigNum(g, '01', { x: 1130, y: 1180, size: 640, fill: C.yellow, dots: C.pink });
+    mul(halftone(g, { color: C.blue, step: 22, angle: 60, f: radial(0, 1920, 760, 1.3), maxK: .6 }));
+    const h = headline(g, 'EXHIBIT 01', '1269', { y: 470, size: 200, sub: 'LUCERA, ITALY' });
+    // the letter
+    const letter = el('g', {}, g);
+    const lb = el('g', { filter: BOIL }, letter);
+    el('rect', { x: -230, y: -300, width: 460, height: 600, rx: 6, fill: C.cream, stroke: C.navy, 'stroke-width': LW }, lb);
+    const r = rng(5);
+    for (let i = 0; i < 9; i++) el('line', { x1: -180, y1: -200 + i * 44, x2: -180 + 260 + r() * 100, y2: -200 + i * 44, stroke: C.navy, 'stroke-width': 9, 'stroke-linecap': 'round', opacity: .55 }, lb);
+    el('circle', { cx: 150, cy: 220, r: 46, fill: C.red, stroke: C.navy, 'stroke-width': 6 }, lb);
+    txt(letter, 'EPISTOLA', { x: 0, y: -236, 'font-size': 36, 'font-family': F.mono, 'font-weight': 800, fill: C.navy, 'text-anchor': 'middle', 'letter-spacing': 3 });
+    const plate = el('g', {}, g);
+    el('rect', { x: -270, y: -58, width: 540, height: 116, rx: 10, fill: C.navy }, plate);
+    txt(plate, 'PETER PEREGRINUS', { x: 0, y: -6, 'font-size': 42, 'font-family': F.mono, 'font-weight': 800, fill: C.cream, 'text-anchor': 'middle' });
+    txt(plate, 'ENGINEER · ARMY AT LUCERA', { x: 0, y: 36, 'font-size': 24, 'font-family': F.mono, 'font-weight': 800, fill: C.yellow, 'text-anchor': 'middle', 'letter-spacing': 1 });
+    // the wheel in the letter
+    const wg = el('g', {}, g); const R = rotor(wg, { r: 210, n: 8, teeth: true });
+    const loop = el('path', { d: 'M 150 -40 A 160 160 0 1 1 120 -100', fill: 'none', stroke: C.blue, 'stroke-width': 10, 'stroke-linecap': 'round', 'marker-end': '' }, g);
+    const fe = tag(g, 'FOREVER?', { size: 46, fill: C.yellow, rot: 4 });
+    const tL = T.b2 + .2, tP = T.b2 + 1.0, tW = T.b3 + .1, tF = T.b3 + 1.9;
+    sfx(T.b1 + .1, 'pop', .3); sfx(tL, 'paper', .7); sfx(tP, 'pop', .35); sfx(tW, 'pop', .45); sfx(tF, 'pop', .5);
+    return (t) => {
+      h(t, T.b1);
+      const z = lerp(1, 1.04, E.io(seg(t, CUT.s1, CUT.s2))); tf(n, (1 - z) * 900, (1 - z) * 900, z);
+      const lx = lerp(330, 250, E.io(seg(t, tW - .2, tW + .4)));
+      rise(letter, t, tL, lx, 930, .45, 1700, 1, lerp(-4, -8, seg(t, tW - .2, tW + .4)));
+      rise(plate, t, tP, 330, 1300, .4, 1700, 1, -1.5);
+      popAt(wg, t, tW, 740, 900, 1, 0, .45);
+      R.set(t >= tW ? (t - tW) * 1.1 : 0, 1.1);
+      op(loop, 0);
+      tagAnim(fe, t, tF, 760, 640);
+    };
+  });
+  wipeAt(CUT.s2, C.blue);
+
+  // ------------------------------------------------ S2 exhibit 02: 1600s, Wilkins' magnet ramp
+  scene(CUT.s2, CUT.s3, (g) => {
+    bg(g, C.paper);
+    bigNum(g, '02', { x: 1130, y: 1190, size: 520, fill: '#FFE3EA', dots: C.pink, angle: 15 });
+    halftone(g, { color: C.yellow, step: 22, angle: 15, f: radial(1080, 300, 420, 1.2), maxK: .58 });
+    const h = headline(g, 'EXHIBIT 02', '1600s', { y: 470, size: 190, sub: 'JOHN WILKINS · ENGLAND' });
+    // apparatus: post with magnet on top, straight ramp up, hole, curved return ramp below
+    const ap = el('g', {}, g);
+    const ab = el('g', { filter: BOIL }, ap);
+    const A = [170, 1230], Bp = [790, 760], hole = [740, 798];
+    el('rect', { x: 860, y: 700, width: 34, height: 560, fill: C.cream, stroke: C.navy, 'stroke-width': LW }, ab);
+    el('rect', { x: 120, y: 1250, width: 840, height: 40, fill: C.navy }, ab);
+    el('line', { x1: A[0], y1: A[1], x2: Bp[0], y2: Bp[1], stroke: C.navy, 'stroke-width': 14, 'stroke-linecap': 'round' }, ab);
+    el('circle', { cx: hole[0], cy: hole[1], r: 22, fill: C.paper, stroke: C.red, 'stroke-width': 5, 'stroke-dasharray': '6 6' }, ab);
+    const ret = 'M 720 850 C 640 1080, 420 1000, 300 1180 Q 260 1230 190 1236';
+    el('path', { d: ret, fill: 'none', stroke: C.navy, 'stroke-width': 12, 'stroke-linecap': 'round' }, ab);
+    const mag = el('g', {}, ap); horseshoe(mag, { s: .9 });
+    const labM = tag(g, 'MAGNET', { size: 34, fill: C.yellow, rot: 3 });
+    const ball = el('g', {}, g);
+    el('circle', { r: 26, fill: C.steel, stroke: C.navy, 'stroke-width': 6 }, ball);
+    el('circle', { cx: -8, cy: -9, r: 7, fill: C.cream }, ball);
+    const retP = el('path', { d: ret }, g); show(retP, false); const RL = retP.getTotalLength();
+    // ball path: up the ramp (c2), fall through the hole, down the return (c3), up again
+    const up0 = T.c2 + .5, up1 = T.c2 + 2.9, dr0 = T.c3 + .1, dr1 = T.c3 + .5, rt1 = T.c3 + 2.2, up2a = T.c3 + 2.3, up2b = T.c3 + 3.9;
+    sfx(T.c1 + .1, 'pop', .3); sfx(T.c1 + 1.6, 'pop', .4); sfx(up0, 'roll', .5, { d: up1 - up0 }); sfx(dr0 + .35, 'clunk', .6); sfx(dr1, 'roll', .5, { d: rt1 - dr1 }); sfx(up2a, 'roll', .45, { d: up2b - up2a });
+    const onRamp = p => [lerp(A[0], hole[0], p), lerp(A[1], hole[1], p) - 30];
+    return (t) => {
+      h(t, T.c1);
+      rise(ap, t, T.c1 + 1.4, 0, 0, .45, 900);
+      popAt(mag, t, T.c1 + 1.6, 880, 650, 1, 180);
+      tagAnim(labM, t, T.c2 + .2, 900, 540);
+      let p;
+      if (t < up0) p = onRamp(0);
+      else if (t < up1) p = onRamp(E.io(seg(t, up0, up1)));
+      else if (t < dr0) p = onRamp(1);
+      else if (t < dr1) { const u = seg(t, dr0, dr1); p = [hole[0] - 10 * u, hole[1] - 30 + 80 * u * u]; }
+      else if (t < rt1) { const q = retP.getPointAtLength(RL * E.in(seg(t, dr1, rt1)) ** .8); p = [q.x, q.y - 28]; }
+      else if (t < up2a) p = onRamp(0);
+      else p = onRamp(E.io(seg(t, up2a, up2b)) * .85);
+      op(ball, t >= T.c1 + 1.8 ? 1 : 0); tf(ball, p[0], p[1], pop(t, T.c1 + 1.8, .3));
+    };
+  });
+  wipeAt(CUT.s3, C.pink);
+
+  // ------------------------------------------------ S3 exhibit 03: 1775, the Paris Academy
+  scene(CUT.s3, CUT.s4, (g) => {
+    bg(g, C.paper);
+    bigNum(g, '03', { x: 1130, y: 1200, size: 600, fill: C.yellow, dots: C.blue, angle: 30 });
+    mul(halftone(g, { color: C.pink, step: 22, angle: 70, f: radial(0, 300, 520, 1.2), maxK: .6 }));
+    const h = headline(g, 'EXHIBIT 03', '1775', { y: 470, size: 200, sub: 'PARIS ACADEMY OF SCIENCES' });
+    const fol = [0, 1, 2].map(i => {
+      const f = el('g', {}, g); const b = el('g', { filter: BOIL }, f);
+      el('path', { d: 'M -300 -170 L -120 -170 L -90 -200 L 60 -200 L 90 -170 L 300 -170 L 300 170 L -300 170 Z', fill: i === 2 ? C.yellow : '#E9B92C', stroke: C.navy, 'stroke-width': LW, 'stroke-linejoin': 'round' }, b);
+      txt(f, 'PERPETUAL MOTION', { x: 0, y: -60, 'font-size': 40, 'font-family': F.mono, 'font-weight': 800, fill: C.navy, 'text-anchor': 'middle' });
+      txt(f, `PROPOSAL No. ${['311', '312', '313'][i]}`, { x: 0, y: -10, 'font-size': 28, 'font-family': F.mono, 'font-weight': 800, fill: C.navy, 'text-anchor': 'middle', opacity: .7 });
+      return f;
+    });
+    const s = stampEl(g, 'NOT ACCEPTED', { size: 96, color: C.red });
+    const tf0 = T.d1 + 2.6, ts = T.d2 + 2.1;
+    sfx(T.d1 + .1, 'pop', .3); fol.forEach((_, i) => sfx(tf0 + i * .25, 'paper', .5)); stampCue(ts, 'mid', 14);
+    return (t) => {
+      h(t, T.d1);
+      fol.forEach((f, i) => rise(f, t, tf0 + i * .25, 520 + (i - 1) * 24, 960 + (i - 1) * 40, .4, 1800, 1, (i - 1) * 3));
+      stampAnim(s, t, ts, 540, 960, -9);
+    };
+  });
+  WIPES.push([CUT.s4, C.navy]); sfx(CUT.s4 - .2, 'whoosh', .35);
+
+  // ------------------------------------------------ S4 exhibit 04: today, the US patent office
+  scene(CUT.s4, CUT.s5, (g) => {
+    bg(g, C.paper);
+    halftone(g, { color: C.blue, step: 22, angle: 30, f: radial(560, 980, 560, .95), maxK: .6 });
+    const h = headline(g, 'EXHIBIT 04', 'TODAY', { y: 470, size: 180, sub: 'U.S. PATENT OFFICE' });
+    const form = el('g', {}, g); const fb = el('g', { filter: BOIL }, form);
+    el('rect', { x: -330, y: -330, width: 660, height: 660, rx: 6, fill: C.cream, stroke: C.navy, 'stroke-width': LW }, fb);
+    txt(form, 'PATENT APPLICATION', { x: -280, y: -250, 'font-size': 40, 'font-family': F.mono, 'font-weight': 800, fill: C.navy });
+    el('line', { x1: -280, y1: -225, x2: 280, y2: -225, stroke: C.navy, 'stroke-width': 4 }, form);
+    const rows = ['DRAWINGS', 'CLAIMS', 'DESCRIPTION', 'WORKING MODEL'];
+    const marks = rows.map((rw, i) => {
+      const y = -140 + i * 110;
+      el('rect', { x: -280, y: y - 34, width: 48, height: 48, rx: 4, fill: 'none', stroke: C.navy, 'stroke-width': 5 }, form);
+      txt(form, rw, { x: -205, y: y + 2, 'font-size': 40, 'font-family': F.sans, 'font-weight': 900, fill: i === 3 ? C.red : C.navy });
+      return el('path', { d: `M ${-272} ${y - 12} L ${-258} ${y + 4} L ${-226} ${y - 34}`, fill: 'none', stroke: i === 3 ? C.red : C.blue, 'stroke-width': 9, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, form);
+    });
+    const ring = el('ellipse', { cx: -20, cy: 190, rx: 300, ry: 62, fill: 'none', stroke: C.red, 'stroke-width': 8, transform: 'rotate(-3)' }, form);
+    const s = stampEl(g, 'PROVE IT', { size: 120, color: C.red });
+    const tfm = T.d3 + .3, tm = T.d3 + 1.6, ts = T.d3 + 3.3;
+    sfx(T.d3 + .05, 'pop', .3); sfx(tfm, 'paper', .6); marks.forEach((_, i) => sfx(tm + i * .22, 'tick', .4)); stampCue(ts, 'mid', 14);
+    return (t) => {
+      h(t, T.d3);
+      rise(form, t, tfm, 540, 1010, .42, 1900, 1, 1.5);
+      marks.forEach((m, i) => op(m, t >= tm + i * .22 ? 1 : 0));
+      op(ring, seg(t, tm + .9, tm + 1.1)); ring.setAttribute('stroke-dasharray', `${(seg(t, tm + .8, tm + 1.2) * 1500).toFixed(0)} 2000`);
+      stampAnim(s, t, ts, 640, 1310, -8);
+    };
+  });
+  wipeAt(CUT.s5, C.yellow);
+
+  // ------------------------------------------------ S5 the physics: the hill, the ledger, the sticky point
+  scene(CUT.s5, CUT.s6, (g) => {
+    bg(g, C.paper);
+    mul(halftone(g, { color: C.blue, step: 20, angle: 60, f: radial(1080, 1250, 520, 1.3), maxK: .6 }));
+    const h = headline(g, 'PHYSICS', 'WHY IT STOPS', { y: 440, size: 116 });
+    // hill
+    const HX0 = 80, HX1 = 1000, HY = 860, HH = 260;
+    const hy = x => HY - HH * Math.exp(-Math.pow((x - 540) / 170, 2));
+    let d = `M ${HX0} ${HY}`; for (let x = HX0; x <= HX1; x += 10) d += ` L ${x} ${hy(x).toFixed(1)}`;
+    const hill = el('g', {}, g);
+    const clipId = 'hillclip';
+    const cp = el('clipPath', { id: clipId }, g); el('path', { d: d + ` L ${HX1} ${HY} Z` }, cp);
+    const hf = el('g', { 'clip-path': `url(#${clipId})` }, hill);
+    halftone(hf, { color: C.yellow, step: 20, angle: 25, f: ramp(HY - HH, HY, 1, .35), maxK: .72 });
+    el('path', { d, fill: 'none', stroke: C.navy, 'stroke-width': LW + 2, 'stroke-linejoin': 'round', filter: BOIL }, hill);
+    el('line', { x1: HX0 - 20, y1: HY, x2: HX1 + 20, y2: HY, stroke: C.navy, 'stroke-width': 5 }, hill);
+    txt(hill, 'MAGNET', { x: 540, y: HY - 30, 'font-size': 34, 'font-family': F.mono, 'font-weight': 800, fill: C.navy, 'text-anchor': 'middle', 'letter-spacing': 3 });
+    const ball = el('g', {}, g); el('circle', { r: 26, fill: C.steel, stroke: C.navy, 'stroke-width': 6 }, ball); el('circle', { cx: -8, cy: -9, r: 7, fill: C.cream }, ball);
+    const plus = chars(g, '+5', { x: 300, y: 600, size: 110, family: F.bagel, fill: C.blue, anchor: 'middle', shadow: { fill: C.pink, dx: 6, dy: 6 } });
+    const minus = chars(g, '−5', { x: 790, y: 600, size: 110, family: F.bagel, fill: C.red, anchor: 'middle', shadow: { fill: C.yellow, dx: 6, dy: 6 } });
+    const lin = tag(g, 'IN', { size: 34, fill: C.cream, rot: -3 }), lout = tag(g, 'OUT', { size: 34, fill: C.cream, rot: 3 });
+    // ledger
+    const led = el('g', {}, g);
+    el('rect', { x: -440, y: -120, width: 880, height: 240, rx: 12, fill: C.navy }, led);
+    txt(led, 'ONE FULL TURN', { x: -390, y: -50, 'font-size': 32, 'font-family': F.mono, 'font-weight': 800, fill: C.yellow, 'letter-spacing': 3 });
+    const sum = txt(led, '+5 − 5 = 0', { x: -390, y: 70, 'font-size': 96, 'font-family': F.bagel, fill: C.cream });
+    // the coasting wheel + sticky point
+    const wg = el('g', {}, g); const Rw = rotor(wg, { r: 150, n: 8 });
+    const st = horseshoe(g, { s: .6 });
+    const sp = tag(g, 'STICKY POINT', { size: 36, fill: C.yellow, rot: -3 });
+    const s = stampEl(g, 'STOPS', { size: 110, color: C.red });
+    const tb0 = T.e2 + .2, tb1 = T.e3 + 3.2, tL = T.e4 + .1, tW = T.e5 - .2, tWs = T.e5 + 3.2, tS = T.e5 + 2.6, tSS = T.e5 + 3.4;
+    sfx(T.e1 + .1, 'pop', .3); sfx(T.e1 + 1.0, 'pop', .4); sfx(tb0 + .2, 'roll', .45, { d: tb1 - tb0 - .2 }); sfx(T.e3 + .6, 'pop', .45); sfx(T.e3 + 2.2, 'pop', .45);
+    sfx(tL, 'paper', .5); sfx(T.e4 + 1.9, 'tick', .5); sfx(tWs, 'clunk', .6); sfx(tS, 'pop', .4); stampCue(tSS, 'mid', 12);
+    return (t) => {
+      h(t, T.e1);
+      const hp = seg(t, T.e1 + 1.0, T.e1 + 1.5); op(hill, hp > 0 ? 1 : 0); tf(hill, 0, (1 - E.back(hp)) * 300);
+      const u = E.io(seg(t, tb0, tb1)); const bx = lerp(140, 940, u);
+      op(ball, t >= tb0 ? 1 : 0); tf(ball, bx, hy(bx) - 30, pop(t, tb0, .3));
+      charsPop(plus, t, T.e3 + .6, .06); charsPop(minus, t, T.e3 + 2.2, .06);
+      tagAnim(lin, t, T.e3 + .6, 300, 700); tagAnim(lout, t, T.e3 + 2.2, 790, 700);
+      rise(led, t, tL, 540, 1060, .4, 1900, 1, -1);
+      op(sum, seg(t, T.e4 + 1.6, T.e4 + 1.8));
+      // wheel coasts to the sticky point; ledger slides away
+      if (t >= tW) tf(led, lerp(540, -700, E.in(seg(t, tW, tW + .4))), 1060, 1, -1);
+      const c = coastStop(t, tW + .3, 1.25, tWs - tW - .3);
+      popAt(wg, t, tW, 320, 1110, 1, 0, .4); Rw.set(c.th + wobble(t, tWs), c.w);
+      popAt(st, t, tW + .1, 320 + 150 + 42, 1110, 1, 180);
+      tagAnim(sp, t, tS, 760, 990);
+      stampAnim(s, t, tSS, 770, 1215, -8);
+    };
+  });
+  wipeAt(CUT.s6, C.blue);
+
+  // ------------------------------------------------ S6 title card: LODESTONE
+  scene(CUT.s6, CUT.s7, (g) => {
+    bg(g, C.blue);
+    halftone(g, { color: C.navy, step: 24, angle: 20, f: edge(1200, 1.4), maxK: .7 });
+    mul(halftone(g, { color: C.pink, step: 22, angle: 70, f: radial(1000, 1700, 600, 1.1), maxK: .62 }));
+    halftone(g, { color: C.yellow, step: 22, angle: 45, f: radial(120, 260, 460, 1.2), maxK: .6 });
+    txt(g, 'PROGRAM FILE 1 / 1', { x: 64, y: 168, 'font-size': 26, 'font-family': F.mono, 'font-weight': 800, fill: C.cream, 'letter-spacing': 2 });
+    txt(g, 'CLASSIFIED', { x: W - 64, y: 168, 'font-size': 26, 'font-family': F.mono, 'font-weight': 800, fill: C.yellow, 'text-anchor': 'end', 'letter-spacing': 2 });
+    const title = chars(g, 'LODESTONE', { x: 540, y: 820, size: 168, family: F.bagel, fill: C.cream, anchor: 'middle', ls: -4, shadow: { fill: C.navy, dx: 11, dy: 11 } });
+    const sub = chars(g, 'MAGNETIC ROTOR PROGRAM', { x: 540, y: 920, size: 44, family: F.sans, weight: 900, fill: C.cream, anchor: 'middle', ls: 3 });
+    const bub = el('g', {}, g);
+    el('path', { d: 'M -40 70 L -90 140 L 30 76 Z', fill: C.cream, stroke: C.navy, 'stroke-width': 6, 'stroke-linejoin': 'round' }, bub);
+    el('rect', { x: -260, y: -80, width: 520, height: 160, rx: 36, fill: C.cream, stroke: C.navy, 'stroke-width': 6 }, bub);
+    el('rect', { x: -60, y: 66, width: 80, height: 16, fill: C.cream }, bub);
+    txt(bub, 'SWITCH IT OFF?', { x: 0, y: 26, 'font-size': 70, 'font-family': F.cute, fill: C.navy, 'text-anchor': 'middle' });
+    const t0 = CUT.s6 + .2, tb = T.f2 + 2.2;
+    [...'LODESTONE'].forEach((_, i) => sfx(t0 + i * .125, 'pop', .22, { f: 500 + 60 * i }));
+    sfx(tb, 'boing', .4);
+    return (t) => {
+      title.items.forEach((it, i) => {
+        const a = t0 + i * .125;
+        if (t < a - .2) { op(it.g, 0); return; }
+        op(it.g, 1);
+        const y = it.y - 700 * (1 - E.in(seg(t, a - .2, a))), q = Math.max(0, t - a);
+        const sq = t < a ? 1.15 : 1 - .28 * Math.exp(-q * 9) * Math.cos(q * 26);
+        it.g.setAttribute('transform', `translate(${it.x} ${y}) scale(${(1 / sq).toFixed(3)} ${sq.toFixed(3)})`);
+      });
+      charsPop(sub, t, t0 + 1.25, .02, .3, 26);
+      popAt(bub, t, tb, 600, 1140, 1, -2, .3);
+    };
+  });
+  wipeAt(CUT.s7, C.yellow);
+
+  // ------------------------------------------------ S7 spec: the mugshot of the rotor
+  scene(CUT.s7, CUT.s8, (g) => {
+    bg(g, C.paper);
+    const cm = el('g', {}, g);
+    for (let i = 0; i <= 6; i++) {
+      const y = 580 + i * 100;
+      el('line', { x1: 150, x2: 930, y1: y, y2: y, stroke: C.navy, 'stroke-width': i % 2 ? 2 : 4, opacity: .45 }, cm);
+      txt(cm, `${(1.2 - i * .2).toFixed(1)}`, { x: 132, y: y + 9, 'font-size': 26, 'font-family': F.mono, 'font-weight': 800, fill: C.navy, 'text-anchor': 'end', opacity: .7 });
+    }
+    txt(cm, 'm', { x: 132, y: 545, 'font-size': 24, 'font-family': F.mono, 'font-weight': 800, fill: C.navy, 'text-anchor': 'end', opacity: .6 });
+    mul(halftone(g, { color: C.blue, step: 22, angle: 30, f: radial(540, 880, 520, .9), maxK: .66 }));
+    const h = headline(g, 'LODESTONE', 'SPEC SHEET', { y: 420, size: 120 });
+    const wg = el('g', {}, g); const R = rotor(wg, { r: 300, n: 24 });
+    const dim = el('g', {}, g);
+    el('line', { x1: 0, y1: 0, x2: 600, y2: 0, stroke: C.red, 'stroke-width': 7 }, dim);
+    for (const x of [0, 600]) el('line', { x1: x, y1: -22, x2: x, y2: 22, stroke: C.red, 'stroke-width': 7 }, dim);
+    const dimT = tag(g, '1.2 m', { size: 44, fill: C.yellow, rot: -2 });
+    const n24 = tag(g, '24 MAGNETS', { size: 42, fill: C.cream, rot: 2 });
+    const plate = el('g', {}, g);
+    el('rect', { x: -280, y: -62, width: 560, height: 124, rx: 10, fill: C.navy }, plate);
+    txt(plate, 'LODESTONE R-01', { x: 0, y: -8, 'font-size': 46, 'font-family': F.mono, 'font-weight': 800, fill: C.cream, 'text-anchor': 'middle' });
+    txt(plate, 'NEODYMIUM · 24 POLES', { x: 0, y: 36, 'font-size': 26, 'font-family': F.mono, 'font-weight': 800, fill: C.yellow, 'text-anchor': 'middle', 'letter-spacing': 1 });
+    const tR = CUT.s7 + .15, tF1 = T.g1 + .5, tD = T.g1 + 1.3, tN = T.g1 + .4;
+    sfx(T.g1 + .05, 'pop', .3); sfx(tF1, 'shutter', .6); FLASHES.push([tF1, .5, .3]); sfx(tD, 'pop', .45); sfx(tN, 'pop', .45);
+    return (t) => {
+      h(t, CUT.s7 + .05);
+      const z = lerp(1, 1.05, E.io(seg(t, CUT.s7, CUT.s8))); tf(wg, 540, lerp(1500, 880, E.back(seg(t, tR, tR + .45))), z);
+      op(wg, t >= tR ? 1 : 0); R.set(t * .25, .25);
+      op(dim, seg(t, tD, tD + .15)); tf(dim, 240, 1230, 1); dim.setAttribute('transform', `translate(240 1220) scale(${E.out(seg(t, tD, tD + .4)).toFixed(3)} 1)`);
+      tagAnim(dimT, t, tD + .2, 540, 1220);
+      tagAnim(n24, t, tN, 800, 560);
+      rise(plate, t, T.g1 + 1.0, 540, 1340, .4, 1900, 1, -1.5);
+    };
+  });
+  wipeAt(CUT.s8, C.pink);
+
+  // ------------------------------------------------ trials: shared layout
+  function trial(t0s, t1s, num, title, sub, opts) {
+    scene(t0s, t1s, (g) => {
+      bg(g, C.paper);
+      bigNum(g, num, { x: 1130, y: 1060, size: 600, fill: opts.numFill, dots: opts.numDots, angle: opts.angle || 25 });
+      mul(halftone(g, { color: opts.halo, step: 22, angle: 70, f: radial(540, 900, 520, 1.0), maxK: .6 }));
+      const h = headline(g, 'TRIAL ' + num, title, { y: 430, size: 130, sub });
+      const wg = el('g', {}, g); const R = rotor(wg, { r: 270, n: 12 });
+      const st = horseshoe(g, { s: .95 });
+      const ctr = el('g', {}, g);
+      el('rect', { x: -170, y: -62, width: 340, height: 124, rx: 12, fill: C.navy }, ctr);
+      const lab = txt(ctr, opts.counterLabel || 'TURNS', { x: -140, y: -18, 'font-size': 26, 'font-family': F.mono, 'font-weight': 800, fill: C.yellow, 'letter-spacing': 3 });
+      const val = txt(ctr, '0', { x: 140, y: 44, 'font-size': 76, 'font-family': F.bagel, fill: C.cream, 'text-anchor': 'end' });
+      const extra = opts.extra ? opts.extra(g) : null;
+      const s = stampEl(g, opts.stamp, { size: 120, color: opts.stampColor || C.red });
+      stampCue(opts.ts, 'mid', 14);
+      return (t) => {
+        h(t, t0s + .1);
+        const wy = 900;
+        rise(wg, t, t0s + .2, 470, wy, .45, 1700);
+        popAt(st, t, t0s + .35, 470 + 270 + 52, wy, 1, 180);
+        rise(ctr, t, t0s + .5, 820, 1300, .4, 1900, 1, 2);
+        const { th, w, count, label } = opts.motion(t);
+        R.set(th, w);
+        val.textContent = label ?? String(count);
+        if (label) { val.setAttribute('font-size', 58); lab.textContent = 'RUNTIME'; } else { val.setAttribute('font-size', 76); lab.textContent = opts.counterLabel || 'TURNS'; }
+        if (extra) extra.update(t, th, w);
+        stampAnim(s, t, opts.ts, 470, wy, -8);
+      };
+    });
+  }
+  // trial 1: bare magnets, 3 turns, stop
+  const T1a = T.g2 + .6, T1d = (T.g3 + .8) - T1a;
+  trial(CUT.s8, CUT.s9, '01', 'BARE', 'MAGNETS ONLY', {
+    numFill: C.yellow, numDots: C.pink, halo: C.blue, stamp: 'STOPPED', ts: T.g3 + 1.1,
+    motion: (t) => { const c = coastStop(t, T1a, 3, T1d); return { th: c.th + wobble(t, T1a + T1d), w: c.w, count: Math.min(3, Math.floor(c.th / TAU + 1e-6)) }; },
+  });
+  { const tot = 3 * TAU, w0 = 2 * tot / T1d, a = w0 / T1d; for (let k = 1; k <= 3; k++) { const th = k * TAU; const u = (w0 - Math.sqrt(Math.max(0, w0 * w0 - 2 * a * th))) / a; sfx(T1a + u, 'tick', .5); } sfx(T1a + T1d, 'clunk', .7); }
+  wipeAt(CUT.s9, C.yellow);
+
+  // trial 2: sliding shield, 11 turns, stop
+  const T2a = T.g4 + 1.0, T2d = (T.g5 + 1.0) - T2a;
+  trial(CUT.s9, CUT.s10, '02', 'SHIELD', 'SLIDES OVER THE STICKY POINT', {
+    numFill: '#FFD3DF', numDots: C.blue, halo: C.yellow, angle: 15, stamp: 'STOPPED', ts: T.g5 + 1.4,
+    motion: (t) => { const c = coastStop(t, T2a, 11, T2d); return { th: c.th + wobble(t, T2a + T2d), w: c.w, count: Math.min(11, Math.floor(c.th / TAU + 1e-6)) }; },
+    extra: (g) => {
+      const sh = el('g', {}, g);
+      el('rect', { x: -22, y: -120, width: 44, height: 240, rx: 6, fill: C.steel, stroke: C.navy, 'stroke-width': 6, filter: BOIL }, sh);
+      const cost = tag(g, 'SHIELD WORK = ENERGY SAVED', { size: 34, fill: C.yellow, rot: -2 });
+      return { update(t, th, w) {
+        // the shield bobs in each time a magnet passes (12 per turn), faster as the rotor spins faster
+        const on = t >= CUT.s9 + .6;
+        op(sh, on ? 1 : 0);
+        const ph = (th * 12 / TAU) % 1; const inn = w > .5 ? .5 + .5 * Math.cos(ph * TAU) : 1;
+        tf(sh, 470 + 270 + 10 - 40 * (1 - inn), 900 - lerp(260, 0, E.back(seg(t, CUT.s9 + .6, CUT.s9 + 1.0))) * 0, 1);
+        tagAnim(cost, t, T.g5 + 2.4, 540, 640);
+      } };
+    },
+  });
+  { const tot = 11 * TAU, w0 = 2 * tot / T2d, a = w0 / T2d; for (let k = 1; k <= 11; k++) { const th = k * TAU; const u = (w0 - Math.sqrt(Math.max(0, w0 * w0 - 2 * a * th))) / a; sfx(T2a + u, 'tick', .4); } sfx(T2a + T2d, 'clunk', .7); sfx(T.g5 + 2.4, 'pop', .45); }
+  wipeAt(CUT.s10, C.blue);
+
+  // trial 3: pulsed coil, keeps turning; the counter switches to days
+  const T3a = T.g6 + 1.4, W3 = 6.6;
+  const d0 = T.g7 + .1, d1 = T.g7 + 1.4;
+  trial(CUT.s10, CUT.s11, '03', 'COIL', 'FIRES AT THE STICKY POINT', {
+    numFill: C.yellow, numDots: C.blue, halo: C.pink, angle: 30, stamp: 'RUNNING', stampColor: C.blue, ts: T.g7 + 1.75, counterLabel: 'TURNS',
+    motion: (t) => {
+      const u = Math.max(0, t - T3a); const sp = W3 * clamp(u / 1.2); const th = u < 1.2 ? W3 * u * u / 2.4 : W3 * .6 + W3 * (u - 1.2);
+      const turns = Math.floor(th / TAU);
+      if (t < d0) return { th, w: sp, count: turns };
+      const days = Math.round(lerp(1, 40, E.out(seg(t, d0, d1))));
+      return { th, w: sp, label: `DAY ${days}` };
+    },
+    extra: (g) => {
+      const coil = el('g', {}, g);
+      const cb = el('g', { filter: BOIL }, coil);
+      el('rect', { x: -40, y: -60, width: 80, height: 120, rx: 10, fill: C.cream, stroke: C.navy, 'stroke-width': 6 }, cb);
+      for (let i = 0; i < 6; i++) el('line', { x1: -40, y1: -46 + i * 19, x2: 40, y2: -38 + i * 19, stroke: C.red, 'stroke-width': 7 }, cb);
+      const zap = el('path', { d: 'M 10 -70 L -18 -6 L 4 -2 L -14 60 L 22 -10 L 0 -14 Z', fill: C.yellow, stroke: C.navy, 'stroke-width': 5, 'stroke-linejoin': 'round' }, g);
+      return { update(t, th, w) {
+        popAt(coil, t, T.g6 + .9, 470 + 270 + 30, 900 + 150, 1, 0);
+        const ph = (th * 12 / TAU) % 1;
+        op(zap, t > T3a && ph < .3 ? 1 : 0); tf(zap, 470 + 255, 900 + 60, 1, 0);
+        // the val label for days needs a smaller size
+      } };
+    },
+  });
+  { for (let k = 0; k < 40; k++) { const t = T3a + 1.2 + k * (TAU / 12) / W3; if (t > CUT.s11) break; if (k % 2 === 0) sfx(t, 'zap', .18); } sfx(T.g6 + .9, 'pop', .4); }
+  wipeAt(CUT.s11, C.night);
+
+  // ------------------------------------------------ S11 one catch (night): the battery
+  DARK.push([CUT.s11, CUT.s12]);
+  scene(CUT.s11, CUT.s12, (g) => {
+    bg(g, C.night);
+    halftone(g, { color: C.night2, step: 24, angle: 20, f: radial(540, 900, 820, .8), maxK: .7 });
+    const h = headline(g, 'NOTE', 'ONE CATCH.', { y: 440, size: 130, fill: C.cream, shadow: C.pink });
+    const wg = el('g', {}, g); const R = rotor(wg, { r: 190, n: 12 });
+    const coil = el('g', { filter: BOIL }, g);
+    el('rect', { x: -40, y: -60, width: 80, height: 120, rx: 10, fill: C.cream, stroke: C.navy, 'stroke-width': 6 }, coil);
+    for (let i = 0; i < 6; i++) el('line', { x1: -40, y1: -46 + i * 19, x2: 40, y2: -38 + i * 19, stroke: C.red, 'stroke-width': 7 }, coil);
+    const wire = el('path', { d: 'M 870 800 C 900 900, 920 1020, 760 1080 S 560 1120, 540 1160', fill: 'none', stroke: C.yellow, 'stroke-width': 10, 'stroke-linecap': 'round' }, g);
+    const WL = wire.getTotalLength();
+    const bat = el('g', {}, g); const bb = el('g', { filter: BOIL }, bat);
+    el('rect', { x: -230, y: -110, width: 460, height: 220, rx: 22, fill: C.cream, stroke: C.navy, 'stroke-width': LW }, bb);
+    el('rect', { x: 230, y: -40, width: 34, height: 80, rx: 6, fill: C.steel, stroke: C.navy, 'stroke-width': 6 }, bb);
+    el('rect', { x: -230, y: -110, width: 150, height: 220, rx: 22, fill: C.red, stroke: C.navy, 'stroke-width': LW }, bb);
+    txt(bat, '+', { x: -155, y: 32, 'font-size': 100, 'font-family': F.bagel, fill: C.cream, 'text-anchor': 'middle' });
+    const lab = txt(bat, 'BATTERY', { x: 75, y: 18, 'font-size': 50, 'font-family': F.sans, 'font-weight': 900, fill: C.navy, 'text-anchor': 'middle', 'letter-spacing': 2 });
+    const bar = el('rect', { x: -70, y: -38, width: 290, height: 74, fill: C.navy }, bat);
+    const tW = T.h2 + .1, tB = T.h2 + .5, tX = T.h2 + 1.4;
+    sfx(T.h1 + .05, 'pop', .35); sfx(tB, 'plop', .6); sfx(tX, 'paper', .6); SHAKES.push([tB + .4, 6, .2]);
+    return (t) => {
+      h(t, T.h1);
+      tf(wg, 600, 800, 1); R.set(t * 6.6, 6.6);
+      tf(coil, 830, 800, 1);
+      op(wire, t >= tW ? 1 : 0); wire.setAttribute('stroke-dasharray', `${(E.out(seg(t, tW, tW + .5)) * WL).toFixed(0)} ${WL + 10}`);
+      rise(bat, t, tB, 540, 1220, .4, 1900, 1, -2);
+      tf(bar, 0, 0, 1); bar.setAttribute('transform', `translate(${(E.in(seg(t, tX, tX + .3)) * 600).toFixed(1)} 0)`);
+      op(bar, 1 - seg(t, tX + .25, tX + .32));
+    };
+  });
+  wipeAt(CUT.s12, C.yellow);
+
+  // ------------------------------------------------ S12 verdict: CLEARED, as an electric motor
+  scene(CUT.s12, CUT.s13, (g) => {
+    bg(g, C.paper);
+    const rays = el('g', {}, g);
+    for (let i = 0; i < 28; i++) {
+      const a0 = i / 28 * TAU, a1 = (i + .5) / 28 * TAU;
+      el('path', { d: `M0 0 L${Math.cos(a0) * 1600} ${Math.sin(a0) * 1600} L${Math.cos(a1) * 1600} ${Math.sin(a1) * 1600} Z`, fill: C.yellow, opacity: .55 }, rays);
+    }
+    halftone(g, { color: C.pink, step: 22, angle: 45, f: edge(1250, 1.6), maxK: .5 });
+    const k = chars(g, 'LODESTONE · CLEARANCE', { x: 540, y: 470, size: 40, family: F.mono, weight: 800, fill: C.navy, anchor: 'middle', ls: 3 });
+    const s = stampEl(g, 'CLEARED', { size: 150, color: C.red, border: 13 });
+    const l2 = chars(g, 'AS AN', { x: 540, y: 1150, size: 70, family: F.slab, fill: C.navy, anchor: 'middle', shadow: { fill: C.pink, dx: 6, dy: 6 } });
+    const l3 = chars(g, 'ELECTRIC MOTOR', { x: 540, y: 1270, size: 90, family: F.slab, fill: C.navy, anchor: 'middle', shadow: { fill: C.yellow, dx: 8, dy: 8 } });
+    const ts = T.i1 + 1.05;
+    stampCue(ts, 'big', 26); FLASHES.push([ts, .5, .14]); sfx(T.i2 + .05, 'sparkle', .5);
+    return (t) => {
+      tf(rays, 540, 860, 1, t * 12);
+      op(rays, seg(t, ts, ts + .2));
+      charsPop(k, t, CUT.s12 + .1, .015, .25, 20);
+      stampAnim(s, t, ts, 540, 860, -7);
+      charsPop(l2, t, T.i2 + .05, .04); charsPop(l3, t, T.i2 + .3, .035, .34, 70);
+    };
+  });
+  wipeAt(CUT.s13, C.blue);
+
+  // ------------------------------------------------ S13 end: the file closes; the wheel has a plug
+  K.setFade(DUR - 1.3, DUR - .2);
+  scene(CUT.s13, DUR + 1, (g) => {
+    bg(g, C.paper);
+    mul(halftone(g, { color: C.blue, step: 22, angle: 60, f: radial(1080, 1920, 900, 1.1), maxK: .6 }));
+    const fol = el('g', {}, g); const fb = el('g', { filter: BOIL }, fol);
+    el('path', { d: 'M -420 -330 L -160 -330 L -120 -380 L 80 -380 L 120 -330 L 420 -330 L 420 330 L -420 330 Z', fill: C.yellow, stroke: C.navy, 'stroke-width': LW, 'stroke-linejoin': 'round' }, fb);
+    el('rect', { x: -300, y: 190, width: 600, height: 100, rx: 6, fill: C.cream, stroke: C.navy, 'stroke-width': 5 }, fb);
+    txt(fol, 'LODESTONE · CG-004', { x: 0, y: 256, 'font-size': 42, 'font-family': F.mono, 'font-weight': 800, fill: C.navy, 'text-anchor': 'middle' });
+    const wg = el('g', {}, fol); const R = rotor(wg, { r: 170, n: 12 });
+    const cord = el('path', { d: 'M 170 -60 C 300 -40, 330 80, 240 120 S 120 170, 60 150', fill: 'none', stroke: C.navy, 'stroke-width': 12, 'stroke-linecap': 'round' }, fol);
+    const CL = cord.getTotalLength();
+    const plug = el('g', {}, fol); const pb = el('g', { filter: BOIL }, plug);
+    el('rect', { x: -46, y: -34, width: 92, height: 68, rx: 14, fill: C.cream, stroke: C.navy, 'stroke-width': 6 }, pb);
+    for (const y of [-16, 16]) el('rect', { x: -86, y: y - 7, width: 42, height: 14, rx: 3, fill: C.steel, stroke: C.navy, 'stroke-width': 4 }, pb);
+    const h = headline(g, 'FILE CLOSED', 'NEVER STOPS', { y: 440, size: 116 });
+    const pt = tag(g, 'IT HAS A PLUG.', { size: 54, fill: C.cream, rot: -3 });
+    const s = stampEl(g, 'CASE CLOSED', { size: 70, color: C.red });
+    const handle = txt(g, '@compandgrow', { x: 540, y: 1510, 'font-size': 40, 'font-family': F.mono, 'font-weight': 800, fill: C.navy, 'text-anchor': 'middle', 'letter-spacing': 3 });
+    const tFo = CUT.s13 + .2, tPl = T.j2 + 1.0, tTg = T.j2 + 1.5, ts = T.j2 + 2.4;
+    sfx(tFo, 'paper', .6); sfx(tPl, 'plop', .55); sfx(tTg, 'pop', .5); stampCue(ts, 'mid', 14); sfx(T.j1 + .1, 'pop', .3);
+    return (t) => {
+      h(t, T.j1);
+      rise(fol, t, tFo, 540, 940, .45, 2000, 1, -1);
+      tf(wg, -60, -60, 1); R.set((t - CUT.s13) * 2.2, 2.2);
+      op(cord, t >= tPl - .4 ? 1 : 0); cord.setAttribute('stroke-dasharray', `${(E.out(seg(t, tPl - .4, tPl)) * CL).toFixed(0)} ${CL + 10}`);
+      popAt(plug, t, tPl, 60 + 40, 150, 1, 15 + Math.sin(t * 3) * 3, .3);
+      tagAnim(pt, t, tTg, 700, 1345);
+      stampAnim(s, t, ts, 420, 650, -9);
+      op(handle, seg(t, ts + .3, ts + .6));
+    };
+  });
+
+  // ------------------------------------------------ HUD, captions, groove
+  K.buildHUD('FILE No. CG-004', [
+    [CUT.s1, CUT.s2, 'EXHIBIT 01', '1269'], [CUT.s2, CUT.s3, 'EXHIBIT 02', 'THE RAMP'], [CUT.s3, CUT.s4, 'EXHIBIT 03', '1775'],
+    [CUT.s4, CUT.s5, 'EXHIBIT 04', 'TODAY'], [CUT.s5, CUT.s6, 'PHYSICS', 'WHY IT STOPS'], [CUT.s7, CUT.s8, 'LODESTONE', 'SPEC'],
+    [CUT.s8, CUT.s9, 'TRIAL 01', 'BARE'], [CUT.s9, CUT.s10, 'TRIAL 02', 'SHIELD'], [CUT.s10, CUT.s11, 'TRIAL 03', 'COIL'],
+    [CUT.s11, CUT.s12, 'NOTE', 'ONE CATCH'], [CUT.s12, CUT.s13, 'VERDICT', 'CLEARANCE'], [CUT.s13, DUR - 1.4, 'FILE', 'CLOSED'],
+  ], '2026.11');
+  DARK.push([0, CUT.s1]);
+  K.buildCaptions(TL.subs, { x: 520, y: 1500, size: 44, maxW: 860 });
+  GROOVE.push([0, CUT.s1], [CUT.s6, CUT.s7], [CUT.s12, CUT.s13]);
+  window.CUT = CUT; window.TL = TL;
+}
+await K.boot(build, { dur: DUR, fps: 24, beat: .5 });
+</script>
+</body>
+</html>

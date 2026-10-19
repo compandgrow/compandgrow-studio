@@ -17,10 +17,10 @@ if [ -z "$PLAYWRIGHT_CHROME" ]; then
   for c in /opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell; do [ -x "$c" ] && PLAYWRIGHT_CHROME=$c; done
 fi
 [ -n "$PLAYWRIGHT_CHROME" ] || node node_modules/playwright-core/cli.js install chromium-headless-shell
-# link every film into the library, each with its own copy of the shared kit
+# link every film into the library, each with its own copy of its kit (studio/kit, or studio/kits/<slug> when the film has a KIT file)
 mkdir -p "$LIB/films"
 for f in "$HERE"/films/*/; do
-  n=$(basename "$f"); rm -rf "$LIB/films/$n"; cp -r "$f" "$LIB/films/$n"; cp -r "$HERE/kit" "$LIB/films/$n/kit"
+  n=$(basename "$f"); rm -rf "$LIB/films/$n"; cp -r "$f" "$LIB/films/$n"; k="$HERE/kit"; [ -f "$f/KIT" ] && k="$HERE/kits/$(cat "$f/KIT")"; cp -r "$k" "$LIB/films/$n/kit"
   mkdir -p "$LIB/films/$n/out" "$LIB/films/$n/stills"
 done
 echo "PLAYWRIGHT_CHROME=$PLAYWRIGHT_CHROME"

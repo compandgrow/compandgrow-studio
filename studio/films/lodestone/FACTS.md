@@ -1,0 +1,20 @@
+# LODESTONE — facts and fiction
+
+LODESTONE is a fictional program. The rotor (24 magnets, 1.2 m), the three trials (3 turns, 11 turns, 40 days), the
+coil, the battery, file number CG-004 and the clearance are invented for the film and are not attributed to any real
+agency or person. The fiction is built to agree with physics: the only rotor that keeps turning is the one fed by a battery,
+i.e. an ordinary electric motor.
+
+| Claim in the film | Source |
+|---|---|
+| 1269: a French army besieges Lucera, Italy; Peter Peregrinus (Pierre de Maricourt) is one of its engineers | IET Archives biography (https://www.theiet.org/membership/library-archives/the-iet-archives/biographies/pierre-de-maricourt-peter-peregrinus/): "part of a French army besieging Lucera in southern Italy", duties included "constructing machines to hurl stones and fireballs" |
+| He writes a letter about magnets (Epistola de magnete), dated 1269 | Project Gutenberg, *The Letter of Petrus Peregrinus on the Magnet, A.D. 1269* (https://gutenberg.org/cache/epub/50524/pg50524-images.html): "finished in camp at the siege of Lucera on the eighth day of August, Anno Domini MCCLXIX" |
+| In it, a wheel that magnets would drive around forever | same letter, Part II ch. III "The Art of Making a Wheel of Perpetual Motion"; IET: "a diagram to show how a wheel might be driven round forever by the power of magnetic attraction"; Wikipedia "Magnet motor" (https://en.wikipedia.org/wiki/Magnet_motor): "a toothed wheel that is continually moving by the force of magnets" |
+| 1600s: English scholar John Wilkins describes a ramp; a magnet at the top pulls an iron ball up; it drops through a hole, rolls back down and climbs again | Wikipedia "Magnet motor": "a ramp with a magnet at the top, which pulled a metal ball up the ramp" (John Wilkins); Maryland Space Grant poster (https://md.spacegrant.org/wp-content/uploads/2022/07/2022-07-27-danielRolandPoster.pdf): "At the top of the ramp, it falls through a hole to the bottom of the ramp and repeats the loop"; Wikipedia "Mathematical Magick" (https://en.wikipedia.org/wiki/Mathematical_Magick): Wilkins' 1648 book has chapters on perpetual motion, incl. "by magnetical virtues". Sources give 1648/1670/1691 (editions), so the film says only "the 1600s" and "describes" (the idea predates him: circuitousroot.com credits Taisnierus, c. 1570) |
+| 1775: the Paris Academy of Sciences says it will no longer deal with perpetual motion | Wikipedia "History of perpetual motion machines" (https://en.wikipedia.org/wiki/History_of_perpetual_motion_machines): in 1775 the Royal Academy of Sciences in Paris stated it "will no longer accept or deal with proposals concerning perpetual motion" |
+| Today the U.S. patent office can demand a working model (for perpetual motion) | USPTO MPEP § 608.03 (text via https://blueironip.com/mpep/mpep-608-03/): "With the exception of cases involving perpetual motion, a model is not ordinarily required by the Office to demonstrate the operability of a device" |
+| A magnet's pull is a hill; help going in is paid back coming out; over a full turn the sum is zero; the wheel stops at an equilibrium ("sticky point") | Wikipedia "Magnet motor": "The force between permanent magnets is conservative ... no work done over a closed cycle"; "such a motor will stop moving and assume an equilibrium position". "Sticky point" is the common hobbyist name for that position. |
+| Moving a shield costs what it saves | same principle (closed-cycle work of a conservative field; the shield is pushed against the same magnetic force) — general physics |
+| A coil that fires to cancel the pull, run from a battery, is an electric motor | general physics (a pulsed-coil / brushless DC motor); IET: Peregrinus' idea "anticipated the operating principles of the modern electric motor" |
+
+On-screen props that are invented: "PROPOSAL No. 311–313" folder labels, the patent form layout, "NOT ACCEPTED" / "PROVE IT" stamps (editorial summaries of the sourced facts), all LODESTONE material.

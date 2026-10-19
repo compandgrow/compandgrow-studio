@@ -1,0 +1,6 @@
+studio/films/*/out/
+studio/films/*/stills/
+studio/films/*/audio/vo/
+studio/films/*/audio/sfx.json
+studio/films/*/audio/cues.json
+studio/films/*/scenes/timeline.json

@@ -1,0 +1,188 @@
+[
+ {
+  "id": "a1",
+  "text": "A wheel of magnets.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "a2",
+  "text": "No fuel. No plug.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "a3",
+  "text": "It never stops.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "b1",
+  "text": "Twelve sixty-nine. A French army besieges Lucera, in Italy.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "b2",
+  "text": "One of its engineers, Peter Peregrinus, writes a letter about magnets.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "b3",
+  "text": "In it: a wheel that magnets would drive around forever.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c1",
+  "text": "In the sixteen hundreds, English scholar John Wilkins describes a ramp.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c2",
+  "text": "A magnet at the top pulls an iron ball up.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c3",
+  "text": "It drops through a hole, rolls back down, and climbs again.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "d1",
+  "text": "Seventeen seventy-five. The Paris Academy of Sciences",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "d2",
+  "text": "says it will no longer deal with perpetual motion.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "d3",
+  "text": "Today, the U.S. patent office can demand a working model.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "e1",
+  "text": "So why does every magnet wheel stop?",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "e2",
+  "text": "A magnet's pull is a hill.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "e3",
+  "text": "Every bit of help going in is paid back coming out.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "e4",
+  "text": "Over one full turn, the sum is zero.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "e5",
+  "text": "Friction takes the rest, and the wheel parks at its sticky point.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "f2",
+  "text": "Lodestone asks: what if the sticky point could be switched off?",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "g1",
+  "text": "Twenty-four magnets on a one point two meter rotor.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "g2",
+  "text": "Trial one. Bare magnets.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "g3",
+  "text": "Three turns. Stopped.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "g4",
+  "text": "Trial two. A shield slides over the sticky point.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "g5",
+  "text": "Eleven turns. Stopped. Moving the shield costs what it saves.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "g6",
+  "text": "Trial three. A coil fires at the sticky point and cancels the pull.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "g7",
+  "text": "Forty days. Still turning.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "h1",
+  "text": "One catch.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "h2",
+  "text": "The coil runs on a battery.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "i1",
+  "text": "Lodestone is cleared.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "i2",
+  "text": "As an electric motor.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "j1",
+  "text": "Peregrinus wanted a wheel that never stops.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "j2",
+  "text": "We built one. It has a plug.",
+  "voice": "bm_george",
+  "speed": 0.95
+ }
+]

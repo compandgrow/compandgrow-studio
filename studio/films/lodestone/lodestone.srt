@@ -1,0 +1,123 @@
+1
+00:00:00,500 --> 00:00:02,605
+A wheel of magnets.
+
+2
+00:00:02,625 --> 00:00:05,105
+No fuel. No plug.
+
+3
+00:00:05,125 --> 00:00:07,128
+It never stops.
+
+4
+00:00:07,375 --> 00:00:12,605
+1269. A French army besieges Lucera, in Italy.
+
+5
+00:00:12,625 --> 00:00:17,980
+One of its engineers, Peter Peregrinus, writes a letter about magnets.
+
+6
+00:00:18,000 --> 00:00:22,195
+In it: a wheel that magnets would drive around forever.
+
+7
+00:00:22,500 --> 00:00:27,730
+In the 1600s, English scholar John Wilkins describes a ramp.
+
+8
+00:00:27,750 --> 00:00:31,605
+A magnet at the top pulls an iron ball up.
+
+9
+00:00:31,625 --> 00:00:36,187
+It drops through a hole, rolls back down, and climbs again.
+
+10
+00:00:36,500 --> 00:00:41,355
+1775. The Paris Academy of Sciences
+
+11
+00:00:41,375 --> 00:00:45,230
+says it will no longer deal with perpetual motion.
+
+12
+00:00:45,250 --> 00:00:50,181
+Today, the U.S. patent office can demand a working model.
+
+13
+00:00:50,500 --> 00:00:53,855
+So why does every magnet wheel stop?
+
+14
+00:00:53,875 --> 00:00:56,480
+A magnet's pull is a hill.
+
+15
+00:00:56,500 --> 00:01:00,480
+Every bit of help going in is paid back coming out.
+
+16
+00:01:00,500 --> 00:01:03,855
+Over one full turn, the sum is zero.
+
+17
+00:01:03,875 --> 00:01:08,308
+Friction takes the rest, and the wheel parks at its sticky point.
+
+18
+00:01:08,625 --> 00:01:13,237
+Lodestone asks: what if the sticky point could be switched off?
+
+19
+00:01:13,500 --> 00:01:17,700
+24 magnets on a 1.2 m rotor.
+
+20
+00:01:17,875 --> 00:01:20,480
+Trial one. Bare magnets.
+
+21
+00:01:20,500 --> 00:01:23,000
+3 turns. Stopped.
+
+22
+00:01:23,125 --> 00:01:27,105
+Trial two. A shield slides over the sticky point.
+
+23
+00:01:27,125 --> 00:01:32,093
+11 turns. Stopped. Moving the shield costs what it saves.
+
+24
+00:01:32,250 --> 00:01:37,605
+Trial three. A coil fires at the sticky point and cancels the pull.
+
+25
+00:01:37,625 --> 00:01:40,281
+40 days. Still turning.
+
+26
+00:01:40,500 --> 00:01:42,300
+One catch.
+
+27
+00:01:42,375 --> 00:01:45,271
+The coil runs on a battery.
+
+28
+00:01:45,500 --> 00:01:47,980
+Lodestone is cleared.
+
+29
+00:01:48,000 --> 00:01:50,247
+As an electric motor.
+
+30
+00:01:50,500 --> 00:01:54,230
+Peregrinus wanted a wheel that never stops.
+
+31
+00:01:54,250 --> 00:01:57,066
+We built one. It has a plug.

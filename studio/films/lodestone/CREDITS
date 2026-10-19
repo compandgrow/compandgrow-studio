@@ -1,0 +1,17 @@
+LODESTONE — third-party assets used in this film
+
+Fonts
+Alfa Slab One, Bagel Fat One, JetBrains Mono, Archivo — SIL Open Font License 1.1 (via Fontsource / github.com/google/fonts)
+Chewy — Apache License 2.0 (via Fontsource)
+
+Voice
+Kokoro-82M text-to-speech (Apache 2.0), voice bm_george, via kokoro-onnx
+
+Music and sound
+Fully synthesized in audio/mix.py (no samples), instruments adapted from the Halftone Dossier demo score
+
+Engine and tools
+Lemo-Opuscar library (MIT) by Lemomo — Halftone Dossier style (engine adapted to 1080×1920 with English captions as
+studio/kits/halftone-dossier/dossier.js) and core render tools
+
+No photographs, logos, stock footage or AI-generated video are used: everything is drawn in code.
