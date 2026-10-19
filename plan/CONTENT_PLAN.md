@@ -27,7 +27,7 @@
 1. ~~HULL 7 — cloaking hull~~ (posted Oct 16)
 2. ~~LONGSHOT — Tesla teleforce~~ (scheduled Oct 18)
 3. ~~TREMOR — Tesla earthquake machine~~ (scheduled Oct 25)
-4. Perpetual magnet motor
+4. ~~LODESTONE — perpetual magnet motor~~ (scheduled Nov 1; style test Halftone Dossier)
 5. Antigravity "lifter"
 6. Weather-steering array (fictional program only; never tie to a real storm)
 7. Ball-lightning power cell
@@ -51,9 +51,17 @@
 | Oct 29 | TREMOR cut: lab + busted | 6ad314d5fbfecae64a781043 | media/2026-w44/tremor-cut-lab.mp4 |
 | Oct 30 | TREMOR cut: bridges | 6ad314d8bcf9e0fc1b7f7200 | media/2026-w44/tremor-cut-bridges.mp4 |
 | Oct 31 | TREMOR cut: trials + side effect | 6ad314dadb2c0dea44ce3726 | media/2026-w44/tremor-cut-trials.mp4 |
+| Nov 1 | LODESTONE full film (Halftone Dossier) | 6ad64867869d6987ab7db336 | media/2026-w44/lodestone-full.mp4 |
+| Nov 3 | LODESTONE cut: "this was real" (1269 + Wilkins) | 6ad6486e5fcedf094d93f0a4 | media/2026-w45/lodestone-cut-real.mp4 |
+| Nov 5 | LODESTONE cut: question (why it stops) | 6ad648705fcedf094d93f0b8 | media/2026-w45/lodestone-cut-why.mp4 |
+| Nov 6 | LODESTONE cut: number (3 / 11 / 40 days) | 6ad64872fe386d21a3f320a4 | media/2026-w45/lodestone-cut-trials.mp4 |
+| Nov 7 | LODESTONE cut: stamp moment (catch → CLEARED) | 6ad64875fe386d21a3f320b3 | media/2026-w45/lodestone-cut-catch.mp4 |
 
 ## Open work
-- Every slot through Sat Oct 31 is filled. Oct 19 run: analyze + report only, then get ahead on film #4 (perpetual magnet motor) for Sun Nov 1 and its 4 cutdowns (Nov 3, 5, 6, 7).
+- Every slot through Sat Nov 7 is filled (Nov 1–7 media pinned to commit 50315d7, URLs on the sexyjazzy/compandgrow-studio path).
+- Repo: GitHub now reports the repo **moved to compandgrow/compandgrow-studio** (transferred; sexyjazzy/… redirects). add_repo for the new name was not available on Oct 19, so the run worked on sexyjazzy/compandgrow-studio. jsDelivr on the new path returned 403 for 3 of 5 new files on Oct 19 (old path 5/5 OK), so scheduled posts use the old path: the redirect must keep working (don't create a new sexyjazzy/compandgrow-studio) at least until Nov 8.
+- Next run (Oct 26): first real data on the Oct 20–25 cutdowns; get ahead on film #5 (board style; topic: ball-lightning power cell, since the lifter is paired with the Exploded Teardown test at #6) for Sun Nov 8 + cutdowns Nov 10, 12, 13, 14.
+- Halftone Dossier kit lives in studio/kits/halftone-dossier (set KIT in the film folder). Render ≈ 7 min on 2 cores (much faster than the board).
 - Nov 1: US clocks fall back; 4:28 pm PT = 00:28 UTC next day from then on.
 
 ## Baseline
