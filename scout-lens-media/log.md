@@ -2,3 +2,4 @@
 |---|---|---|---|---|---|---|
 | - | - | - | 2026-10-19T08:16Z | - | - | run blocked: no fetch_sports_data tool available in session (searched twice); no games processed, nothing posted |
 | - | - | - | 2026-10-19T09:16Z | - | - | run blocked: no fetch_sports_data tool available in session (searched three times); no games processed, nothing posted |
+| - | - | - | 2026-10-19T10:16Z | - | - | run blocked: no fetch_sports_data tool available in session (searched four times, incl. select and keyword queries); no games processed, nothing posted |
