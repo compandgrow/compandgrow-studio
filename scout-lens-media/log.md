@@ -92,3 +92,4 @@
 - 2026-10-21T12:18Z: run blocked, no sports data tool (fetch_sports_data absent from session after ToolSearch select and keyword queries plus zernio search_tools; zernio, vidIQ, github and OpenArt have no sports tool; repo pulled, Playwright and headless Chromium launch ok); no games checked, nothing posted.
 
 - 2026-10-21T13:17Z: run blocked, no sports data tool (fetch_sports_data not in session; ToolSearch select and keyword queries returned only zernio and vidIQ tools; repo pulled, Playwright import ok); no games checked, nothing posted.
+| 2026-10-21T14:21Z | - | - | - | - | - | blocked: fetch_sports_data tool not available in this run (Zernio has no sports-scores tool) |
