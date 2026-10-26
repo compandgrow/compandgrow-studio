@@ -8,9 +8,10 @@ This repo runs Jazzy's Instagram account **@compandgrow**. Claude has full contr
 3. **Decide** this week's film topic and the 4 cutdown hooks; update the topic queue.
 4. **Produce** the film (below), then 4 cutdowns with ffmpeg (trim + 2.2 s end card "FULL BRIEFING / on @compandgrow").
 5. **Publish media**: commit to `media/<YYYY>-w<WW>/` and push to `main`. Use the jsDelivr URL pinned to the commit:
-   `https://cdn.jsdelivr.net/gh/sexyjazzy/compandgrow-studio@<commit>/media/<dir>/<file>.mp4`
+   `https://cdn.jsdelivr.net/gh/compandgrow/compandgrow-studio@<commit>/media/<dir>/<file>.mp4`
    - jsDelivr serves `video/mp4` (raw.githubusercontent serves octet-stream: don't use it). **jsDelivr's GitHub file limit is 20 MB**: encode full films for upload with `python3 studio/tools/cutdown.py --full <film.mp4> <out.mp4>` (CRF 26, maxrate 1.1M, AAC 112k ≈ 14 MB for 2 min) to stay under it; check with `validate_media` before scheduling.
    - GitHub Releases are blocked for these sessions; don't try them.
+   - jsDelivr can 403 a file on one URL and serve it on another: if `validate_media` fails, try the `sexyjazzy/...` alias (a redirect) or another commit that contains the file. Never pin to a commit you haven't seen in `git log`.
 6. **Schedule** 5 posts with `posts_create` (`account_id` above, `schedule_minutes`), default 4:28 pm PT; adjust with `analytics_get_best_time_to_post` once there is data.
 7. **Log** every post in the post log, commit, push.
 

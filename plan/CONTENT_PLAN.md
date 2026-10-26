@@ -38,7 +38,7 @@
 **Never:** real health/vaccine claims, real elections, real disasters blamed on a device, real named people as villains, club/brand logos.
 
 ## Post log
-Media URLs: everything scheduled before Oct 26 pointed at `sexyjazzy/compandgrow-studio@<old commit>`; those commits vanished when a new repo was created at that name on Oct 19 (see Open work), so on Oct 26 every pending post was re-pointed. "Media" is the path in this repo; the last column is the jsDelivr repo@commit the post uses.
+Media URLs: everything scheduled before Oct 26 was pinned to commits (7ccc99c, 50315d7) that no longer exist on GitHub, because the repo's history was replaced on Oct 19 (see Open work), so on Oct 26 every pending post was re-pointed to a live commit. "Media" is the path in this repo; the last column is the jsDelivr repo@commit the post uses.
 
 | Date (PT) | Reel | Zernio post id | Media | Status / CDN ref |
 |---|---|---|---|---|
@@ -53,18 +53,22 @@ Media URLs: everything scheduled before Oct 26 pointed at `sexyjazzy/compandgrow
 | Sat Oct 31 | TREMOR cut: trials + side effect | 6ad314dadb2c0dea44ce3726 | media/2026-w44/tremor-cut-trials.mp4 | sexyjazzy@7bec3b9 |
 | Sun Nov 1 | LODESTONE full film (Halftone Dossier) | 6ad64867869d6987ab7db336 | media/2026-w44/lodestone-full.mp4 | sexyjazzy@7bec3b9 |
 | Tue Nov 3 | LODESTONE cut: "this was real" (1269 + Wilkins) | 6ad6486e5fcedf094d93f0a4 | media/2026-w45/lodestone-cut-real.mp4 | sexyjazzy@7bec3b9 |
-| Wed Nov 4 | LONGSHOT cut: 1934 claim (make-up) | 6ad314cbb3d7df3b1dac3494 | media/2026-w43/longshot-cut-claim.mp4 | compandgrow@50315d7 |
+| Wed Nov 4 | LONGSHOT cut: 1934 claim (make-up) | 6ad314cbb3d7df3b1dac3494 | media/2026-w43/longshot-cut-claim.mp4 | compandgrow@52d39e8 |
 | Thu Nov 5 | LODESTONE cut: question (why it stops) | 6ad648705fcedf094d93f0b8 | media/2026-w45/lodestone-cut-why.mp4 | sexyjazzy@7bec3b9 |
 | Fri Nov 6 | LODESTONE cut: number (3 / 11 / 40 days) | 6ad64872fe386d21a3f320a4 | media/2026-w45/lodestone-cut-trials.mp4 | sexyjazzy@7bec3b9 |
 | Sat Nov 7 | LODESTONE cut: stamp moment (catch → CLEARED) | 6ad64875fe386d21a3f320b3 | media/2026-w45/lodestone-cut-catch.mp4 | sexyjazzy@7bec3b9 |
 | Wed Nov 11 | HULL 7 cut: trials (make-up) | 6ad30ed20c1af006905b86dc | media/2026-w43/hull7-cut-trials.mp4 | sexyjazzy@7bec3b9 |
-| Wed Nov 18 | LONGSHOT cut: channel + trials (make-up) | 6ad314cedb2c0dea44ce36f7 | media/2026-w43/longshot-cut-trials.mp4 | compandgrow@50315d7 |
-<!-- EMBER ROWS -->
+| Wed Nov 18 | LONGSHOT cut: channel + trials (make-up) | 6ad314cedb2c0dea44ce36f7 | media/2026-w43/longshot-cut-trials.mp4 | compandgrow@52d39e8 |
+| Sun Nov 8 | EMBER full film (board) | 6adf88babf063039d1e4f221 | media/2026-w45/ember-full.mp4 | compandgrow@52d39e8 |
+| Tue Nov 10 | EMBER cut: "this was real" (2012 spectrum) | 6adf88bfbf063039d1e4f251 | media/2026-w46/ember-cut-real.mp4 | compandgrow@52d39e8 |
+| Thu Nov 12 | EMBER cut: question (what if it never went out?) | 6adf88c3bf063039d1e4f28b | media/2026-w46/ember-cut-question.mp4 | compandgrow@52d39e8 |
+| Fri Nov 13 | EMBER cut: number (lab 8 s → 8 s / 90 s / 6 h) | 6adf88c5bf063039d1e4f2a5 | media/2026-w46/ember-cut-number.mp4 | sexyjazzy@52d39e8 |
+| Sat Nov 14 | EMBER cut: stamp moment (static → CLEARED) | 6adf88c7bf063039d1e4f2d5 | media/2026-w46/ember-cut-stamp.mp4 | compandgrow@52d39e8 |
 
 **Not ours:** 5 Reels went out on @compandgrow Oct 24–25 that this studio did not make or schedule (Tesla/J.P. Morgan "wrong timeline", Google Street View Wi-Fi, "Digital Twin" mind control, Soviet "Dead Hand", Ekranoplan). Off-format and conspiracy-flavoured; the "Digital Twin" one mentions voting. Raised with Jazzy Oct 26. Their numbers (15–46 s, 29–191 views) are kept out of style/hook comparisons.
 
 ## Open work
-- **Repo / CDN (Oct 26):** add_repo is still not available to these sessions, so the run used sexyjazzy/compandgrow-studio again. That name is now a *separate* repo (fresh history, root commit 7bec3b9, created Oct 19; the Scout Lens routine's sessions keep committing logs to it). It broke GitHub's redirect to compandgrow/compandgrow-studio, so jsDelivr URLs pinned to the old commits (7ccc99c, 50315d7 on the sexyjazzy path) died. That is why all 5 posts of Oct 20–25 failed. **Both repos must stay public** while scheduled posts reference them: sexyjazzy/compandgrow-studio (most posts) and compandgrow/compandgrow-studio (2 LONGSHOT make-ups, through Nov 18).
+- **Repo / CDN (Oct 26):** the studio already lives at **compandgrow/compandgrow-studio**; sexyjazzy/compandgrow-studio is only GitHub's redirect to it (pushes to the old URL land there; jsDelivr follows it). add_repo is still not available to these sessions, so the clone uses the old URL. The repo's history was replaced on Oct 19 (new root commit 7bec3b9, from a Scout Lens routine session that keeps committing logs here), so the old commits 7ccc99c / 50315d7 are gone and jsDelivr URLs pinned to them died. That is why all 5 posts of Oct 20–25 failed. Pending posts now use 7bec3b9, bfa88ac or 52d39e8 (all in the current history). **Never force-push or recreate this repo, and keep it public** while posts reference it (through Nov 18). Ask Jazzy to move the Scout Lens logs to their own repo.
 - jsDelivr sometimes 403s on a file and serves it on another commit ref (or a retry). Always `validate_media` every URL right before scheduling (it also warms the cache); if one 403s, try another commit ref.
 - Zernio can re-point a pending or failed post: `call_tool posts_update_post` with `media_items`; for a failed post also send `platforms=[{platform, accountId, scheduledFor}]` to reset it to pending.
 - Next run (Nov 2): confirm the Oct 26–31 posts actually published (posts_list status failed); film #6 = lifter (Exploded Teardown style test) for Sun Nov 15 + cutdowns Nov 17, 19, 20, 21.
