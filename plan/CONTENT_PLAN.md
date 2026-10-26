@@ -28,9 +28,9 @@
 2. ~~LONGSHOT — Tesla teleforce~~ (scheduled Oct 18)
 3. ~~TREMOR — Tesla earthquake machine~~ (scheduled Oct 25)
 4. ~~LODESTONE — perpetual magnet motor~~ (scheduled Nov 1; style test Halftone Dossier)
-5. Antigravity "lifter"
-6. Weather-steering array (fictional program only; never tie to a real storm)
-7. Ball-lightning power cell
+5. ~~EMBER — ball-lightning power cell~~ (scheduled Nov 8; board style)
+6. Antigravity "lifter" (next: film #6, Exploded Teardown style test, Sun Nov 15)
+7. Weather-steering array (fictional program only; never tie to a real storm)
 8. Time-slowing chamber
 9. Bermuda "vortex engine"
 10. Mind-reading helmet
@@ -38,31 +38,38 @@
 **Never:** real health/vaccine claims, real elections, real disasters blamed on a device, real named people as villains, club/brand logos.
 
 ## Post log
-| Date (PT) | Reel | Zernio post id | Media |
-|---|---|---|---|
-| Oct 16 | HULL 7 full film | 6ad2b3174ee0219ef684b6aa | uploaded via browser |
-| Oct 18 | LONGSHOT full film | 6ad2b31d8a77472bfea4bd8b | uploaded via browser |
-| Oct 20 | HULL 7 cut: hook | 6ad30ed00c1af006905b86cc | media/2026-w43/hull7-cut-hook.mp4 |
-| Oct 22 | HULL 7 cut: trials | 6ad30ed20c1af006905b86dc | media/2026-w43/hull7-cut-trials.mp4 |
-| Oct 23 | LONGSHOT cut: 1934 claim | 6ad314cbb3d7df3b1dac3494 | media/2026-w43/longshot-cut-claim.mp4 |
-| Oct 24 | LONGSHOT cut: channel + trials | 6ad314cedb2c0dea44ce36f7 | media/2026-w43/longshot-cut-trials.mp4 |
-| Oct 25 | TREMOR full film | 6ad314d1db2c0dea44ce3709 | media/2026-w43/tremor-full.mp4 |
-| Oct 27 | TREMOR cut: 1935 claim | 6ad314d3db2c0dea44ce370d | media/2026-w44/tremor-cut-claim.mp4 |
-| Oct 29 | TREMOR cut: lab + busted | 6ad314d5fbfecae64a781043 | media/2026-w44/tremor-cut-lab.mp4 |
-| Oct 30 | TREMOR cut: bridges | 6ad314d8bcf9e0fc1b7f7200 | media/2026-w44/tremor-cut-bridges.mp4 |
-| Oct 31 | TREMOR cut: trials + side effect | 6ad314dadb2c0dea44ce3726 | media/2026-w44/tremor-cut-trials.mp4 |
-| Nov 1 | LODESTONE full film (Halftone Dossier) | 6ad64867869d6987ab7db336 | media/2026-w44/lodestone-full.mp4 |
-| Nov 3 | LODESTONE cut: "this was real" (1269 + Wilkins) | 6ad6486e5fcedf094d93f0a4 | media/2026-w45/lodestone-cut-real.mp4 |
-| Nov 5 | LODESTONE cut: question (why it stops) | 6ad648705fcedf094d93f0b8 | media/2026-w45/lodestone-cut-why.mp4 |
-| Nov 6 | LODESTONE cut: number (3 / 11 / 40 days) | 6ad64872fe386d21a3f320a4 | media/2026-w45/lodestone-cut-trials.mp4 |
-| Nov 7 | LODESTONE cut: stamp moment (catch → CLEARED) | 6ad64875fe386d21a3f320b3 | media/2026-w45/lodestone-cut-catch.mp4 |
+Media URLs: everything scheduled before Oct 26 pointed at `sexyjazzy/compandgrow-studio@<old commit>`; those commits vanished when a new repo was created at that name on Oct 19 (see Open work), so on Oct 26 every pending post was re-pointed. "Media" is the path in this repo; the last column is the jsDelivr repo@commit the post uses.
+
+| Date (PT) | Reel | Zernio post id | Media | Status / CDN ref |
+|---|---|---|---|---|
+| Oct 16 | HULL 7 full film | 6ad2b3174ee0219ef684b6aa | uploaded via browser | published (436 views) |
+| Oct 18 | LONGSHOT full film | 6ad2b31d8a77472bfea4bd8b | uploaded via browser | published (175 views) |
+| ~~Oct 20, 22, 23, 24, 25~~ | HULL 7 / LONGSHOT cuts, TREMOR film | — | — | all 5 FAILED (Instagram could not fetch media: dead jsDelivr commit) → rescheduled below |
+| Mon Oct 26 | TREMOR full film (make-up for failed Oct 25) | 6ad314d1db2c0dea44ce3709 | media/2026-w43/tremor-full.mp4 | sexyjazzy@7bec3b9 |
+| Tue Oct 27 | TREMOR cut: 1935 claim | 6ad314d3db2c0dea44ce370d | media/2026-w44/tremor-cut-claim.mp4 | sexyjazzy@7bec3b9 |
+| Wed Oct 28 | HULL 7 cut: hook (make-up) | 6ad30ed00c1af006905b86cc | media/2026-w43/hull7-cut-hook.mp4 | sexyjazzy@7bec3b9 |
+| Thu Oct 29 | TREMOR cut: lab + busted | 6ad314d5fbfecae64a781043 | media/2026-w44/tremor-cut-lab.mp4 | sexyjazzy@7bec3b9 |
+| Fri Oct 30 | TREMOR cut: bridges | 6ad314d8bcf9e0fc1b7f7200 | media/2026-w44/tremor-cut-bridges.mp4 | sexyjazzy@bfa88ac |
+| Sat Oct 31 | TREMOR cut: trials + side effect | 6ad314dadb2c0dea44ce3726 | media/2026-w44/tremor-cut-trials.mp4 | sexyjazzy@7bec3b9 |
+| Sun Nov 1 | LODESTONE full film (Halftone Dossier) | 6ad64867869d6987ab7db336 | media/2026-w44/lodestone-full.mp4 | sexyjazzy@7bec3b9 |
+| Tue Nov 3 | LODESTONE cut: "this was real" (1269 + Wilkins) | 6ad6486e5fcedf094d93f0a4 | media/2026-w45/lodestone-cut-real.mp4 | sexyjazzy@7bec3b9 |
+| Wed Nov 4 | LONGSHOT cut: 1934 claim (make-up) | 6ad314cbb3d7df3b1dac3494 | media/2026-w43/longshot-cut-claim.mp4 | compandgrow@50315d7 |
+| Thu Nov 5 | LODESTONE cut: question (why it stops) | 6ad648705fcedf094d93f0b8 | media/2026-w45/lodestone-cut-why.mp4 | sexyjazzy@7bec3b9 |
+| Fri Nov 6 | LODESTONE cut: number (3 / 11 / 40 days) | 6ad64872fe386d21a3f320a4 | media/2026-w45/lodestone-cut-trials.mp4 | sexyjazzy@7bec3b9 |
+| Sat Nov 7 | LODESTONE cut: stamp moment (catch → CLEARED) | 6ad64875fe386d21a3f320b3 | media/2026-w45/lodestone-cut-catch.mp4 | sexyjazzy@7bec3b9 |
+| Wed Nov 11 | HULL 7 cut: trials (make-up) | 6ad30ed20c1af006905b86dc | media/2026-w43/hull7-cut-trials.mp4 | sexyjazzy@7bec3b9 |
+| Wed Nov 18 | LONGSHOT cut: channel + trials (make-up) | 6ad314cedb2c0dea44ce36f7 | media/2026-w43/longshot-cut-trials.mp4 | compandgrow@50315d7 |
+<!-- EMBER ROWS -->
+
+**Not ours:** 5 Reels went out on @compandgrow Oct 24–25 that this studio did not make or schedule (Tesla/J.P. Morgan "wrong timeline", Google Street View Wi-Fi, "Digital Twin" mind control, Soviet "Dead Hand", Ekranoplan). Off-format and conspiracy-flavoured; the "Digital Twin" one mentions voting. Raised with Jazzy Oct 26. Their numbers (15–46 s, 29–191 views) are kept out of style/hook comparisons.
 
 ## Open work
-- Every slot through Sat Nov 7 is filled (Nov 1–7 media pinned to commit 50315d7, URLs on the sexyjazzy/compandgrow-studio path).
-- Repo: GitHub now reports the repo **moved to compandgrow/compandgrow-studio** (transferred; sexyjazzy/… redirects). add_repo for the new name was not available on Oct 19, so the run worked on sexyjazzy/compandgrow-studio. jsDelivr on the new path returned 403 for 3 of 5 new files on Oct 19 (old path 5/5 OK), so scheduled posts use the old path: the redirect must keep working (don't create a new sexyjazzy/compandgrow-studio) at least until Nov 8.
-- Next run (Oct 26): first real data on the Oct 20–25 cutdowns; get ahead on film #5 (board style; topic: ball-lightning power cell, since the lifter is paired with the Exploded Teardown test at #6) for Sun Nov 8 + cutdowns Nov 10, 12, 13, 14.
-- Halftone Dossier kit lives in studio/kits/halftone-dossier (set KIT in the film folder). Render ≈ 7 min on 2 cores (much faster than the board).
-- Nov 1: US clocks fall back; 4:28 pm PT = 00:28 UTC next day from then on.
+- **Repo / CDN (Oct 26):** add_repo is still not available to these sessions, so the run used sexyjazzy/compandgrow-studio again. That name is now a *separate* repo (fresh history, root commit 7bec3b9, created Oct 19; the Scout Lens routine's sessions keep committing logs to it). It broke GitHub's redirect to compandgrow/compandgrow-studio, so jsDelivr URLs pinned to the old commits (7ccc99c, 50315d7 on the sexyjazzy path) died. That is why all 5 posts of Oct 20–25 failed. **Both repos must stay public** while scheduled posts reference them: sexyjazzy/compandgrow-studio (most posts) and compandgrow/compandgrow-studio (2 LONGSHOT make-ups, through Nov 18).
+- jsDelivr sometimes 403s on a file and serves it on another commit ref (or a retry). Always `validate_media` every URL right before scheduling (it also warms the cache); if one 403s, try another commit ref.
+- Zernio can re-point a pending or failed post: `call_tool posts_update_post` with `media_items`; for a failed post also send `platforms=[{platform, accountId, scheduledFor}]` to reset it to pending.
+- Next run (Nov 2): confirm the Oct 26–31 posts actually published (posts_list status failed); film #6 = lifter (Exploded Teardown style test) for Sun Nov 15 + cutdowns Nov 17, 19, 20, 21.
+- Halftone Dossier kit lives in studio/kits/halftone-dossier (set KIT in the film folder). Board renders took ≈ 15 min on 2 cores on Oct 26.
+- From Nov 1 (clocks fall back): 4:28 pm PT = 00:28 UTC next day.
 
 ## Baseline
 Before Oct 16: 18 posts (Feb 10 – Mar 7, 2026), travel-fact photos/carousels, best post 9 views, 0 follows.
