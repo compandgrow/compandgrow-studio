@@ -174,13 +174,15 @@
    "media": "media/2026-w44/lodestone-teaser.mp4",
    "media_url": "https://media.zernio.com/media/1793375755891_ffe790ca84ac28e1_lodestone-teaser.mp4",
    "cdn_ref": null,
-   "status": "scheduled",
+   "status": "published",
    "segments": [
     "0:7.3",
     "63.85:73.1"
    ],
    "format_version": 2,
-   "experiment": "posting test"
+   "experiment": "posting test",
+   "published_at": "2026-10-30T23:29:28Z",
+   "instagram_url": "https://www.instagram.com/reel/DfIw3JRlDH9/"
   },
   {
    "id": "lodestone-cut-real",
