@@ -1,0 +1,73 @@
+{
+ "version": 1,
+ "updated": "2026-10-30",
+ "why": "Starting format: the what-if engineering briefing as made for HULL 7 to EMBER (films 1-5). The performance-analyst tunes it from here.",
+ "owner_note": "The performance-analyst may change anything in 'tunable' (one change per version, see .claude/agents/performance-analyst.md). Nothing in 'locked' may change without Jazzy.",
+ "tunable": {
+  "film": {
+   "duration_s": {"target": [90, 120], "max": 130},
+   "spoken_words_max": 300,
+   "hook": {
+    "payoff_within_s": 3,
+    "max_words": 10,
+    "rule": "Open on the device doing the impossible thing (or the strangest true fact), in big text from frame 0. No context before it.",
+    "first_frame": "Frame 0 shows the hook text and the device; it is the cover."
+   },
+   "structure": [
+    {"slot": "hook", "note": "the device in action + the impossible claim, <= 10 words"},
+    {"slot": "this_was_real", "note": "2-3 dated, sourced history beats (year, place, who)"},
+    {"slot": "physics", "note": "why it can't work as told, or what it would take; one simple diagram"},
+    {"slot": "program", "note": "fictional program title card + spec sheet (invented numbers)"},
+    {"slot": "trials", "note": "3 trials with escalating numbers; the last one works"},
+    {"slot": "catch", "note": "one honest catch / side effect"},
+    {"slot": "verdict", "note": "clearance stamp moment"},
+    {"slot": "outro", "note": "final pull-back + one question for the comments, <= 10 words"}
+   ]
+  },
+  "cutdowns": {
+   "count_per_film": 4,
+   "duration_s": {"target": [15, 35], "max": 40},
+   "end_card_s": 2.2,
+   "end_card_text": ["FULL BRIEFING", "on @compandgrow"],
+   "hook_types": ["this_was_real", "question", "number", "stamp"],
+   "hook_order_by_day": {"Tue": "this_was_real", "Thu": "question", "Fri": "number", "Sat": "stamp"},
+   "rule": "Each cut opens on its own hook in the first 3 s; never open a cut on a slow line or a title card."
+  },
+  "style": {
+   "anchor": "board",
+   "test_order": ["exploded-teardown", "board", "satellite-briefing"],
+   "judge_after_films": 2,
+   "rule": "Alternate a test style every other film (2D styles only, ~45 min render on 2 cores). After 2 tests per style keep the winner as the anchor; drop styles that lose twice."
+  },
+  "caption": {
+   "first_line": "the hook or the comment question, <= 10 words",
+   "body_lines": [1, 3],
+   "hashtags": [6, 10],
+   "must_include": ["#whatif"]
+  },
+  "posting": {
+   "time_local": "16:28",
+   "timezone": "America/Los_Angeles",
+   "days": {"Sun": "film", "Tue": "cut", "Thu": "cut", "Fri": "cut", "Sat": "cut"},
+   "note": "Adjust with analytics_get_best_time_to_post once 10+ Reels have data."
+  }
+ },
+ "locked": {
+  "facts": "Every real-world claim is sourced in the film's FACTS.md (claim -> URL). The fictional program, specs and trials are invented and never attributed to real agencies, labs or people.",
+  "never_list": "plan/CONTENT_PLAN.md -> Never: real health/vaccine claims, real elections, real disasters blamed on a device, real named people as villains, club/brand logos.",
+  "visuals": "No logos, no player/celebrity photos, no AI video. Code-rendered films only.",
+  "voice": "Kokoro bm_george, speed 0.95.",
+  "video": "1080x1920, H.264 + AAC, about -14 LUFS. Uploaded files under 20 MB (jsDelivr limit).",
+  "account": "Instagram @compandgrow only (Zernio 6ad2b0ba41b89dd24d24a501). Never post to @thescoutbrief.",
+  "gates": "Reviewer PASS before scheduling. validate_media on every URL. Never double-book a slot.",
+  "ask_jazzy": "Changing the niche, renaming the handle, anything involving money, or a topic near the never-list."
+ },
+ "history": [
+  {
+   "version": 1,
+   "from": "2026-10-30",
+   "summary": "90-120 s film, 8 slots, 4 cutdowns 15-35 s with one hook type each, board anchor + style tests",
+   "judge_after_reels": 5
+  }
+ ]
+}

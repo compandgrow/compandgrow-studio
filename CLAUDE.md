@@ -2,18 +2,15 @@
 
 This repo runs Jazzy's Instagram account **@compandgrow**. Claude has full control of content and posting. Read `plan/CONTENT_PLAN.md` first: target, cadence, topic queue, post log, and the never-list.
 
-## Weekly run (Monday, scheduled)
-1. **Analyze.** Zernio connector: `analytics_get_analytics` (account `6ad2b0ba41b89dd24d24a501`, last 14 days), `accounts_get_follower_stats`. Per Reel: views, reach, avg watch time, skip rate, saves, shares, follows. Compare against the pace line.
-2. **Report** to Jazzy (5–8 lines): followers vs pace, best and worst Reel and why, what changes this week.
-3. **Decide** this week's film topic and the 4 cutdown hooks; update the topic queue.
-4. **Produce** the film (below), then 4 cutdowns with ffmpeg (trim + 2.2 s end card "FULL BRIEFING / on @compandgrow").
-5. **Publish media**: commit to `media/<YYYY>-w<WW>/` and push to `main`. Use the jsDelivr URL pinned to the commit:
-   `https://cdn.jsdelivr.net/gh/compandgrow/compandgrow-studio@<commit>/media/<dir>/<file>.mp4`
-   - jsDelivr serves `video/mp4` (raw.githubusercontent serves octet-stream: don't use it). **jsDelivr's GitHub file limit is 20 MB**: encode full films for upload with `python3 studio/tools/cutdown.py --full <film.mp4> <out.mp4>` (CRF 26, maxrate 1.1M, AAC 112k ≈ 14 MB for 2 min) to stay under it; check with `validate_media` before scheduling.
-   - GitHub Releases are blocked for these sessions; don't try them.
-   - jsDelivr can 403 a file on one URL and serve it on another: if `validate_media` fails, try the `sexyjazzy/...` alias (a redirect) or another commit that contains the file. Never pin to a commit you haven't seen in `git log`.
-6. **Schedule** 5 posts with `posts_create` (`account_id` above, `schedule_minutes`), default 4:28 pm PT; adjust with `analytics_get_best_time_to_post` once there is data.
-7. **Log** every post in the post log, commit, push.
+## Weekly run (Monday, scheduled) — run by the reel team
+Run the **`weekly-run` skill** (`.claude/skills/weekly-run/SKILL.md`). It runs the agents in `.claude/agents/` in order:
+performance-analyst → slot-planner → topic-scout → researcher → scriptwriter → producer → cutdown-editor → reviewer → publisher, then reports to Jazzy.
+- Format (length, hook rule, slots, cut hook types, style tests, posting time): `config/format.json`. The performance-analyst may tune `tunable`, one change per version; `locked` changes need Jazzy.
+- Account + media hosting: `config/account.json`. Post records: `data/posts.json` (machine-readable) mirrored in the post log in `plan/CONTENT_PLAN.md`.
+- 24 h reviews and learnings: `data/performance/` (`python3 studio/tools/performance.py due|save|table`).
+- Media hosting details the publisher follows: commit to `media/<YYYY>-w<WW>/` on `main`, jsDelivr URL pinned to the commit
+  (`https://cdn.jsdelivr.net/gh/compandgrow/compandgrow-studio@<commit>/media/<dir>/<file>.mp4`); 20 MB limit (`studio/tools/cutdown.py --full`);
+  raw.githubusercontent serves the wrong type and GitHub Releases are blocked; if `validate_media` 403s, try the `sexyjazzy/...` alias or another commit seen in `git log`.
 
 **Before producing anything:** check the post log and `posts_list` for slots already filled in the coming week. Never double-book a slot. If this week's Sunday film is already scheduled, use the run to fill open cutdown slots and get ahead on next week's film.
 
