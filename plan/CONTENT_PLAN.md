@@ -53,6 +53,7 @@ Media URLs: everything scheduled before Oct 26 was pinned to commits (7ccc99c, 5
 | Wed Oct 28 | HULL 7 cut: hook (make-up) | 6ad30ed00c1af006905b86cc | media/2026-w43/hull7-cut-hook.mp4 | ✗ deleted Oct 30 |
 | Thu Oct 29 | TREMOR cut: lab + busted | 6ad314d5fbfecae64a781043 | media/2026-w44/tremor-cut-lab.mp4 | ✗ deleted Oct 30 |
 | Fri Oct 30 | TREMOR cut: bridges | 6ad314d8bcf9e0fc1b7f7200 | media/2026-w44/tremor-cut-bridges.mp4 | ✗ deleted Oct 30 |
+| **Fri Oct 30** | LODESTONE teaser ("FULL BRIEFING SUNDAY", 18.8 s; test of Zernio-storage posting) | 6ae4be1c8cb39817b270f2c0 | media/2026-w44/lodestone-teaser.mp4 | scheduled · Zernio storage |
 | Sat Oct 31 | TREMOR cut: trials + side effect | 6ad314dadb2c0dea44ce3726 | media/2026-w44/tremor-cut-trials.mp4 | ✗ deleted Oct 30 |
 | Sun Nov 1 | LODESTONE full film (Halftone Dossier) | 6ad64867869d6987ab7db336 | media/2026-w44/lodestone-full.mp4 | scheduled · Zernio storage |
 | Tue Nov 3 | LODESTONE cut: "this was real" (1269 + Wilkins) | 6ad6486e5fcedf094d93f0a4 | media/2026-w45/lodestone-cut-real.mp4 | scheduled · Zernio storage |

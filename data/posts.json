@@ -162,6 +162,27 @@
    "media_url": "https://media.zernio.com/media/1793345638972_ed6cd0e992c270a2_lodestone-full.mp4"
   },
   {
+   "id": "lodestone-teaser",
+   "film": "lodestone",
+   "kind": "cut",
+   "hook_type": "teaser",
+   "style": "halftone-dossier",
+   "label": "LODESTONE teaser (Sunday), test of Zernio-storage posting",
+   "slot_pt": "2026-10-30 16:28",
+   "scheduled_for": "2026-10-30T23:28:00Z",
+   "zernio_post": "6ae4be1c8cb39817b270f2c0",
+   "media": "media/2026-w44/lodestone-teaser.mp4",
+   "media_url": "https://media.zernio.com/media/1793375755891_ffe790ca84ac28e1_lodestone-teaser.mp4",
+   "cdn_ref": null,
+   "status": "scheduled",
+   "segments": [
+    "0:7.3",
+    "63.85:73.1"
+   ],
+   "format_version": 2,
+   "experiment": "posting test"
+  },
+  {
    "id": "lodestone-cut-real",
    "film": "lodestone",
    "kind": "cut",
