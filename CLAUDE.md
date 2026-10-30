@@ -8,9 +8,7 @@ performance-analyst → slot-planner → topic-scout → researcher → scriptwr
 - Format (length, hook rule, slots, cut hook types, style tests, posting time): `config/format.json`. The performance-analyst may tune `tunable`, one change per version; `locked` changes need Jazzy.
 - Account + media hosting: `config/account.json`. Post records: `data/posts.json` (machine-readable) mirrored in the post log in `plan/CONTENT_PLAN.md`.
 - 24 h reviews and learnings: `data/performance/` (`python3 studio/tools/performance.py due|save|table`).
-- Media hosting details the publisher follows: commit to `media/<YYYY>-w<WW>/` on `main`, jsDelivr URL pinned to the commit
-  (`https://cdn.jsdelivr.net/gh/compandgrow/compandgrow-studio@<commit>/media/<dir>/<file>.mp4`); 20 MB limit (`studio/tools/cutdown.py --full`);
-  raw.githubusercontent serves the wrong type and GitHub Releases are blocked; if `validate_media` 403s, try the `sexyjazzy/...` alias or another commit seen in `git log`.
+- Media hosting: **upload videos to Zernio's own storage** (`studio/tools/zernio_upload.py`, steps inside) and post the `publicUrl`. jsDelivr links failed on Instagram for every post Oct 20–29 ("couldn't fetch your media") even though `validate_media` passed; all 15 pending posts were moved to Zernio storage on Oct 30. Still commit each file to `media/<YYYY>-w<WW>/` on `main` as the archive.
 
 **Before producing anything:** check the post log and `posts_list` for slots already filled in the coming week. Never double-book a slot. If this week's Sunday film is already scheduled, use the run to fill open cutdown slots and get ahead on next week's film.
 

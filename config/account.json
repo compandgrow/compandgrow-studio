@@ -4,18 +4,29 @@
   "handle": "compandgrow",
   "zernio_account_id": "6ad2b0ba41b89dd24d24a501"
  },
- "never_post_to": {"handle": "thescoutbrief", "zernio_account_id": "6ad5bc58ea5889c95a4c443b"},
+ "never_post_to": {
+  "handle": "thescoutbrief",
+  "zernio_account_id": "6ad5bc58ea5889c95a4c443b"
+ },
  "approval": "auto",
  "approval_note": "auto = schedule after reviewer PASS (Jazzy gave Claude full control on Oct 16). ask = save Zernio drafts only.",
  "media_hosting": {
-  "repo": "compandgrow/compandgrow-studio",
-  "branch": "main",
-  "dir": "media/<YYYY>-w<WW>/",
-  "url": "https://cdn.jsdelivr.net/gh/compandgrow/compandgrow-studio@<commit>/media/<dir>/<file>.mp4",
-  "alias_if_403": "https://cdn.jsdelivr.net/gh/sexyjazzy/compandgrow-studio@<commit>/media/<dir>/<file>.mp4",
-  "max_mb": 20,
-  "rules": "Pin to a commit you have seen in git log. Never force-push or recreate the repo; keep it public while posts reference it. GitHub Releases are blocked."
+  "route": "zernio_storage",
+  "how": "studio/tools/zernio_upload.py (presigned upload via call_tool media_get_media_presigned_url); post uses the publicUrl, Zernio moves it to permanent storage",
+  "why": "Instagram could not fetch jsDelivr URLs: every jsDelivr post Oct 20-29 failed. Scout Brief posts uploaded to Zernio storage all published. Switched 2026-10-30.",
+  "archive": "media/<YYYY>-w<WW>/ on main in compandgrow/compandgrow-studio (keep committing files there)",
+  "fallback": "https://cdn.jsdelivr.net/gh/compandgrow/compandgrow-studio@<commit>/media/<dir>/<file>.mp4"
  },
- "goal": {"followers": 2500, "by": "2027-01-16", "stretch": 10000},
- "pace_line": {"2026-10-30": 50, "2026-11-13": 200, "2026-11-27": 500, "2026-12-18": 1200, "2027-01-16": 2500}
+ "goal": {
+  "followers": 2500,
+  "by": "2027-01-16",
+  "stretch": 10000
+ },
+ "pace_line": {
+  "2026-10-30": 50,
+  "2026-11-13": 200,
+  "2026-11-27": 500,
+  "2026-12-18": 1200,
+  "2027-01-16": 2500
+ }
 }

@@ -1,5 +1,5 @@
 {
- "note": "Machine-readable post log (mirror of plan/CONTENT_PLAN.md -> Post log). status: scheduled | published | failed | cancelled. Seeded 2026-10-30 from the markdown log; statuses after Oct 26 not yet confirmed against Zernio.",
+ "note": "Machine-readable post log (mirror of plan/CONTENT_PLAN.md -> Post log). status: scheduled | published | failed | cancelled. Seeded 2026-10-30 from the markdown log; statuses after Oct 26 not yet confirmed against Zernio. Oct 30: all scheduled posts re-pointed to Zernio storage (media_url); 4 failed posts await rescheduling.",
  "not_ours": [
   "5 Reels posted Oct 24-25 that this studio did not make (Tesla/J.P. Morgan, Street View Wi-Fi, Digital Twin, Dead Hand, Ekranoplan). Keep out of comparisons."
  ],
@@ -48,9 +48,10 @@
    "zernio_post": "6ad314d1db2c0dea44ce3709",
    "media": "media/2026-w43/tremor-full.mp4",
    "cdn_ref": "sexyjazzy@7bec3b9",
-   "status": "scheduled",
+   "status": "failed",
    "segments": null,
-   "format_version": null
+   "format_version": null,
+   "error": "Instagram couldn't fetch media (jsDelivr URL)"
   },
   {
    "id": "tremor-cut-claim",
@@ -64,9 +65,10 @@
    "zernio_post": "6ad314d3db2c0dea44ce370d",
    "media": "media/2026-w44/tremor-cut-claim.mp4",
    "cdn_ref": "sexyjazzy@7bec3b9",
-   "status": "scheduled",
+   "status": "failed",
    "segments": null,
-   "format_version": null
+   "format_version": null,
+   "error": "Instagram couldn't fetch media (jsDelivr URL)"
   },
   {
    "id": "hull7-cut-hook",
@@ -80,9 +82,10 @@
    "zernio_post": "6ad30ed00c1af006905b86cc",
    "media": "media/2026-w43/hull7-cut-hook.mp4",
    "cdn_ref": "sexyjazzy@7bec3b9",
-   "status": "scheduled",
+   "status": "failed",
    "segments": null,
-   "format_version": null
+   "format_version": null,
+   "error": "Instagram couldn't fetch media (jsDelivr URL)"
   },
   {
    "id": "tremor-cut-lab",
@@ -96,9 +99,10 @@
    "zernio_post": "6ad314d5fbfecae64a781043",
    "media": "media/2026-w44/tremor-cut-lab.mp4",
    "cdn_ref": "sexyjazzy@7bec3b9",
-   "status": "scheduled",
+   "status": "failed",
    "segments": null,
-   "format_version": null
+   "format_version": null,
+   "error": "Instagram couldn't fetch media (jsDelivr URL)"
   },
   {
    "id": "tremor-cut-bridges",
@@ -111,10 +115,11 @@
    "scheduled_for": "2026-10-30T23:28:00Z",
    "zernio_post": "6ad314d8bcf9e0fc1b7f7200",
    "media": "media/2026-w44/tremor-cut-bridges.mp4",
-   "cdn_ref": "sexyjazzy@bfa88ac",
+   "cdn_ref": null,
    "status": "scheduled",
    "segments": null,
-   "format_version": null
+   "format_version": null,
+   "media_url": "https://media.zernio.com/media/1793345637352_84cc1db7366a2e99_tremor-cut-bridges.mp4"
   },
   {
    "id": "tremor-cut-trials",
@@ -127,10 +132,11 @@
    "scheduled_for": "2026-10-31T23:28:00Z",
    "zernio_post": "6ad314dadb2c0dea44ce3726",
    "media": "media/2026-w44/tremor-cut-trials.mp4",
-   "cdn_ref": "sexyjazzy@7bec3b9",
+   "cdn_ref": null,
    "status": "scheduled",
    "segments": null,
-   "format_version": null
+   "format_version": null,
+   "media_url": "https://media.zernio.com/media/1793345638040_237325cf25aedabc_tremor-cut-trials.mp4"
   },
   {
    "id": "lodestone-full",
@@ -143,10 +149,11 @@
    "scheduled_for": "2026-11-02T00:28:00Z",
    "zernio_post": "6ad64867869d6987ab7db336",
    "media": "media/2026-w44/lodestone-full.mp4",
-   "cdn_ref": "sexyjazzy@7bec3b9",
+   "cdn_ref": null,
    "status": "scheduled",
    "segments": null,
-   "format_version": null
+   "format_version": null,
+   "media_url": "https://media.zernio.com/media/1793345638972_ed6cd0e992c270a2_lodestone-full.mp4"
   },
   {
    "id": "lodestone-cut-real",
@@ -159,10 +166,11 @@
    "scheduled_for": "2026-11-04T00:28:00Z",
    "zernio_post": "6ad6486e5fcedf094d93f0a4",
    "media": "media/2026-w45/lodestone-cut-real.mp4",
-   "cdn_ref": "sexyjazzy@7bec3b9",
+   "cdn_ref": null,
    "status": "scheduled",
    "segments": null,
-   "format_version": null
+   "format_version": null,
+   "media_url": "https://media.zernio.com/media/1793345639572_04db19e523024450_lodestone-cut-real.mp4"
   },
   {
    "id": "longshot-cut-claim",
@@ -175,10 +183,11 @@
    "scheduled_for": "2026-11-05T00:28:00Z",
    "zernio_post": "6ad314cbb3d7df3b1dac3494",
    "media": "media/2026-w43/longshot-cut-claim.mp4",
-   "cdn_ref": "compandgrow@52d39e8",
+   "cdn_ref": null,
    "status": "scheduled",
    "segments": null,
-   "format_version": null
+   "format_version": null,
+   "media_url": "https://media.zernio.com/media/1793345640246_2153274f3a8ba7a9_longshot-cut-claim.mp4"
   },
   {
    "id": "lodestone-cut-why",
@@ -191,10 +200,11 @@
    "scheduled_for": "2026-11-06T00:28:00Z",
    "zernio_post": "6ad648705fcedf094d93f0b8",
    "media": "media/2026-w45/lodestone-cut-why.mp4",
-   "cdn_ref": "sexyjazzy@7bec3b9",
+   "cdn_ref": null,
    "status": "scheduled",
    "segments": null,
-   "format_version": null
+   "format_version": null,
+   "media_url": "https://media.zernio.com/media/1793345641147_b8fb073be44463dc_lodestone-cut-why.mp4"
   },
   {
    "id": "lodestone-cut-trials",
@@ -207,10 +217,11 @@
    "scheduled_for": "2026-11-07T00:28:00Z",
    "zernio_post": "6ad64872fe386d21a3f320a4",
    "media": "media/2026-w45/lodestone-cut-trials.mp4",
-   "cdn_ref": "sexyjazzy@7bec3b9",
+   "cdn_ref": null,
    "status": "scheduled",
    "segments": null,
-   "format_version": null
+   "format_version": null,
+   "media_url": "https://media.zernio.com/media/1793345641805_875ffd84b345dafb_lodestone-cut-trials.mp4"
   },
   {
    "id": "lodestone-cut-catch",
@@ -223,10 +234,11 @@
    "scheduled_for": "2026-11-08T00:28:00Z",
    "zernio_post": "6ad64875fe386d21a3f320b3",
    "media": "media/2026-w45/lodestone-cut-catch.mp4",
-   "cdn_ref": "sexyjazzy@7bec3b9",
+   "cdn_ref": null,
    "status": "scheduled",
    "segments": null,
-   "format_version": null
+   "format_version": null,
+   "media_url": "https://media.zernio.com/media/1793345642625_854a13f8187705dc_lodestone-cut-catch.mp4"
   },
   {
    "id": "ember-full",
@@ -239,10 +251,11 @@
    "scheduled_for": "2026-11-09T00:28:00Z",
    "zernio_post": "6adf88babf063039d1e4f221",
    "media": "media/2026-w45/ember-full.mp4",
-   "cdn_ref": "compandgrow@52d39e8",
+   "cdn_ref": null,
    "status": "scheduled",
    "segments": null,
-   "format_version": null
+   "format_version": null,
+   "media_url": "https://media.zernio.com/media/1793345643347_ab589dcbf9cc5cc8_ember-full.mp4"
   },
   {
    "id": "ember-cut-real",
@@ -255,10 +268,11 @@
    "scheduled_for": "2026-11-11T00:28:00Z",
    "zernio_post": "6adf88bfbf063039d1e4f251",
    "media": "media/2026-w46/ember-cut-real.mp4",
-   "cdn_ref": "compandgrow@52d39e8",
+   "cdn_ref": null,
    "status": "scheduled",
    "segments": null,
-   "format_version": null
+   "format_version": null,
+   "media_url": "https://media.zernio.com/media/1793345644084_749efe1f3f399a7c_ember-cut-real.mp4"
   },
   {
    "id": "hull7-cut-trials",
@@ -271,10 +285,11 @@
    "scheduled_for": "2026-11-12T00:28:00Z",
    "zernio_post": "6ad30ed20c1af006905b86dc",
    "media": "media/2026-w43/hull7-cut-trials.mp4",
-   "cdn_ref": "sexyjazzy@7bec3b9",
+   "cdn_ref": null,
    "status": "scheduled",
    "segments": null,
-   "format_version": null
+   "format_version": null,
+   "media_url": "https://media.zernio.com/media/1793345644865_5227aef76d443bb7_hull7-cut-trials.mp4"
   },
   {
    "id": "ember-cut-question",
@@ -287,10 +302,11 @@
    "scheduled_for": "2026-11-13T00:28:00Z",
    "zernio_post": "6adf88c3bf063039d1e4f28b",
    "media": "media/2026-w46/ember-cut-question.mp4",
-   "cdn_ref": "compandgrow@52d39e8",
+   "cdn_ref": null,
    "status": "scheduled",
    "segments": null,
-   "format_version": null
+   "format_version": null,
+   "media_url": "https://media.zernio.com/media/1793345645609_21514241164e62b4_ember-cut-question.mp4"
   },
   {
    "id": "ember-cut-number",
@@ -303,10 +319,11 @@
    "scheduled_for": "2026-11-14T00:28:00Z",
    "zernio_post": "6adf88c5bf063039d1e4f2a5",
    "media": "media/2026-w46/ember-cut-number.mp4",
-   "cdn_ref": "sexyjazzy@52d39e8",
+   "cdn_ref": null,
    "status": "scheduled",
    "segments": null,
-   "format_version": null
+   "format_version": null,
+   "media_url": "https://media.zernio.com/media/1793345646345_a02b3a4382d4b2b9_ember-cut-number.mp4"
   },
   {
    "id": "ember-cut-stamp",
@@ -319,10 +336,11 @@
    "scheduled_for": "2026-11-15T00:28:00Z",
    "zernio_post": "6adf88c7bf063039d1e4f2d5",
    "media": "media/2026-w46/ember-cut-stamp.mp4",
-   "cdn_ref": "compandgrow@52d39e8",
+   "cdn_ref": null,
    "status": "scheduled",
    "segments": null,
-   "format_version": null
+   "format_version": null,
+   "media_url": "https://media.zernio.com/media/1793345647175_f1579f07ff8591df_ember-cut-stamp.mp4"
   },
   {
    "id": "longshot-cut-trials",
@@ -335,10 +353,11 @@
    "scheduled_for": "2026-11-19T00:28:00Z",
    "zernio_post": "6ad314cedb2c0dea44ce36f7",
    "media": "media/2026-w43/longshot-cut-trials.mp4",
-   "cdn_ref": "compandgrow@52d39e8",
+   "cdn_ref": null,
    "status": "scheduled",
    "segments": null,
-   "format_version": null
+   "format_version": null,
+   "media_url": "https://media.zernio.com/media/1793345647867_dbead2fcf84ddfe2_longshot-cut-trials.mp4"
   }
  ]
 }
