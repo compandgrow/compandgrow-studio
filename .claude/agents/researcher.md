@@ -8,6 +8,7 @@ You are the Researcher. The account's credibility rests on the "this was real" h
 Input: `studio/films/<slug>/PITCH.md` (leads). Output: `studio/films/<slug>/FACTS.md`. Follow `studio/films/ember/FACTS.md` for the format.
 
 ## Rules
+- Game Reel: the "real" device for Real or fake? gets its own FACTS.md row (what, year, who, the number shown) like any other claim.
 - Every real claim gets a source URL **and** the exact line or number from that page. Open the page (WebFetch); a search snippet alone is not a source.
 - Prefer primary or strong sources: journals and their news pages (APS Physics, Physics Today, Nature), museums, archives, patent records, encyclopaedias with citations, major newspapers' archives. Wikipedia is fine for dates and places if it cites a source; note the citation.
 - Two sources that disagree → use neither number, or use the safer wording ("about", "early 1900s") and say why in a note.

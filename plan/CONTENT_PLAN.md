@@ -9,7 +9,8 @@
 
 ## Cadence (5 Reels/week, 4:28 pm PT unless the data says otherwise)
 - **Sun:** full film (90–120 s).
-- **Tue / Thu / Fri / Sat:** 15–35 s cutdowns from the latest film, each with a different hook (question, shocking number, "this was real", the stamp moment). End card: "FULL BRIEFING on @compandgrow".
+- **Thu (from Nov 19):** "Real or fake?" game Reel, 20–30 s: 3 devices, one real and sourced, viewers comment 1/2/3, reveal at the end (format v2, judged after 3).
+- **Tue / Fri / Sat:** 15–35 s cutdowns from the latest film, each with a different hook (question, shocking number, "this was real", the stamp moment). End card: "FULL BRIEFING on @compandgrow".
 
 ## Style testing (Jazzy handed style decisions to Claude, Oct 16)
 - Anchor style: **Engineering Briefing Board** (films 1–3).
@@ -38,6 +39,8 @@
 **Never:** real health/vaccine claims, real elections, real disasters blamed on a device, real named people as villains, club/brand logos.
 
 ## Post log
+**Fresh start (Oct 30):** at Jazzy's request the 4 failed posts (Oct 26–29) and the 5 remaining cuts of older films (TREMOR bridges/trials, LONGSHOT claim/trials, HULL 7 trials) were deleted in Zernio. Only LODESTONE (Nov 1–7) and EMBER (Nov 8–14) remain; all 10 use Zernio storage. Rows marked ✗ below were deleted. Next open slots: Sun Nov 15 film + Tue 17 / Thu 19 / Fri 20 / Sat 21.
+
 Media URLs: everything scheduled before Oct 26 was pinned to commits (7ccc99c, 50315d7) that no longer exist on GitHub, because the repo's history was replaced on Oct 19 (see Open work), so on Oct 26 every pending post was re-pointed to a live commit. "Media" is the path in this repo; the last column is the jsDelivr repo@commit the post uses.
 
 | Date (PT) | Reel | Zernio post id | Media | Status / CDN ref |
@@ -45,25 +48,25 @@ Media URLs: everything scheduled before Oct 26 was pinned to commits (7ccc99c, 5
 | Oct 16 | HULL 7 full film | 6ad2b3174ee0219ef684b6aa | uploaded via browser | published (436 views) |
 | Oct 18 | LONGSHOT full film | 6ad2b31d8a77472bfea4bd8b | uploaded via browser | published (175 views) |
 | ~~Oct 20, 22, 23, 24, 25~~ | HULL 7 / LONGSHOT cuts, TREMOR film | — | — | all 5 FAILED (Instagram could not fetch media: dead jsDelivr commit) → rescheduled below |
-| Mon Oct 26 | TREMOR full film (make-up for failed Oct 25) | 6ad314d1db2c0dea44ce3709 | media/2026-w43/tremor-full.mp4 | sexyjazzy@7bec3b9 |
-| Tue Oct 27 | TREMOR cut: 1935 claim | 6ad314d3db2c0dea44ce370d | media/2026-w44/tremor-cut-claim.mp4 | sexyjazzy@7bec3b9 |
-| Wed Oct 28 | HULL 7 cut: hook (make-up) | 6ad30ed00c1af006905b86cc | media/2026-w43/hull7-cut-hook.mp4 | sexyjazzy@7bec3b9 |
-| Thu Oct 29 | TREMOR cut: lab + busted | 6ad314d5fbfecae64a781043 | media/2026-w44/tremor-cut-lab.mp4 | sexyjazzy@7bec3b9 |
-| Fri Oct 30 | TREMOR cut: bridges | 6ad314d8bcf9e0fc1b7f7200 | media/2026-w44/tremor-cut-bridges.mp4 | sexyjazzy@bfa88ac |
-| Sat Oct 31 | TREMOR cut: trials + side effect | 6ad314dadb2c0dea44ce3726 | media/2026-w44/tremor-cut-trials.mp4 | sexyjazzy@7bec3b9 |
-| Sun Nov 1 | LODESTONE full film (Halftone Dossier) | 6ad64867869d6987ab7db336 | media/2026-w44/lodestone-full.mp4 | sexyjazzy@7bec3b9 |
-| Tue Nov 3 | LODESTONE cut: "this was real" (1269 + Wilkins) | 6ad6486e5fcedf094d93f0a4 | media/2026-w45/lodestone-cut-real.mp4 | sexyjazzy@7bec3b9 |
-| Wed Nov 4 | LONGSHOT cut: 1934 claim (make-up) | 6ad314cbb3d7df3b1dac3494 | media/2026-w43/longshot-cut-claim.mp4 | compandgrow@52d39e8 |
-| Thu Nov 5 | LODESTONE cut: question (why it stops) | 6ad648705fcedf094d93f0b8 | media/2026-w45/lodestone-cut-why.mp4 | sexyjazzy@7bec3b9 |
-| Fri Nov 6 | LODESTONE cut: number (3 / 11 / 40 days) | 6ad64872fe386d21a3f320a4 | media/2026-w45/lodestone-cut-trials.mp4 | sexyjazzy@7bec3b9 |
-| Sat Nov 7 | LODESTONE cut: stamp moment (catch → CLEARED) | 6ad64875fe386d21a3f320b3 | media/2026-w45/lodestone-cut-catch.mp4 | sexyjazzy@7bec3b9 |
-| Wed Nov 11 | HULL 7 cut: trials (make-up) | 6ad30ed20c1af006905b86dc | media/2026-w43/hull7-cut-trials.mp4 | sexyjazzy@7bec3b9 |
-| Wed Nov 18 | LONGSHOT cut: channel + trials (make-up) | 6ad314cedb2c0dea44ce36f7 | media/2026-w43/longshot-cut-trials.mp4 | compandgrow@52d39e8 |
-| Sun Nov 8 | EMBER full film (board) | 6adf88babf063039d1e4f221 | media/2026-w45/ember-full.mp4 | compandgrow@52d39e8 |
-| Tue Nov 10 | EMBER cut: "this was real" (2012 spectrum) | 6adf88bfbf063039d1e4f251 | media/2026-w46/ember-cut-real.mp4 | compandgrow@52d39e8 |
-| Thu Nov 12 | EMBER cut: question (what if it never went out?) | 6adf88c3bf063039d1e4f28b | media/2026-w46/ember-cut-question.mp4 | compandgrow@52d39e8 |
-| Fri Nov 13 | EMBER cut: number (lab 8 s → 8 s / 90 s / 6 h) | 6adf88c5bf063039d1e4f2a5 | media/2026-w46/ember-cut-number.mp4 | sexyjazzy@52d39e8 |
-| Sat Nov 14 | EMBER cut: stamp moment (static → CLEARED) | 6adf88c7bf063039d1e4f2d5 | media/2026-w46/ember-cut-stamp.mp4 | compandgrow@52d39e8 |
+| Mon Oct 26 | TREMOR full film (make-up for failed Oct 25) | 6ad314d1db2c0dea44ce3709 | media/2026-w43/tremor-full.mp4 | ✗ deleted Oct 30 |
+| Tue Oct 27 | TREMOR cut: 1935 claim | 6ad314d3db2c0dea44ce370d | media/2026-w44/tremor-cut-claim.mp4 | ✗ deleted Oct 30 |
+| Wed Oct 28 | HULL 7 cut: hook (make-up) | 6ad30ed00c1af006905b86cc | media/2026-w43/hull7-cut-hook.mp4 | ✗ deleted Oct 30 |
+| Thu Oct 29 | TREMOR cut: lab + busted | 6ad314d5fbfecae64a781043 | media/2026-w44/tremor-cut-lab.mp4 | ✗ deleted Oct 30 |
+| Fri Oct 30 | TREMOR cut: bridges | 6ad314d8bcf9e0fc1b7f7200 | media/2026-w44/tremor-cut-bridges.mp4 | ✗ deleted Oct 30 |
+| Sat Oct 31 | TREMOR cut: trials + side effect | 6ad314dadb2c0dea44ce3726 | media/2026-w44/tremor-cut-trials.mp4 | ✗ deleted Oct 30 |
+| Sun Nov 1 | LODESTONE full film (Halftone Dossier) | 6ad64867869d6987ab7db336 | media/2026-w44/lodestone-full.mp4 | scheduled · Zernio storage |
+| Tue Nov 3 | LODESTONE cut: "this was real" (1269 + Wilkins) | 6ad6486e5fcedf094d93f0a4 | media/2026-w45/lodestone-cut-real.mp4 | scheduled · Zernio storage |
+| Wed Nov 4 | LONGSHOT cut: 1934 claim (make-up) | 6ad314cbb3d7df3b1dac3494 | media/2026-w43/longshot-cut-claim.mp4 | ✗ deleted Oct 30 |
+| Thu Nov 5 | LODESTONE cut: question (why it stops) | 6ad648705fcedf094d93f0b8 | media/2026-w45/lodestone-cut-why.mp4 | scheduled · Zernio storage |
+| Fri Nov 6 | LODESTONE cut: number (3 / 11 / 40 days) | 6ad64872fe386d21a3f320a4 | media/2026-w45/lodestone-cut-trials.mp4 | scheduled · Zernio storage |
+| Sat Nov 7 | LODESTONE cut: stamp moment (catch → CLEARED) | 6ad64875fe386d21a3f320b3 | media/2026-w45/lodestone-cut-catch.mp4 | scheduled · Zernio storage |
+| Wed Nov 11 | HULL 7 cut: trials (make-up) | 6ad30ed20c1af006905b86dc | media/2026-w43/hull7-cut-trials.mp4 | ✗ deleted Oct 30 |
+| Wed Nov 18 | LONGSHOT cut: channel + trials (make-up) | 6ad314cedb2c0dea44ce36f7 | media/2026-w43/longshot-cut-trials.mp4 | ✗ deleted Oct 30 |
+| Sun Nov 8 | EMBER full film (board) | 6adf88babf063039d1e4f221 | media/2026-w45/ember-full.mp4 | scheduled · Zernio storage |
+| Tue Nov 10 | EMBER cut: "this was real" (2012 spectrum) | 6adf88bfbf063039d1e4f251 | media/2026-w46/ember-cut-real.mp4 | scheduled · Zernio storage |
+| Thu Nov 12 | EMBER cut: question (what if it never went out?) | 6adf88c3bf063039d1e4f28b | media/2026-w46/ember-cut-question.mp4 | scheduled · Zernio storage |
+| Fri Nov 13 | EMBER cut: number (lab 8 s → 8 s / 90 s / 6 h) | 6adf88c5bf063039d1e4f2a5 | media/2026-w46/ember-cut-number.mp4 | scheduled · Zernio storage |
+| Sat Nov 14 | EMBER cut: stamp moment (static → CLEARED) | 6adf88c7bf063039d1e4f2d5 | media/2026-w46/ember-cut-stamp.mp4 | scheduled · Zernio storage |
 
 **Not ours:** 5 Reels went out on @compandgrow Oct 24–25 that this studio did not make or schedule (Tesla/J.P. Morgan "wrong timeline", Google Street View Wi-Fi, "Digital Twin" mind control, Soviet "Dead Hand", Ekranoplan). Off-format and conspiracy-flavoured; the "Digital Twin" one mentions voting. Raised with Jazzy Oct 26. Their numbers (15–46 s, 29–191 views) are kept out of style/hook comparisons.
 

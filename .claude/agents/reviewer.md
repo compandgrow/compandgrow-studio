@@ -18,6 +18,7 @@ Inputs: `studio/films/<slug>/` (FACTS.md, TREATMENT.md, audio/lines.json, audio/
    Look for clipped or overlapping text, subtitles out of sync, black frames, a weak first frame (it's the cover), key content hidden under the subtitle strip, an unreadable end card.
 5. **Hook**: payoff within `format.json → hook.payoff_within_s` and `max_words` (use the .srt timings), for the film and for each cut.
 6. **Specs**: 1080×1920, H.264 + AAC, film and cut durations within `format.json`, loudness about −14 LUFS (±1.5), every upload file < 20 MB.
-7. **Captions**: present for every post, first line rule, `#whatif`, no unsupported claims.
+7. **Captions**6b. **Game Reel**: exactly one REAL device, sourced in FACTS.md; the fakes are stamped FAKE at the reveal; the caption doesn't give away the answer; countdown readable.
+: present for every post, first line rule, `#whatif`, no unsupported claims.
 
 Output per file: `PASS` or `FIX` + numbered list (beat/time + exact change). Write `studio/films/<slug>/review.md`. Be strict; after two FIX rounds on the same file, escalate to Jazzy instead of looping.

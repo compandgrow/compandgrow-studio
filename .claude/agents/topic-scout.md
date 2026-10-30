@@ -21,6 +21,7 @@ True core leads: - <fact lead + where it might be sourced>
 Fictional program sketch: <codename, what it does, 3 trial ideas with escalating numbers, one honest catch>
 Hook candidates (<= 10 words, payoff first): 1. 2. 3.
 Cutdown hooks: this_was_real: … · question: … · number: … · stamp: …
+Game (Real or fake?): real device lead: … · fake 1 (from film): … · fake 2 (from film): …
 Outliers seen: <title/hook, views, why it worked>
 Risk check: <never-list: clear / why>
 ```

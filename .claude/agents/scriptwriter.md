@@ -14,6 +14,7 @@ Inputs: `studio/films/<slug>/PITCH.md`, `FACTS.md`, `config/format.json` → `tu
 4. `captions/<post_id>.txt` for the film and each cut (`<slug>-full`, `<slug>-cut-real`, `-cut-why`, `-cut-number`, `-cut-stamp`): first line per `format.json → caption.first_line`, 1–3 lines of body, a comment question, then hashtags (count per format; always `#whatif`).
 
 ## Rules
+- **Game Reel** (`format.json → tunable.game`, Thu slot): also write `studio/films/<slug>/game/` → `lines.json`, `subs.json`, `GAME.md` (the 3 devices, which one is real and its FACTS.md row, the fake ones' source films) and `captions/<slug>-game.txt` (first line = the question, never the answer). Pick a real device that is surprising but checkable; the researcher must have it in FACTS.md.
 - Every real claim in `text`, `subs` and captions must be a row in FACTS.md, worded no stronger than the source. Nothing from memory.
 - The fictional half: invented codename, specs, trial numbers and stamp. Never name a real agency, lab, company or living person as running it.
 - Hook: the payoff within `hook.max_words` and in the first line. Open on the impossible thing, not on context ("In 1935…" is context unless the year *is* the surprise).

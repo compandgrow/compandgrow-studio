@@ -1,5 +1,5 @@
 {
- "note": "Machine-readable post log (mirror of plan/CONTENT_PLAN.md -> Post log). status: scheduled | published | failed | cancelled. Seeded 2026-10-30 from the markdown log; statuses after Oct 26 not yet confirmed against Zernio. Oct 30: all scheduled posts re-pointed to Zernio storage (media_url); 4 failed posts await rescheduling.",
+ "note": "Machine-readable post log (mirror of plan/CONTENT_PLAN.md -> Post log). status: scheduled | published | failed | cancelled. Seeded 2026-10-30 from the markdown log; statuses after Oct 26 not yet confirmed against Zernio. Oct 30: all scheduled posts re-pointed to Zernio storage (media_url); 4 failed posts await rescheduling. Oct 30 (later): Jazzy asked for a fresh start: 4 failed + 5 older-film cuts deleted in Zernio; 10 LODESTONE/EMBER posts remain.",
  "not_ours": [
   "5 Reels posted Oct 24-25 that this studio did not make (Tesla/J.P. Morgan, Street View Wi-Fi, Digital Twin, Dead Hand, Ekranoplan). Keep out of comparisons."
  ],
@@ -48,10 +48,11 @@
    "zernio_post": "6ad314d1db2c0dea44ce3709",
    "media": "media/2026-w43/tremor-full.mp4",
    "cdn_ref": "sexyjazzy@7bec3b9",
-   "status": "failed",
+   "status": "deleted",
    "segments": null,
    "format_version": null,
-   "error": "Instagram couldn't fetch media (jsDelivr URL)"
+   "error": "Instagram couldn't fetch media (jsDelivr URL)",
+   "note": "deleted 2026-10-30 (fresh start: keep only LODESTONE + EMBER)"
   },
   {
    "id": "tremor-cut-claim",
@@ -65,10 +66,11 @@
    "zernio_post": "6ad314d3db2c0dea44ce370d",
    "media": "media/2026-w44/tremor-cut-claim.mp4",
    "cdn_ref": "sexyjazzy@7bec3b9",
-   "status": "failed",
+   "status": "deleted",
    "segments": null,
    "format_version": null,
-   "error": "Instagram couldn't fetch media (jsDelivr URL)"
+   "error": "Instagram couldn't fetch media (jsDelivr URL)",
+   "note": "deleted 2026-10-30 (fresh start: keep only LODESTONE + EMBER)"
   },
   {
    "id": "hull7-cut-hook",
@@ -82,10 +84,11 @@
    "zernio_post": "6ad30ed00c1af006905b86cc",
    "media": "media/2026-w43/hull7-cut-hook.mp4",
    "cdn_ref": "sexyjazzy@7bec3b9",
-   "status": "failed",
+   "status": "deleted",
    "segments": null,
    "format_version": null,
-   "error": "Instagram couldn't fetch media (jsDelivr URL)"
+   "error": "Instagram couldn't fetch media (jsDelivr URL)",
+   "note": "deleted 2026-10-30 (fresh start: keep only LODESTONE + EMBER)"
   },
   {
    "id": "tremor-cut-lab",
@@ -99,10 +102,11 @@
    "zernio_post": "6ad314d5fbfecae64a781043",
    "media": "media/2026-w44/tremor-cut-lab.mp4",
    "cdn_ref": "sexyjazzy@7bec3b9",
-   "status": "failed",
+   "status": "deleted",
    "segments": null,
    "format_version": null,
-   "error": "Instagram couldn't fetch media (jsDelivr URL)"
+   "error": "Instagram couldn't fetch media (jsDelivr URL)",
+   "note": "deleted 2026-10-30 (fresh start: keep only LODESTONE + EMBER)"
   },
   {
    "id": "tremor-cut-bridges",
@@ -116,10 +120,11 @@
    "zernio_post": "6ad314d8bcf9e0fc1b7f7200",
    "media": "media/2026-w44/tremor-cut-bridges.mp4",
    "cdn_ref": null,
-   "status": "scheduled",
+   "status": "deleted",
    "segments": null,
    "format_version": null,
-   "media_url": "https://media.zernio.com/media/1793345637352_84cc1db7366a2e99_tremor-cut-bridges.mp4"
+   "media_url": "https://media.zernio.com/media/1793345637352_84cc1db7366a2e99_tremor-cut-bridges.mp4",
+   "note": "deleted 2026-10-30 (fresh start: keep only LODESTONE + EMBER)"
   },
   {
    "id": "tremor-cut-trials",
@@ -133,10 +138,11 @@
    "zernio_post": "6ad314dadb2c0dea44ce3726",
    "media": "media/2026-w44/tremor-cut-trials.mp4",
    "cdn_ref": null,
-   "status": "scheduled",
+   "status": "deleted",
    "segments": null,
    "format_version": null,
-   "media_url": "https://media.zernio.com/media/1793345638040_237325cf25aedabc_tremor-cut-trials.mp4"
+   "media_url": "https://media.zernio.com/media/1793345638040_237325cf25aedabc_tremor-cut-trials.mp4",
+   "note": "deleted 2026-10-30 (fresh start: keep only LODESTONE + EMBER)"
   },
   {
    "id": "lodestone-full",
@@ -184,10 +190,11 @@
    "zernio_post": "6ad314cbb3d7df3b1dac3494",
    "media": "media/2026-w43/longshot-cut-claim.mp4",
    "cdn_ref": null,
-   "status": "scheduled",
+   "status": "deleted",
    "segments": null,
    "format_version": null,
-   "media_url": "https://media.zernio.com/media/1793345640246_2153274f3a8ba7a9_longshot-cut-claim.mp4"
+   "media_url": "https://media.zernio.com/media/1793345640246_2153274f3a8ba7a9_longshot-cut-claim.mp4",
+   "note": "deleted 2026-10-30 (fresh start: keep only LODESTONE + EMBER)"
   },
   {
    "id": "lodestone-cut-why",
@@ -286,10 +293,11 @@
    "zernio_post": "6ad30ed20c1af006905b86dc",
    "media": "media/2026-w43/hull7-cut-trials.mp4",
    "cdn_ref": null,
-   "status": "scheduled",
+   "status": "deleted",
    "segments": null,
    "format_version": null,
-   "media_url": "https://media.zernio.com/media/1793345644865_5227aef76d443bb7_hull7-cut-trials.mp4"
+   "media_url": "https://media.zernio.com/media/1793345644865_5227aef76d443bb7_hull7-cut-trials.mp4",
+   "note": "deleted 2026-10-30 (fresh start: keep only LODESTONE + EMBER)"
   },
   {
    "id": "ember-cut-question",
@@ -354,10 +362,11 @@
    "zernio_post": "6ad314cedb2c0dea44ce36f7",
    "media": "media/2026-w43/longshot-cut-trials.mp4",
    "cdn_ref": null,
-   "status": "scheduled",
+   "status": "deleted",
    "segments": null,
    "format_version": null,
-   "media_url": "https://media.zernio.com/media/1793345647867_dbead2fcf84ddfe2_longshot-cut-trials.mp4"
+   "media_url": "https://media.zernio.com/media/1793345647867_dbead2fcf84ddfe2_longshot-cut-trials.mp4",
+   "note": "deleted 2026-10-30 (fresh start: keep only LODESTONE + EMBER)"
   }
  ]
 }

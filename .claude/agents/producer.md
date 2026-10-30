@@ -13,4 +13,4 @@ You are the Producer. Follow the "Producing a film" section of `CLAUDE.md` exact
 6. Render: `node core/render/video.mjs films/<n> --fps 24 --workers 2 --size 1080x1920 --out films/<n>/out/video.mp4` (`window.MBCAP = 8`, ~45 min on 2 cores). Run it in the foreground with a long timeout; if cut short, `studio/tools/tail.mjs` / `fwd.mjs` render the missing frame ranges.
 7. Mix: edit section times/keys in `audio/mix.py`, run it with `$LIB/.venv/bin/python`, then `sh core/render/mux.sh video.mp4 mix.wav <n>.mp4 24 1`.
 8. Copy the source edits back from `$LIB/films/<n>/` into `studio/films/<n>/` (the repo is the source of truth; out/, vo/ and stills/ stay out of git). Write the `.srt` next to `index.html`.
-Report: duration, loudness (`ffmpeg -i <film>.mp4 -af ebur128 -f null - 2>&1 | grep "I:" | tail -1`), render time, what you checked in the stills and what you fixed.
+Report: (also render the game Reel from `game/` when `data/queue.json` asks for one: 3 cards, countdown, REAL/FAKE stamps, in the film's kit) duration, loudness (`ffmpeg -i <film>.mp4 -af ebur128 -f null - 2>&1 | grep "I:" | tail -1`), render time, what you checked in the stills and what you fixed.

@@ -1,11 +1,17 @@
 {
- "version": 1,
+ "version": 2,
  "updated": "2026-10-30",
- "why": "Starting format: the what-if engineering briefing as made for HULL 7 to EMBER (films 1-5). The performance-analyst tunes it from here.",
+ "why": "Jazzy approved a 'Real or fake?' game Reel to raise comments/shares; it replaces the Thursday (question) cut from the week of Nov 15. The question hook moves into the game.",
  "owner_note": "The performance-analyst may change anything in 'tunable' (one change per version, see .claude/agents/performance-analyst.md). Nothing in 'locked' may change without Jazzy.",
  "tunable": {
   "film": {
-   "duration_s": {"target": [90, 120], "max": 130},
+   "duration_s": {
+    "target": [
+     90,
+     120
+    ],
+    "max": 130
+   },
    "spoken_words_max": 300,
    "hook": {
     "payoff_within_s": 3,
@@ -14,42 +20,137 @@
     "first_frame": "Frame 0 shows the hook text and the device; it is the cover."
    },
    "structure": [
-    {"slot": "hook", "note": "the device in action + the impossible claim, <= 10 words"},
-    {"slot": "this_was_real", "note": "2-3 dated, sourced history beats (year, place, who)"},
-    {"slot": "physics", "note": "why it can't work as told, or what it would take; one simple diagram"},
-    {"slot": "program", "note": "fictional program title card + spec sheet (invented numbers)"},
-    {"slot": "trials", "note": "3 trials with escalating numbers; the last one works"},
-    {"slot": "catch", "note": "one honest catch / side effect"},
-    {"slot": "verdict", "note": "clearance stamp moment"},
-    {"slot": "outro", "note": "final pull-back + one question for the comments, <= 10 words"}
+    {
+     "slot": "hook",
+     "note": "the device in action + the impossible claim, <= 10 words"
+    },
+    {
+     "slot": "this_was_real",
+     "note": "2-3 dated, sourced history beats (year, place, who)"
+    },
+    {
+     "slot": "physics",
+     "note": "why it can't work as told, or what it would take; one simple diagram"
+    },
+    {
+     "slot": "program",
+     "note": "fictional program title card + spec sheet (invented numbers)"
+    },
+    {
+     "slot": "trials",
+     "note": "3 trials with escalating numbers; the last one works"
+    },
+    {
+     "slot": "catch",
+     "note": "one honest catch / side effect"
+    },
+    {
+     "slot": "verdict",
+     "note": "clearance stamp moment"
+    },
+    {
+     "slot": "outro",
+     "note": "final pull-back + one question for the comments, <= 10 words"
+    }
    ]
   },
   "cutdowns": {
-   "count_per_film": 4,
-   "duration_s": {"target": [15, 35], "max": 40},
+   "count_per_film": 3,
+   "duration_s": {
+    "target": [
+     15,
+     35
+    ],
+    "max": 40
+   },
    "end_card_s": 2.2,
-   "end_card_text": ["FULL BRIEFING", "on @compandgrow"],
-   "hook_types": ["this_was_real", "question", "number", "stamp"],
-   "hook_order_by_day": {"Tue": "this_was_real", "Thu": "question", "Fri": "number", "Sat": "stamp"},
+   "end_card_text": [
+    "FULL BRIEFING",
+    "on @compandgrow"
+   ],
+   "hook_types": [
+    "this_was_real",
+    "question",
+    "number",
+    "stamp"
+   ],
+   "hook_order_by_day": {
+    "Tue": "this_was_real",
+    "Fri": "number",
+    "Sat": "stamp"
+   },
    "rule": "Each cut opens on its own hook in the first 3 s; never open a cut on a slow line or a title card."
   },
   "style": {
    "anchor": "board",
-   "test_order": ["exploded-teardown", "board", "satellite-briefing"],
+   "test_order": [
+    "exploded-teardown",
+    "board",
+    "satellite-briefing"
+   ],
    "judge_after_films": 2,
    "rule": "Alternate a test style every other film (2D styles only, ~45 min render on 2 cores). After 2 tests per style keep the winner as the anchor; drop styles that lose twice."
   },
   "caption": {
    "first_line": "the hook or the comment question, <= 10 words",
-   "body_lines": [1, 3],
-   "hashtags": [6, 10],
-   "must_include": ["#whatif"]
+   "body_lines": [
+    1,
+    3
+   ],
+   "hashtags": [
+    6,
+    10
+   ],
+   "must_include": [
+    "#whatif"
+   ]
   },
   "posting": {
    "time_local": "16:28",
    "timezone": "America/Los_Angeles",
-   "days": {"Sun": "film", "Tue": "cut", "Thu": "cut", "Fri": "cut", "Sat": "cut"},
+   "days": {
+    "Sun": "film",
+    "Tue": "cut",
+    "Thu": "game",
+    "Fri": "cut",
+    "Sat": "cut"
+   },
    "note": "Adjust with analytics_get_best_time_to_post once 10+ Reels have data."
+  },
+  "game": {
+   "name": "real_or_fake",
+   "slot_day": "Thu",
+   "duration_s": {
+    "target": [
+     20,
+     30
+    ],
+    "max": 35
+   },
+   "structure": [
+    {
+     "slot": "hook",
+     "note": "'One of these is real.' + 3 numbered devices on screen from frame 0"
+    },
+    {
+     "slot": "cards",
+     "note": "3 device cards, ~4 s each: name, one-line claim, one number. One is a real, sourced invention/patent/experiment; two come from our fictional programs"
+    },
+    {
+     "slot": "vote",
+     "note": "countdown 3-2-1 + 'Comment 1, 2 or 3' (~3 s)"
+    },
+    {
+     "slot": "reveal",
+     "note": "REAL stamp on the true one with year + source line; FAKE stamps on the others naming the film they come from"
+    },
+    {
+     "slot": "end_card",
+     "note": "'FULL BRIEFINGS on @compandgrow'"
+    }
+   ],
+   "rules": "The real device must be in a FACTS.md with source + quote. The fake ones are labelled FAKE at the reveal. Caption first line = the question; never give the answer in the caption.",
+   "judge": "comments, shares+saves and follows per 1k reach vs the normal cuts, after 3 game Reels"
   }
  },
  "locked": {
@@ -67,7 +168,15 @@
    "version": 1,
    "from": "2026-10-30",
    "summary": "90-120 s film, 8 slots, 4 cutdowns 15-35 s with one hook type each, board anchor + style tests",
-   "judge_after_reels": 5
+   "judge_after_reels": 5,
+   "until": "2026-10-30"
+  },
+  {
+   "version": 2,
+   "from": "2026-11-15",
+   "summary": "Thu slot = 'Real or fake?' game Reel (20-30 s); 3 cuts per film (real/number/stamp)",
+   "evidence": "Jazzy's request; no review data yet",
+   "judge_after_reels": 3
   }
  ]
 }
