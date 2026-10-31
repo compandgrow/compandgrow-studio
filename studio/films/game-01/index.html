@@ -1,0 +1,132 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Alfa;src:url(fonts/AlfaSlabOne.woff2)}
+@font-face{font-family:Mono;src:url(fonts/JetBrainsMono-ExtraBold.woff2)}
+@font-face{font-family:Arch;src:url(fonts/Archivo-VF.ttf);font-weight:100 900}
+:root{--navy:#141a3a;--navy2:#1d2552;--cream:#f1e6d0;--red:#e0533a;--yellow:#f2c230;--ink:#111318;--blue:#8fd0ef}
+html,body{margin:0;background:#000}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--navy);font-family:Arch;color:var(--cream)}
+#dots{position:absolute;inset:0;background-image:radial-gradient(rgba(242,194,48,.18) 22%,transparent 24%);background-size:26px 26px;
+ -webkit-mask-image:radial-gradient(circle at 12% 88%,#000 0,transparent 38%),radial-gradient(circle at 92% 8%,#000 0,transparent 30%);mask-composite:add}
+.top{position:absolute;top:120px;left:70px;right:70px;display:flex;justify-content:space-between;font-family:Mono;font-size:30px;letter-spacing:2px;color:var(--yellow)}
+.top b{color:var(--cream)}
+.scene{position:absolute;inset:0;opacity:0}
+.big{position:absolute;left:60px;right:60px;text-align:center;font-family:Alfa;line-height:1.02;color:var(--cream)}
+.tile{position:absolute;width:290px;height:420px;background:var(--cream);border-radius:22px;color:var(--ink);box-shadow:0 10px 0 rgba(0,0,0,.35)}
+.tile .n{position:absolute;top:-34px;left:50%;transform:translateX(-50%);width:80px;height:80px;border-radius:50%;background:var(--yellow);
+ font-family:Alfa;font-size:52px;line-height:80px;text-align:center;color:var(--ink);border:5px solid var(--ink)}
+.tile svg{position:absolute;left:15px;top:70px;width:260px;height:230px}
+.tile .lab{position:absolute;bottom:26px;left:12px;right:12px;text-align:center;font-family:Mono;font-size:25px;line-height:1.15}
+.card{position:absolute;left:70px;top:300px;width:940px;height:1150px;background:var(--cream);border-radius:30px;color:var(--ink);box-shadow:0 16px 0 rgba(0,0,0,.35)}
+.card .n{position:absolute;top:-50px;left:60px;width:120px;height:120px;border-radius:50%;background:var(--yellow);font-family:Alfa;font-size:78px;
+ line-height:120px;text-align:center;border:7px solid var(--ink)}
+.card .kick{position:absolute;top:44px;right:56px;font-family:Mono;font-size:28px;color:var(--red);letter-spacing:2px}
+.card svg{position:absolute;left:70px;top:120px;width:800px;height:560px}
+.card h2{position:absolute;left:60px;right:60px;top:700px;margin:0;font-family:Alfa;font-size:66px;line-height:1.05;font-weight:400}
+.card .stat{position:absolute;left:60px;right:60px;top:950px;font-family:Mono;font-size:44px;background:var(--ink);color:var(--yellow);padding:22px 28px;border-radius:14px}
+.stamp{position:absolute;font-family:Alfa;border:10px solid currentColor;border-radius:16px;padding:6px 26px;letter-spacing:4px;background:rgba(241,230,208,.85)}
+.from{position:absolute;width:290px;text-align:center;font-family:Mono;font-size:24px;color:var(--cream)}
+.count{position:absolute;left:0;right:0;text-align:center;font-family:Alfa;color:var(--yellow)}
+.src{position:absolute;left:70px;right:70px;bottom:330px;font-family:Mono;font-size:22px;color:#b9b2c9;text-align:center}
+</style></head><body>
+<div id="stage"><div id="dots"></div>
+<div class="top"><span>CASE FILES · <b>REAL OR FAKE?</b></span><span>@compandgrow</span></div>
+
+<!-- shared drawings -->
+<svg width="0" height="0" style="position:absolute"><defs>
+ <g id="ship"><path d="M20 150 L240 150 L215 190 L45 190 Z" fill="#3a4a7a" stroke="#111318" stroke-width="5"/>
+  <rect x="90" y="110" width="70" height="40" fill="#3a4a7a" stroke="#111318" stroke-width="5"/><rect x="170" y="125" width="30" height="25" fill="#3a4a7a" stroke="#111318" stroke-width="5"/>
+  <line x1="120" y1="110" x2="120" y2="70" stroke="#111318" stroke-width="5"/></g>
+ <g id="tower"><rect x="105" y="40" width="50" height="160" fill="#c9bfa8" stroke="#111318" stroke-width="5"/>
+  <g stroke="#111318" stroke-width="3"><line x1="105" y1="80" x2="155" y2="80"/><line x1="105" y1="120" x2="155" y2="120"/><line x1="105" y1="160" x2="155" y2="160"/></g>
+  <rect x="95" y="200" width="70" height="22" fill="#e0533a" stroke="#111318" stroke-width="5"/></g>
+ <g id="carrier"><path d="M10 140 L250 140 L235 185 L28 185 Z" fill="#cfeaf6" stroke="#111318" stroke-width="5"/>
+  <g stroke="#7ab6d3" stroke-width="3"><line x1="50" y1="140" x2="44" y2="185"/><line x1="90" y1="140" x2="88" y2="185"/><line x1="130" y1="140" x2="130" y2="185"/><line x1="170" y1="140" x2="172" y2="185"/><line x1="210" y1="140" x2="216" y2="185"/><line x1="25" y1="162" x2="242" y2="162"/></g>
+  <rect x="190" y="110" width="30" height="30" fill="#cfeaf6" stroke="#111318" stroke-width="5"/>
+  <path d="M60 128 l22 0 l-6 -8 l8 0 l10 8 l14 0 l0 6 l-48 0z" fill="#111318"/></g>
+</defs></svg>
+
+<div class="scene" id="hook">
+ <div class="big" style="top:330px;font-size:120px">ONE OF<br>THESE IS<br><span style="color:var(--yellow)">REAL.</span></div>
+ <div id="hookTiles"></div>
+</div>
+
+<div class="scene" id="c1"><div class="card"><div class="n">1</div><div class="kick">EXHIBIT 1 OF 3</div>
+ <svg viewBox="0 0 260 230"><g id="c1ship"><use href="#ship"/></g><g id="c1rays" fill="none" stroke="#e0533a" stroke-width="4" stroke-dasharray="10 8"></g></svg>
+ <h2>A warship hull that bends light around itself.</h2><div class="stat">NOT SEEN AT 8 KM</div></div></div>
+
+<div class="scene" id="c2"><div class="card"><div class="n">2</div><div class="kick">EXHIBIT 2 OF 3</div>
+ <svg viewBox="0 0 260 230"><g id="c2c"><use href="#carrier"/></g><path id="c2w" fill="none" stroke="#3a4a7a" stroke-width="5"/></svg>
+ <h2>An aircraft carrier made of ice and wood pulp.</h2><div class="stat">CODE NAME: HABAKKUK</div></div></div>
+
+<div class="scene" id="c3"><div class="card"><div class="n">3</div><div class="kick">EXHIBIT 3 OF 3</div>
+ <svg viewBox="0 0 260 230"><g id="c3t"><use href="#tower"/></g><g id="c3w" fill="none" stroke="#e0533a" stroke-width="4"></g></svg>
+ <h2>Eight tuned drivers that bring down a tower.</h2><div class="stat">TRIAL 3: 60 M TOWER. DOWN.</div></div></div>
+
+<div class="scene" id="vote">
+ <div class="big" style="top:250px;font-size:92px">WHICH ONE<br>IS <span style="color:var(--yellow)">REAL?</span></div>
+ <div id="voteTiles"></div>
+ <div class="big" style="top:1180px;font-size:58px;font-family:Mono">COMMENT 1, 2 OR 3</div>
+ <div class="count" id="cnt" style="top:1270px;font-size:200px">3</div>
+</div>
+
+<div class="scene" id="reveal">
+ <div id="revTiles"></div>
+ <div class="from" style="left:60px;top:840px" id="f1">from our<br>HULL 7 briefing</div>
+ <div class="from" style="left:730px;top:840px" id="f3">from our<br>TREMOR briefing</div>
+ <div class="big" id="rTitle" style="top:960px;font-size:76px;color:var(--yellow)">PROJECT HABAKKUK<br><span style="font-size:60px;color:var(--cream)">1943</span></div>
+ <div class="big" id="rBody" style="top:1150px;font-size:40px;font-family:Arch;font-weight:700;line-height:1.3">Britain's WWII plan: an aircraft carrier<br>of ice + wood pulp. A model was built on<br>Patricia Lake, Canada. Its wreck is still there.</div>
+ <div class="src" id="rSrc">Sources: Alberta's Historic Places · Diver Magazine · Combined Ops</div>
+</div>
+
+<div class="scene" id="end">
+ <div class="big" style="top:640px;font-size:110px">FULL<br>BRIEFINGS</div>
+ <div class="big" style="top:900px;font-size:64px;color:var(--yellow);font-family:Mono">on @compandgrow</div>
+ <div class="big" style="top:1060px;font-size:44px;font-family:Mono">NEW FILE EVERY SUNDAY</div>
+</div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const p=(t,a,b)=>clamp((t-a)/(b-a));
+const eo=x=>1-Math.pow(1-x,3), back=x=>{const c=1.7;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const ICON={1:'ship',2:'carrier',3:'tower'}, LAB={1:'INVISIBLE<br>WARSHIP',2:'ICE<br>CARRIER',3:'TOWER<br>TOPPLER'};
+function tiles(host,y){const xs=[60,395,730];host.innerHTML=[1,2,3].map((n,i)=>`<div class="tile" id="${host.id}${n}" style="left:${xs[i]}px;top:${y}px"><div class="n">${n}</div><svg viewBox="0 0 260 230"><use href="#${ICON[n]}"/></svg><div class="lab">${LAB[n]}</div></div>`).join('')}
+tiles($('hookTiles'),900); tiles($('voteTiles'),640); tiles($('revTiles'),380);
+// reveal stamps
+[[1,'FAKE','#e0533a'],[2,'REAL','#1f8a4c'],[3,'FAKE','#e0533a']].forEach(([n,w,c])=>{const s=document.createElement('div');s.className='stamp';s.id='st'+n;s.textContent=w;
+ s.style.cssText=`color:${c};font-size:${n==2?84:64}px;left:50%;top:175px;transform-origin:center`;$('revTiles'+n).appendChild(s)});
+const T={hook:[0,2.8],c1:[2.8,6.8],c2:[6.8,10.8],c3:[10.8,14.8],vote:[14.8,19.0],reveal:[19.0,25.6],end:[25.6,28.0]};
+const DUR=28.0;
+function scene(id,t){const [a,b]=T[id];const el=$(id);
+ if(t<a-0.001||t>=b){el.style.opacity=0;return -1}
+ const first=id==='hook';const k=first?1:eo(p(t,a,a+0.35)), out=id==='end'?0:eo(p(t,b-0.3,b));
+ el.style.opacity=1; el.style.transform=`translateX(${(1-k)*1080 - out*1080}px)`; return t-a}
+window.seek=t=>{
+ for(const id in T) scene(id,t);
+ // hook: tiles pop
+ [1,2,3].forEach((n,i)=>{const e=$('hookTiles'+n);const k=t<0.05?1:back(p(t,0.0+i*0.0,0.01));e.style.transform=`rotate(${(i-1)*4}deg) translateY(${Math.sin(t*3+i)*8}px)`});
+ // card 1: rays bending around the ship + ship fading in/out
+ {const lt=t-T.c1[0];let d='';for(let i=0;i<4;i++){const y=60+i*40;const b=40*Math.sin(clamp(lt*1.5)*Math.PI/2);d+=`<path d="M0 ${y+60} C 80 ${y+60-b}, 180 ${y+60-b}, 260 ${y+60}"/>`}
+  $('c1rays').innerHTML=d;$('c1rays').setAttribute('stroke-dashoffset',-lt*40);$('c1ship').style.opacity=0.25+0.75*Math.abs(Math.cos(lt*1.6))}
+ // card 2: bob + waves
+ {const lt=t-T.c2[0];$('c2c').setAttribute('transform',`translate(0 ${Math.sin(lt*2.4)*5}) rotate(${Math.sin(lt*1.8)*1.2} 130 160)`);
+  let d='M0 195';for(let x=0;x<=260;x+=10)d+=` L${x} ${195+Math.sin(x/18+lt*4)*5}`;$('c2w').setAttribute('d',d)}
+ // card 3: tower sway + rings
+ {const lt=t-T.c3[0];const a=Math.sin(lt*9)*clamp(lt/2.5)*7;$('c3t').setAttribute('transform',`rotate(${a} 130 222)`);
+  let d='';for(let i=0;i<3;i++){const r=((lt*60+i*40)%120)+10;d+=`<circle cx="130" cy="211" r="${r}" opacity="${1-r/130}"/>`}$('c3w').innerHTML=d}
+ // vote countdown
+ {const lt=t-T.vote[0];const n=3-Math.floor(clamp(lt-1.0,0,2.99));const f=(lt-1.0)%1;$('cnt').textContent=lt<1.0?'':n;
+  $('cnt').style.transform=`scale(${lt<1?1:1+0.25*Math.exp(-f*7)})`;
+  [1,2,3].forEach((k,i)=>$('voteTiles'+k).style.transform=`translateY(${Math.sin(t*3+i)*6}px)`)}
+ // reveal
+ {const lt=t-T.reveal[0];const hits={1:0.5,3:1.2,2:2.2};
+  [1,2,3].forEach(n=>{const s=$('st'+n),h=hits[n];const k=p(lt,h,h+0.18);s.style.opacity=lt<h?0:1;
+   s.style.transform=`translateX(-50%) rotate(${n==2?-8:-14}deg) scale(${lt<h?2.4:2.4-1.4*eo(k)})`;
+   const tile=$('revTiles'+n);tile.style.opacity=(n!=2&&lt>h+0.3)?0.55:1;tile.style.transform=n==2?`scale(${1+0.08*eo(p(lt,2.2,2.6))})`:''});
+  $('f1').style.opacity=eo(p(lt,0.8,1.1));$('f3').style.opacity=eo(p(lt,1.5,1.8));
+  $('rTitle').style.opacity=eo(p(lt,2.6,3.0));$('rBody').style.opacity=eo(p(lt,3.1,3.5));$('rSrc').style.opacity=eo(p(lt,3.4,3.8))}
+};
+window.DUR=DUR;window.STAMPS={whoosh:[2.8,6.8,10.8,14.8,19.0,25.6],tick:[15.8,16.8,17.8],stamp:[19.5,20.2],real:[21.2],pop:[0.0]};
+document.fonts.ready.then(()=>{seek(0);window.ready=true});
+</script></body></html>

@@ -9,7 +9,7 @@
 
 ## Cadence (5 Reels/week, 4:28 pm PT unless the data says otherwise)
 - **Sun:** full film (90–120 s).
-- **Thu (from Nov 19):** "Real or fake?" game Reel, 20–30 s: 3 devices, one real and sourced, viewers comment 1/2/3, reveal at the end (format v2, judged after 3).
+- **Thu (from Nov 19; first one posted early, Sun Nov 1 10:28 am):** "Real or fake?" game Reel, 20–30 s: 3 devices, one real and sourced, viewers comment 1/2/3, reveal at the end (format v2, judged after 3).
 - **Tue / Fri / Sat:** 15–35 s cutdowns from the latest film, each with a different hook (question, shocking number, "this was real", the stamp moment). End card: "FULL BRIEFING on @compandgrow".
 
 ## Style testing (Jazzy handed style decisions to Claude, Oct 16)
@@ -55,6 +55,7 @@ Media URLs: everything scheduled before Oct 26 was pinned to commits (7ccc99c, 5
 | Fri Oct 30 | TREMOR cut: bridges | 6ad314d8bcf9e0fc1b7f7200 | media/2026-w44/tremor-cut-bridges.mp4 | ✗ deleted Oct 30 |
 | **Fri Oct 30** | LODESTONE teaser ("FULL BRIEFING SUNDAY", 18.8 s; test of Zernio-storage posting) | 6ae4be1c8cb39817b270f2c0 | media/2026-w44/lodestone-teaser.mp4 | published 4:29 pm PT · https://www.instagram.com/reel/DfIw3JRlDH9/ |
 | Sat Oct 31 | TREMOR cut: trials + side effect | 6ad314dadb2c0dea44ce3726 | media/2026-w44/tremor-cut-trials.mp4 | ✗ deleted Oct 30 |
+| **Sun Nov 1, 10:28 am** | GAME #1 "Real or fake?" (ship / ice carrier = REAL / tower) — early test of the game format | 6ae5436137a968d769bf08db | media/2026-w44/game-01.mp4 | scheduled · Zernio storage |
 | Sun Nov 1 | LODESTONE full film (Halftone Dossier) | 6ad64867869d6987ab7db336 | media/2026-w44/lodestone-full.mp4 | scheduled · Zernio storage |
 | Tue Nov 3 | LODESTONE cut: "this was real" (1269 + Wilkins) | 6ad6486e5fcedf094d93f0a4 | media/2026-w45/lodestone-cut-real.mp4 | scheduled · Zernio storage |
 | Wed Nov 4 | LONGSHOT cut: 1934 claim (make-up) | 6ad314cbb3d7df3b1dac3494 | media/2026-w43/longshot-cut-claim.mp4 | ✗ deleted Oct 30 |

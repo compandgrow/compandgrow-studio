@@ -185,6 +185,24 @@
    "instagram_url": "https://www.instagram.com/reel/DfIw3JRlDH9/"
   },
   {
+   "id": "game-01",
+   "film": "game-01",
+   "kind": "game",
+   "hook_type": "real_or_fake",
+   "style": "halftone-dossier",
+   "label": "Real or fake? #1: invisible warship (HULL 7, fake) / ice aircraft carrier (Project Habakkuk 1943, REAL) / tower toppler (TREMOR, fake)",
+   "slot_pt": "2026-11-01 10:28",
+   "scheduled_for": "2026-11-01T18:28:00Z",
+   "zernio_post": "6ae5436137a968d769bf08db",
+   "media": "media/2026-w44/game-01.mp4",
+   "media_url": "https://media.zernio.com/media/1793409875549_f0eafc9ea0f7bd15_game-01-real-or-fake.mp4",
+   "cdn_ref": null,
+   "status": "scheduled",
+   "segments": null,
+   "format_version": 2,
+   "experiment": "first game Reel, early test before the Thu slot"
+  },
+  {
    "id": "lodestone-cut-real",
    "film": "lodestone",
    "kind": "cut",
