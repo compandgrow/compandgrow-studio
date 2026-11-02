@@ -1,0 +1,236 @@
+[
+ {
+  "id": "a1",
+  "text": "This foil triangle flies.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "a2",
+  "text": "Nothing on it moves.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "a3",
+  "text": "No wings. No rotor. No fuel.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "a4",
+  "text": "So is it antigravity?",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "a5",
+  "text": "Take it apart.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "b1",
+  "text": "Nineteen twenty-eight. A British patent.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "b2",
+  "text": "For a way of producing force or motion.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "b3",
+  "text": "Its holder: Thomas Townsend Brown.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c1",
+  "text": "Three parts.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c2",
+  "text": "Thin wire. Air gap. Foil skirt.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c3",
+  "text": "About thirty thousand volts go across them.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c4",
+  "text": "The sharp wire's field ionises the air.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c5",
+  "text": "Ions race to the foil, bumping into air.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c6",
+  "text": "Each bump passes on a push. A wind.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c7",
+  "text": "The wind blows down. The lifter goes up.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c8",
+  "text": "The missing fourth part is the air.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c9",
+  "text": "Not antigravity. Ion wind.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c10",
+  "text": "A real plane has flown on it.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c11",
+  "text": "Twenty eighteen. No moving parts. About sixty metres, the length of a gym.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "d1",
+  "text": "Stillwing asks: what if you stacked them?",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "d2",
+  "text": "Cells into a tile. Tiles into a wing.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "d3",
+  "text": "Wire: zero point one millimetres. Gap: thirty.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "d4",
+  "text": "Thirty kilovolts per cell. Zero moving parts.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "e1",
+  "text": "Trial one: a foil cell lifts its own three grams.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "e2",
+  "text": "Sixty seconds on a tether. Flew.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "e3",
+  "text": "Trial two: sixty-four cells carry two kilos.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "e4",
+  "text": "Four minutes at two metres. Flew.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "e5",
+  "text": "Trial three: twelve hundred cells. A full wing.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "e6",
+  "text": "The wing flies twelve kilometres, on its own batteries. Silent.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "f1",
+  "text": "One catch.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "f2",
+  "text": "It pushes on air.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "f3",
+  "text": "Up high, the air thins. So does the thrust.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "f4",
+  "text": "It stalls out at three kilometres.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "f5",
+  "text": "In the vacuum chamber: zero.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "g1",
+  "text": "Stillwing is cleared.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "g2",
+  "text": "Below three kilometres.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "g3",
+  "text": "Not as antigravity.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "h1",
+  "text": "Just wire, foil, and air.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "h2",
+  "text": "Case closed. The next file opens Sunday.",
+  "voice": "bm_george",
+  "speed": 0.95
+ }
+]
