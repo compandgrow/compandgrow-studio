@@ -1,0 +1,155 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Alfa;src:url(fonts/AlfaSlabOne.woff2)}
+@font-face{font-family:Mono;src:url(fonts/JetBrainsMono-ExtraBold.woff2)}
+@font-face{font-family:Arch;src:url(fonts/Archivo-VF.ttf);font-weight:100 900}
+:root{--navy:#141a3a;--navy2:#1d2552;--cream:#f1e6d0;--red:#e0533a;--yellow:#f2c230;--ink:#111318;--blue:#8fd0ef}
+html,body{margin:0;background:#000}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--navy);font-family:Arch;color:var(--cream)}
+#dots{position:absolute;inset:0;background-image:radial-gradient(rgba(242,194,48,.18) 22%,transparent 24%);background-size:26px 26px;
+ -webkit-mask-image:radial-gradient(circle at 12% 88%,#000 0,transparent 38%),radial-gradient(circle at 92% 8%,#000 0,transparent 30%);mask-composite:add}
+.top{position:absolute;top:120px;left:70px;right:70px;display:flex;justify-content:space-between;font-family:Mono;font-size:30px;letter-spacing:2px;color:var(--yellow)}
+.top b{color:var(--cream)}
+.scene{position:absolute;inset:0;opacity:0}
+.big{position:absolute;left:60px;right:60px;text-align:center;font-family:Alfa;line-height:1.02;color:var(--cream)}
+.tile{position:absolute;width:290px;height:420px;background:var(--cream);border-radius:22px;color:var(--ink);box-shadow:0 10px 0 rgba(0,0,0,.35)}
+.tile .n{position:absolute;top:-34px;left:50%;transform:translateX(-50%);width:80px;height:80px;border-radius:50%;background:var(--yellow);
+ font-family:Alfa;font-size:52px;line-height:80px;text-align:center;color:var(--ink);border:5px solid var(--ink)}
+.tile svg{position:absolute;left:15px;top:70px;width:260px;height:230px}
+.tile .lab{position:absolute;bottom:26px;left:12px;right:12px;text-align:center;font-family:Mono;font-size:25px;line-height:1.15}
+.card{position:absolute;left:70px;top:300px;width:940px;height:1150px;background:var(--cream);border-radius:30px;color:var(--ink);box-shadow:0 16px 0 rgba(0,0,0,.35)}
+.card .n{position:absolute;top:-50px;left:60px;width:120px;height:120px;border-radius:50%;background:var(--yellow);font-family:Alfa;font-size:78px;
+ line-height:120px;text-align:center;border:7px solid var(--ink)}
+.card .kick{position:absolute;top:44px;right:56px;font-family:Mono;font-size:28px;color:var(--red);letter-spacing:2px}
+.card svg{position:absolute;left:70px;top:120px;width:800px;height:560px}
+.card h2{position:absolute;left:60px;right:60px;top:700px;margin:0;font-family:Alfa;font-size:66px;line-height:1.05;font-weight:400}
+.card .stat{position:absolute;left:60px;right:60px;top:950px;font-family:Mono;font-size:44px;background:var(--ink);color:var(--yellow);padding:22px 28px;border-radius:14px}
+.stamp{position:absolute;font-family:Alfa;border:10px solid currentColor;border-radius:16px;padding:6px 26px;letter-spacing:4px;background:rgba(241,230,208,.85)}
+.from{position:absolute;width:290px;text-align:center;font-family:Mono;font-size:26px;line-height:1.25;color:var(--cream)}
+.from i{font-style:normal;color:var(--blue)}
+.count{position:absolute;left:0;right:0;text-align:center;font-family:Alfa;color:var(--yellow)}
+.bar{position:absolute;left:60px;right:60px;text-align:center;font-family:Mono;font-size:46px;background:var(--yellow);color:var(--ink);padding:20px 10px;border-radius:16px;letter-spacing:1px}
+#corner{position:absolute;top:190px;right:70px;font-family:Alfa;font-size:44px;background:var(--yellow);color:var(--ink);padding:6px 22px;border-radius:14px;border:5px solid var(--ink);opacity:0}
+.src{position:absolute;left:70px;right:70px;font-family:Mono;font-size:26px;color:#c9c2d8;text-align:center}
+</style></head><body>
+<div id="stage"><div id="dots"></div>
+<div class="top"><span>CASE FILES · <b>REAL OR FAKE?</b></span><span>@compandgrow</span></div>
+
+<!-- shared drawings (in-house SVG only) -->
+<svg width="0" height="0" style="position:absolute"><defs>
+ <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff6c8"/><stop offset=".45" stop-color="#f2c230"/><stop offset="1" stop-color="#f2c230" stop-opacity="0"/></radialGradient>
+ <g id="wing">
+  <path d="M10 196 Q130 182 250 196" fill="none" stroke="#b9ad93" stroke-width="4"/>
+  <g stroke="#111318" stroke-width="3"><line x1="70" y1="62" x2="56" y2="96"/><line x1="190" y1="62" x2="204" y2="96"/></g>
+  <line x1="60" y1="62" x2="200" y2="62" stroke="#111318" stroke-width="3"/>
+  <path d="M20 96 L240 96 L222 118 L38 118 Z" fill="#d9dde6" stroke="#111318" stroke-width="5" stroke-linejoin="round"/>
+  <line x1="30" y1="106" x2="231" y2="106" stroke="#9aa3b5" stroke-width="3"/></g>
+ <g id="cell">
+  <rect x="70" y="190" width="120" height="24" rx="4" fill="#3a4a7a" stroke="#111318" stroke-width="5"/>
+  <line x1="130" y1="190" x2="130" y2="172" stroke="#111318" stroke-width="6"/>
+  <circle cx="130" cy="100" r="62" fill="url(#glow)"/>
+  <circle cx="130" cy="100" r="26" fill="#fff6c8" stroke="#f2c230" stroke-width="4"/>
+  <ellipse cx="130" cy="100" rx="72" ry="72" fill="none" stroke="#111318" stroke-width="5"/>
+  <ellipse cx="130" cy="100" rx="72" ry="22" fill="none" stroke="#111318" stroke-width="4"/>
+  <ellipse cx="130" cy="100" rx="24" ry="72" fill="none" stroke="#111318" stroke-width="4"/></g>
+ <g id="saucer">
+  <line x1="6" y1="200" x2="254" y2="200" stroke="#b9ad93" stroke-width="4"/>
+  <ellipse id="sShadow" cx="130" cy="200" rx="96" ry="9" fill="#111318" opacity=".25"/>
+  <ellipse cx="130" cy="128" rx="118" ry="26" fill="#c9cfdc" stroke="#111318" stroke-width="5"/>
+  <ellipse cx="130" cy="122" rx="40" ry="10" fill="#9aa3b5" stroke="#111318" stroke-width="4"/>
+  <path d="M84 116 q8 -16 22 -16 q12 0 16 14" fill="#8fd0ef" stroke="#111318" stroke-width="4"/>
+  <path d="M140 114 q4 -14 16 -14 q14 0 22 16" fill="#8fd0ef" stroke="#111318" stroke-width="4"/>
+  <line x1="16" y1="134" x2="244" y2="134" stroke="#111318" stroke-width="3"/></g>
+</defs></svg>
+
+<div class="scene" id="hook">
+ <div class="big" style="top:450px;font-size:98px">ONLY ONE WAS<br><span style="color:var(--yellow)">REALLY BUILT.</span></div>
+ <div id="hookTiles"></div>
+ <div class="bar" style="top:1400px">ONE IS REAL · COMMENT 1, 2 OR 3</div>
+</div>
+
+<div class="scene" id="c1"><div class="card"><div class="n">1</div><div class="kick">EXHIBIT 1 OF 3</div>
+ <svg viewBox="0 0 260 230"><g id="c1wind" fill="none" stroke="#8fd0ef" stroke-width="3" stroke-linecap="round"></g><g id="c1w"><use href="#wing"/></g></svg>
+ <h2>A foil wing that flew 12&nbsp;km. Silent.</h2><div class="stat">TRIAL 03: 12 KM</div></div></div>
+
+<div class="scene" id="c2"><div class="card"><div class="n">2</div><div class="kick">EXHIBIT 2 OF 3</div>
+ <svg viewBox="0 0 260 230"><g id="c2g"><circle cx="130" cy="100" r="95" fill="url(#glow)"/></g><use href="#cell"/><g id="c2arc" fill="none" stroke="#f2c230" stroke-width="3"></g></svg>
+ <h2>A power cell running on caught ball lightning.</h2><div class="stat">TRIAL 03: 6 HOURS</div></div></div>
+
+<div class="scene" id="c3"><div class="card"><div class="n">3</div><div class="kick">EXHIBIT 3 OF 3</div>
+ <svg viewBox="0 0 260 230"><g id="c3s"><use href="#saucer"/></g><g id="c3d" fill="#b9ad93"></g></svg>
+ <h2>A flying saucer built for the US military.</h2><div class="stat">TWO PROTOTYPES</div></div></div>
+
+<div id="corner">1 / 2 / 3?</div>
+
+<div class="scene" id="vote">
+ <div class="big" style="top:260px;font-size:120px">LOCK IT <span style="color:var(--yellow)">IN</span></div>
+ <div id="voteTiles"></div>
+ <div class="bar" style="top:1150px">COMMENT 1, 2 OR 3</div>
+ <div class="count" id="cnt" style="top:1270px;font-size:200px">3</div>
+</div>
+
+<div class="scene" id="reveal">
+ <div id="revTiles"></div>
+ <div class="from" style="left:60px;top:840px" id="f1">from our<br>STILLWING briefing<br><i>the real 2018<br>ion plane<br>flew ~60 m</i></div>
+ <div class="from" style="left:395px;top:840px" id="f2">from our<br>EMBER briefing</div>
+ <div class="big" id="rTitle" style="top:1020px;font-size:84px;color:var(--yellow)">AVROCAR · 1959<br><span style="font-size:40px;font-family:Mono;color:var(--cream)">Avro Canada VZ-9</span></div>
+ <div class="big" id="rBody" style="top:1215px;font-size:44px;font-family:Arch;font-weight:700;line-height:1.3">Built for the US Army and Air Force.<br>It never got more than a few feet<br>off the ground. Cancelled in 1961.</div>
+ <div class="src" id="rSrc" style="top:1425px">Source: National Museum of the U.S. Air Force</div>
+</div>
+
+<div class="scene" id="end">
+ <div class="big" style="top:560px;font-size:92px">NEW CASE<br>EVERY SUNDAY.</div>
+ <div class="big" style="top:800px;font-size:92px;color:var(--yellow)">GAME EVERY<br>THURSDAY.</div>
+ <div class="big" style="top:1080px;font-size:56px;font-family:Mono">FULL BRIEFINGS</div>
+ <div class="big" style="top:1160px;font-size:56px;font-family:Mono;color:var(--yellow)">on @compandgrow</div>
+</div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const p=(t,a,b)=>clamp((t-a)/(b-a));
+const eo=x=>1-Math.pow(1-x,3);
+const ICON={1:'wing',2:'cell',3:'saucer'}, LAB={1:'SILENT<br>WING',2:'LIGHTNING<br>CELL',3:'SAUCER'};
+function tiles(host,y){const xs=[60,395,730];host.innerHTML=[1,2,3].map((n,i)=>`<div class="tile" id="${host.id}${n}" style="left:${xs[i]}px;top:${y}px"><div class="n">${n}</div><svg viewBox="0 0 260 230"><use href="#${ICON[n]}"/></svg><div class="lab">${LAB[n]}</div></div>`).join('')}
+tiles($('hookTiles'),860); tiles($('voteTiles'),640); tiles($('revTiles'),380);
+// reveal stamps: real one is in position 3
+[[1,'FAKE','#e0533a'],[2,'FAKE','#e0533a'],[3,'REAL','#1f8a4c']].forEach(([n,w,c])=>{const s=document.createElement('div');s.className='stamp';s.id='st'+n;s.textContent=w;
+ s.style.cssText=`color:${c};font-size:${n==3?72:64}px;left:50%;top:175px;transform-origin:center`;$('revTiles'+n).appendChild(s)});
+const T={hook:[0,1.5],c1:[1.5,4.0],c2:[4.0,6.5],c3:[6.5,9.0],vote:[9.0,11.5],reveal:[11.5,19.0],end:[19.0,21.0]};
+const DUR=21.0;
+function scene(id,t){const [a,b]=T[id];const el=$(id);
+ if(t<a-0.001||t>=b){el.style.opacity=0;return -1}
+ const first=id==='hook';const k=first?1:eo(p(t,a,a+0.3)), out=id==='end'?0:eo(p(t,b-0.25,b));
+ el.style.opacity=1; el.style.transform=`translateX(${(1-k)*1080 - out*1080}px)`; return t-a}
+window.seek=t=>{
+ for(const id in T) scene(id,t);
+ // corner vote prompt over every card scene (static, no slide)
+ $('corner').style.opacity=(t>=T.c1[0]&&t<T.c3[1])?1:0;
+ // hook: tiles visible on frame 0, gentle float
+ [1,2,3].forEach((n,i)=>{$('hookTiles'+n).style.transform=`rotate(${(i-1)*4}deg) translateY(${Math.sin(t*3+i)*8}px)`});
+ // card 1: wing hovers, faint wind lines fall beneath it
+ {const lt=t-T.c1[0];$('c1w').setAttribute('transform',`translate(0 ${Math.sin(lt*2.2)*4})`);
+  let d='';for(let i=0;i<7;i++){const x=40+i*30;const y=((lt*70+i*23)%70)+122;d+=`<line x1="${x}" y1="${y}" x2="${x}" y2="${y+16}" opacity="${0.55*(1-(y-122)/70)}"/>`}$('c1wind').innerHTML=d}
+ // card 2: glow pulse + small arcs off the ball
+ {const lt=t-T.c2[0];const g=0.55+0.45*Math.abs(Math.sin(lt*5));$('c2g').setAttribute('opacity',g);
+  let d='';for(let i=0;i<3;i++){const a=lt*2.5+i*2.1;const r1=30,r2=60;const x1=130+Math.cos(a)*r1,y1=100+Math.sin(a)*r1,x2=130+Math.cos(a+.4)*r2,y2=100+Math.sin(a+.4)*r2;
+   d+=`<path d="M${x1} ${y1} L${(x1+x2)/2+6} ${(y1+y2)/2-6} L${x2} ${y2}" opacity="${0.4+0.6*Math.abs(Math.sin(lt*7+i))}"/>`}$('c2arc').innerHTML=d}
+ // card 3: saucer bobs a little off the ground, dust puffs at the rim
+ {const lt=t-T.c3[0];$('c3s').setAttribute('transform',`translate(0 ${Math.sin(lt*3)*5})`);
+  let d='';for(let i=0;i<4;i++){const s=((lt*0.9+i*0.25)%1);const side=i%2?1:-1;const x=130+side*(100+s*40),r=4+s*10;d+=`<circle cx="${x}" cy="${196-s*8}" r="${r}" opacity="${0.6*(1-s)}"/>`}$('c3d').innerHTML=d}
+ // vote countdown: 3 at 9.6, 2 at 10.3, 1 at 11.0
+ {const lt=t-T.vote[0];const hits=[0.6,1.3,2.0];let n='',f=9;hits.forEach((h,i)=>{if(lt>=h){n=3-i;f=lt-h}});$('cnt').textContent=n;
+  $('cnt').style.transform=`scale(${1+0.25*Math.exp(-f*7)})`;
+  [1,2,3].forEach((k,i)=>$('voteTiles'+k).style.transform=`translateY(${Math.sin(t*3+i)*6}px)`)}
+ // reveal: stamps at 12.0, 12.7, 13.8
+ {const lt=t-T.reveal[0];const hits={1:0.5,2:1.2,3:2.3};
+  [1,2,3].forEach(n=>{const s=$('st'+n),h=hits[n];const k=p(lt,h,h+0.18);s.style.opacity=lt<h?0:1;
+   s.style.transform=`translateX(-50%) rotate(${n==3?-8:-14}deg) scale(${lt<h?2.4:2.4-1.4*eo(k)})`;
+   const tile=$('revTiles'+n);tile.style.opacity=(n!=3&&lt>h+0.3)?0.55:1;tile.style.transform=n==3?`scale(${1+0.08*eo(p(lt,2.3,2.7))})`:''});
+  $('f1').style.opacity=eo(p(lt,0.8,1.1));$('f2').style.opacity=eo(p(lt,1.5,1.8));
+  $('rTitle').style.opacity=eo(p(lt,2.6,2.9));$('rBody').style.opacity=eo(p(lt,2.9,3.2));$('rSrc').style.opacity=eo(p(lt,3.1,3.4))}
+};
+window.DUR=DUR;window.STAMPS={whoosh:[1.5,4.0,6.5,9.0,11.5,19.0],tick:[9.6,10.3,11.0],stamp:[12.0,12.7],real:[13.8],pop:[0.0]};
+document.fonts.ready.then(()=>{seek(0);window.ready=true});
+</script></body></html>

@@ -1,0 +1,18 @@
+STILLWING — third-party assets used in this film
+
+Fonts
+Archivo, IBM Plex Mono — SIL Open Font License 1.1 (from studio/kit/fonts)
+
+Voice
+Kokoro-82M text-to-speech (Apache 2.0), voice bm_george, via kokoro-onnx
+
+Music and sound
+Samples played through the Lemo-Opuscar sampler: marimba, vibraphone (bowed), glockenspiel, hi-hat (VCSL, CC0 1.0); glass harp,
+electric bass (FreePats, CC0 1.0); claves (VSCO 2 CE, CC0 1.0). Kick, foley and room tone synthesised in audio/mix.py.
+
+Engine and tools
+Lemo-Opuscar library (MIT) by Lemomo — Exploded Teardown style (engine adapted to 1080×1920 with English captions as
+studio/kits/exploded-teardown/teardown.js), three.js (MIT), core render tools
+
+No photographs, logos, stock footage or AI-generated video are used: everything is drawn in code. The lifter cell and the plane
+silhouette are generic models, not CAD of any real craft.
