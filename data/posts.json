@@ -156,10 +156,12 @@
    "zernio_post": "6ad64867869d6987ab7db336",
    "media": "media/2026-w44/lodestone-full.mp4",
    "cdn_ref": null,
-   "status": "scheduled",
+   "status": "published",
    "segments": null,
    "format_version": null,
-   "media_url": "https://media.zernio.com/media/1793345638972_ed6cd0e992c270a2_lodestone-full.mp4"
+   "media_url": "https://media.zernio.com/media/1793345638972_ed6cd0e992c270a2_lodestone-full.mp4",
+   "published_at": "2026-11-02T00:28:42Z",
+   "instagram_url": "https://www.instagram.com/reel/DfOBMragLWT/"
   },
   {
    "id": "lodestone-teaser",

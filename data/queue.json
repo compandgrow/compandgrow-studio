@@ -1,0 +1,146 @@
+{
+ "generated_at": "2026-11-02T17:10:00Z",
+ "window": "2026-11-03 .. 2026-11-21 PT (14 days + week of Nov 15-21)",
+ "slots": [
+  {
+   "slot_pt": "2026-11-03 16:28",
+   "day": "Tue",
+   "kind": "cut",
+   "state": "filled",
+   "post_id": "lodestone-cut-real",
+   "zernio_post": "6ad6486e5fcedf094d93f0a4"
+  },
+  {
+   "slot_pt": "2026-11-05 16:28",
+   "day": "Thu",
+   "kind": "cut (pre-v2 question cut)",
+   "state": "filled",
+   "post_id": "lodestone-cut-why",
+   "zernio_post": "6ad648705fcedf094d93f0b8"
+  },
+  {
+   "slot_pt": "2026-11-06 16:28",
+   "day": "Fri",
+   "kind": "cut",
+   "state": "filled",
+   "post_id": "lodestone-cut-trials",
+   "zernio_post": "6ad64872fe386d21a3f320a4"
+  },
+  {
+   "slot_pt": "2026-11-07 16:28",
+   "day": "Sat",
+   "kind": "cut",
+   "state": "filled",
+   "post_id": "lodestone-cut-catch",
+   "zernio_post": "6ad64875fe386d21a3f320b3"
+  },
+  {
+   "slot_pt": "2026-11-08 16:28",
+   "day": "Sun",
+   "kind": "film",
+   "state": "filled",
+   "post_id": "ember-full",
+   "zernio_post": "6adf88babf063039d1e4f221"
+  },
+  {
+   "slot_pt": "2026-11-10 16:28",
+   "day": "Tue",
+   "kind": "cut",
+   "state": "filled",
+   "post_id": "ember-cut-real",
+   "zernio_post": "6adf88bfbf063039d1e4f251"
+  },
+  {
+   "slot_pt": "2026-11-12 16:28",
+   "day": "Thu",
+   "kind": "cut (pre-v2 question cut)",
+   "state": "filled",
+   "post_id": "ember-cut-question",
+   "zernio_post": "6adf88c3bf063039d1e4f28b"
+  },
+  {
+   "slot_pt": "2026-11-13 16:28",
+   "day": "Fri",
+   "kind": "cut",
+   "state": "filled",
+   "post_id": "ember-cut-number",
+   "zernio_post": "6adf88c5bf063039d1e4f2a5"
+  },
+  {
+   "slot_pt": "2026-11-14 16:28",
+   "day": "Sat",
+   "kind": "cut",
+   "state": "filled",
+   "post_id": "ember-cut-stamp",
+   "zernio_post": "6adf88c7bf063039d1e4f2d5"
+  },
+  {
+   "slot_pt": "2026-11-15 16:28",
+   "day": "Sun",
+   "kind": "film",
+   "state": "open",
+   "post_id": null
+  },
+  {
+   "slot_pt": "2026-11-17 16:28",
+   "day": "Tue",
+   "kind": "cut",
+   "state": "open",
+   "post_id": null
+  },
+  {
+   "slot_pt": "2026-11-19 16:28",
+   "day": "Thu",
+   "kind": "game",
+   "state": "open",
+   "post_id": null
+  },
+  {
+   "slot_pt": "2026-11-20 16:28",
+   "day": "Fri",
+   "kind": "cut",
+   "state": "open",
+   "post_id": null
+  },
+  {
+   "slot_pt": "2026-11-21 16:28",
+   "day": "Sat",
+   "kind": "cut",
+   "state": "open",
+   "post_id": null
+  }
+ ],
+ "make": {
+  "film": {
+   "topic": "Antigravity \"lifter\" (topic queue #6)",
+   "slug": "lifter",
+   "style": "exploded-teardown",
+   "for_slot": "2026-11-15 16:28"
+  },
+  "cuts": [
+   {
+    "film": "lifter",
+    "hook_type": "this_was_real",
+    "for_slot": "2026-11-17 16:28"
+   },
+   {
+    "film": "lifter",
+    "hook_type": "number",
+    "for_slot": "2026-11-20 16:28"
+   },
+   {
+    "film": "lifter",
+    "hook_type": "stamp",
+    "for_slot": "2026-11-21 16:28"
+   }
+  ],
+  "game": {
+   "name": "real_or_fake",
+   "number": 2,
+   "for_slot": "2026-11-19 16:28",
+   "note": "first game in the regular Thu slot (format v2); game #1 went out early Sun Nov 1"
+  }
+ },
+ "repair": [],
+ "notes": "Zernio checked 2026-11-02 ~17:10Z: posts_list_failed is empty; all 9 LODESTONE/EMBER posts still pending are scheduled (Zernio shows them at :27 UTC, which is fine). LODESTONE full went out 2026-11-02T00:28:42Z (https://www.instagram.com/reel/DfOBMragLWT/); GAME #1 went out 2026-11-01T18:29:54Z. The Thu Nov 5 and Nov 12 question cuts are pre-v2 (4-cut format) and stay. LODESTONE and EMBER have no hook types left, so all new cuts are lifter cuts. This week's Sunday film (EMBER, Nov 8) is already scheduled, so this run gets ahead on the Nov 15-21 week. studio/films/lifter and studio/kits/exploded-teardown do not exist yet: the kit has to be adapted from $LIB/styles/exploded-teardown. Not counted (not_ours): the football/NFL stats posts that posts_list returns."
+}

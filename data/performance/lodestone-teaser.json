@@ -1,0 +1,51 @@
+{
+ "id": "lodestone-teaser",
+ "zernio_post": "6ae4be1c8cb39817b270f2c0",
+ "posted_at": "2026-10-30T23:29:28.818000Z",
+ "post_hour_pt": 16,
+ "post_weekday": "Fri",
+ "snapshot_at": "2026-11-02T17:04:31Z",
+ "hours_since_post": 65.6,
+ "data_age_h": 62.5,
+ "metrics": {
+  "views": 187,
+  "reach": 166,
+  "likes": 0,
+  "comments": 0,
+  "shares": 0,
+  "saves": 0,
+  "follows": 0,
+  "profile_views": 0,
+  "replays": 0,
+  "avg_watch_s": 7.26,
+  "video_s": 18,
+  "watch_ratio": 0.403,
+  "skip_rate": 56.6,
+  "completion_rate": null,
+  "engagements_per_1k_reach": 0.0,
+  "shares_saves_per_1k_reach": 0.0,
+  "follows_per_1k_reach": 0.0,
+  "retention_curve": null,
+  "url": "https://www.instagram.com/reel/DfIw3JRlDH9/",
+  "last_updated": "2026-11-02T14:01:21Z",
+  "follows_source": "timeline day-1 row (analytics follows=null)"
+ },
+ "features": {
+  "kind": "cut",
+  "film": "lodestone",
+  "hook_type": "teaser",
+  "style": "halftone-dossier",
+  "label": "LODESTONE teaser (Sunday), test of Zernio-storage posting",
+  "first_line": "A wheel of magnets.",
+  "words_in_first_3s": 8,
+  "first_line_has_number": false,
+  "first_line_is_question": false,
+  "segments": [
+   "0:7.3",
+   "63.85:73.1"
+  ],
+  "format_version": 2,
+  "experiment": "posting test",
+  "caption_first_line": null
+ }
+}
