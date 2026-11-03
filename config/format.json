@@ -1,18 +1,18 @@
 {
- "version": 2,
- "updated": "2026-10-30",
- "why": "Jazzy approved a 'Real or fake?' game Reel to raise comments/shares; it replaces the Thursday (question) cut from the week of Nov 15. The question hook moves into the game.",
+ "version": 3,
+ "updated": "2026-11-03",
+ "why": "Nov 3: Jazzy handed over full control incl. content type, goal = max viewership. Data (9 followers flat, 0 follows from ~1,150 reached, viewers leave at 13-22 s, game #1 got 0 comments with the answer in-video): post daily, add true 'Sounds fake. It's real.' shorts, hold the game answer back a day, films 45-60 s, follow card on every Reel.",
  "owner_note": "The performance-analyst may change anything in 'tunable' (one change per version, see .claude/agents/performance-analyst.md). Nothing in 'locked' may change without Jazzy.",
  "tunable": {
   "film": {
    "duration_s": {
     "target": [
-     90,
-     120
+     45,
+     60
     ],
-    "max": 130
+    "max": 75
    },
-   "spoken_words_max": 300,
+   "spoken_words_max": 150,
    "hook": {
     "payoff_within_s": 3,
     "max_words": 10,
@@ -22,40 +22,36 @@
    "structure": [
     {
      "slot": "hook",
-     "note": "the device in action + the impossible claim, <= 10 words"
+     "note": "a subject + the impossible claim, <= 10 words, problem or device first (learnings rule 2)"
+    },
+    {
+     "slot": "question",
+     "note": "the stakes/question line inside the first 10 s (learnings rule 1)"
     },
     {
      "slot": "this_was_real",
-     "note": "2-3 dated, sourced history beats (year, place, who)"
-    },
-    {
-     "slot": "physics",
-     "note": "why it can't work as told, or what it would take; one simple diagram"
+     "note": "ONE dated, sourced beat"
     },
     {
      "slot": "program",
-     "note": "fictional program title card + spec sheet (invented numbers)"
+     "note": "fictional program name + 1 spec line"
     },
     {
      "slot": "trials",
-     "note": "3 trials with escalating numbers; the last one works"
-    },
-    {
-     "slot": "catch",
-     "note": "one honest catch / side effect"
+     "note": "3 trials, fast, escalating numbers"
     },
     {
      "slot": "verdict",
-     "note": "clearance stamp moment"
+     "note": "catch + stamp moment"
     },
     {
      "slot": "outro",
-     "note": "final pull-back + one question for the comments, <= 10 words"
+     "note": "series hook + follow: 'Next case Sunday. Follow @compandgrow.'"
     }
    ]
   },
   "cutdowns": {
-   "count_per_film": 3,
+   "count_per_film": 2,
    "duration_s": {
     "target": [
      15,
@@ -66,7 +62,7 @@
    "end_card_s": 2.2,
    "end_card_text": [
     "FULL BRIEFING",
-    "on @compandgrow"
+    "on @compandgrow · FOLLOW"
    ],
    "hook_types": [
     "this_was_real",
@@ -76,7 +72,6 @@
    ],
    "hook_order_by_day": {
     "Tue": "this_was_real",
-    "Fri": "number",
     "Sat": "stamp"
    },
    "rule": "Each cut opens on its own hook in the first 3 s; never open a cut on a slow line or a title card."
@@ -110,22 +105,30 @@
    "timezone": "America/Los_Angeles",
    "days": {
     "Sun": "film",
+    "Mon": "fact",
     "Tue": "cut",
-    "Thu": "game",
-    "Fri": "cut",
+    "Wed": "game",
+    "Thu": "reveal",
+    "Fri": "fact",
     "Sat": "cut"
    },
-   "note": "Adjust with analytics_get_best_time_to_post once 10+ Reels have data."
+   "note": "Adjust with analytics_get_best_time_to_post once 10+ Reels have data.",
+   "times": {
+    "default": "16:28",
+    "game": "16:28",
+    "reveal": "16:28",
+    "note": "daily; one post per day from Nov 15. Extra 10:28 posts allowed while testing."
+   }
   },
   "game": {
    "name": "real_or_fake",
-   "slot_day": "Thu",
+   "slot_day": "Wed",
    "duration_s": {
     "target": [
-     20,
-     30
+     18,
+     25
     ],
-    "max": 35
+    "max": 28
    },
    "structure": [
     {
@@ -150,8 +153,46 @@
     }
    ],
    "rules": "The real device must be in a FACTS.md with source + quote. The fake ones are labelled FAKE at the reveal. Caption first line = the question; never give the answer in the caption.",
-   "judge": "comments, shares+saves and follows per 1k reach vs the normal cuts, after 3 game Reels"
-  }
+   "judge": "comments, shares+saves and follows per 1k reach vs the normal cuts, after 3 game Reels",
+   "answer": "HELD BACK: the game ends on 'ANSWER TOMORROW' + follow card; the next day's reveal Reel (cards kit mode 'reveal') gives the answer. Caption never gives the answer.",
+   "kit": "studio/kits/cards (mode game + mode reveal)"
+  },
+  "fact": {
+   "name": "Sounds fake. It's real.",
+   "slot_days": [
+    "Mon",
+    "Fri"
+   ],
+   "kit": "studio/kits/cards (mode fact)",
+   "duration_s": {
+    "target": [
+     18,
+     30
+    ],
+    "max": 35
+   },
+   "structure": [
+    {
+     "slot": "hook",
+     "note": "the unbelievable true claim in big text from frame 0, <= 8 words"
+    },
+    {
+     "slot": "beats",
+     "note": "2-4 cards: one line + one number each, ~3.5 s"
+    },
+    {
+     "slot": "payoff",
+     "note": "the twist or the strongest fact + source line"
+    },
+    {
+     "slot": "end",
+     "note": "follow card"
+    }
+   ],
+   "rules": "100% true and sourced in FACTS.md (2 sources or 1 primary). Pick stories with a 'no way' reaction: odd WWII/Cold War engineering, lab science that sounds like sci-fi, failed megaprojects, record machines. Never-list applies."
+  },
+  "follow_cta": "Every Reel ends on a follow card ('FOLLOW @compandgrow' + why: next case / new round / new one every week). Captions end with a follow line.",
+  "trial_reels": "Not used while the account has < 500 followers: almost all viewers are already non-followers."
  },
  "locked": {
   "facts": "Every real-world claim is sourced in the film's FACTS.md (claim -> URL). The fictional program, specs and trials are invented and never attributed to real agencies, labs or people.",
@@ -161,7 +202,7 @@
   "video": "1080x1920, H.264 + AAC, about -14 LUFS. Uploaded files under 20 MB (jsDelivr limit).",
   "account": "Instagram @compandgrow only (Zernio 6ad2b0ba41b89dd24d24a501). Never post to @thescoutbrief.",
   "gates": "Reviewer PASS before scheduling. validate_media on every URL. Never double-book a slot.",
-  "ask_jazzy": "Changing the niche, renaming the handle, anything involving money, or a topic near the never-list."
+  "ask_jazzy": "Anything involving money, renaming the handle, or a topic near the never-list. (Content type/niche: Claude decides, per Jazzy Nov 3.)"
  },
  "history": [
   {
@@ -176,7 +217,15 @@
    "from": "2026-11-15",
    "summary": "Thu slot = 'Real or fake?' game Reel (20-30 s); 3 cuts per film (real/number/stamp)",
    "evidence": "Jazzy's request; no review data yet",
-   "judge_after_reels": 3
+   "judge_after_reels": 3,
+   "until": "2026-11-03"
+  },
+  {
+   "version": 3,
+   "from": "2026-11-03",
+   "summary": "daily posting; Mon/Fri fact shorts, Wed game (answer held back), Thu reveal, Sun 45-60 s film, Tue/Sat cuts; follow card everywhere",
+   "evidence": "learnings.md 2026-11-02 + channel stats 2026-11-03",
+   "judge_after_reels": 7
   }
  ]
 }

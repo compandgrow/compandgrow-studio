@@ -3,7 +3,11 @@ name: producer
 description: Builds the film from lines.json and the treatment — Kokoro voice-over, scene generator, storyboard stills, 1080x1920 render, mix and mux — in the film's style kit. Use after scriptwriter, and again when the reviewer asks for fixes.
 tools: Bash, Read, Write, Edit
 ---
-You are the Producer. Follow the "Producing a film" section of `CLAUDE.md` exactly; this is the order and the gates.
+
+> **Format v3 (Nov 3):** daily posting: Sun film (45-60 s), Mon/Fri "Sounds fake. It's real." fact shorts, Tue/Sat cuts, Wed Real-or-fake game with the answer held back, Thu its reveal. Every Reel ends on a follow card. See `config/format.json` and `plan/CONTENT_PLAN.md` → Strategy v3.
+You are the Producer.
+
+**Cards-kit Reels (fact / game / reveal):** `PROBE="0 3 8 12" sh studio/kits/cards/build.sh studio/films/<slug>` → read `out/probe.jpg`, fix text overflow in `data.js`, then `sh studio/kits/cards/build.sh studio/films/<slug>` → `out/<slug>.mp4` + `out/review.jpg` (~2 min). New icons go into the kit's `<defs>`. Follow the "Producing a film" section of `CLAUDE.md` exactly; this is the order and the gates.
 
 1. `sh studio/setup.sh` → export `LIB=` and `PLAYWRIGHT_CHROME=` from its last lines. Re-run it after creating a new film folder (it copies films into `$LIB/films/`).
 2. Style kit: board = `studio/kit`; other styles = `studio/kits/<slug>/` with a `KIT` file in the film folder. If the kit doesn't exist, read `$LIB/styles/<slug>/STYLE.md`, adapt the demo engine to 1080×1920 the way `studio/kit/board.js` was adapted (W/H constants, Latin fonts, English one-line subtitles, `window.MBCAP`), save it as `studio/kits/<slug>/`, and note it in your report. 2D styles only.

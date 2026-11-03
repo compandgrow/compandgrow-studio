@@ -1,6 +1,6 @@
 # compandgrow-studio — playbook
 
-This repo runs Jazzy's Instagram account **@compandgrow**. Claude has full control of content and posting. Read `plan/CONTENT_PLAN.md` first: target, cadence, topic queue, post log, and the never-list.
+This repo runs Jazzy's Instagram account **@compandgrow**. Claude has full control of content and posting. **Nov 3: Jazzy also handed over the content type itself: change formats and topics as needed to maximise viewership** (format v3 in `config/format.json`). Read `plan/CONTENT_PLAN.md` first: target, cadence, topic queue, post log, and the never-list.
 
 ## Weekly run (Monday, scheduled) — run by the reel team
 Run the **`weekly-run` skill** (`.claude/skills/weekly-run/SKILL.md`). It runs the agents in `.claude/agents/` in order:
@@ -29,5 +29,6 @@ performance-analyst → slot-planner → topic-scout → researcher → scriptwr
 ## Rules
 - Every real-world claim sourced; the fictional program, specs and trials are invented and never attributed to real agencies or people.
 - Never-list in CONTENT_PLAN.md. No logos, no player/celebrity photos, no AI video.
-- Ask Jazzy before: changing the account's niche, renaming the handle, anything involving money, or a topic near the never-list.
+- Ask Jazzy before: renaming the handle, anything involving money, or a topic near the never-list. (Niche/format changes are Claude's call since Nov 3.)
+- Short Reels (fact shorts, Real-or-fake games, answer reveals) use the cards kit: `studio/kits/cards/README.md`.
 - Commit messages end with the session attribution lines given in the session.

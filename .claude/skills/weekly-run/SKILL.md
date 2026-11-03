@@ -4,6 +4,8 @@ description: Run the @compandgrow reel team — review last week's Reels, plan o
 ---
 # Weekly run — @compandgrow reel team
 
+**Format v3 (Nov 3, Jazzy gave full control incl. content type):** 7 posts a week. Sun film (45-60 s), Mon + Fri "Sounds fake. It's real." fact shorts, Tue + Sat film cuts, Wed Real-or-fake game (answer held back), Thu its reveal. Fact/game/reveal Reels use `studio/kits/cards` (~2 min render each), so even a run without a film render can fill 4 slots.
+
 Arguments: none (full run), `review` (steps 0–1 only: performance + slots, no production), `cuts <film>` (cut and schedule an existing film), or `film <topic>` (make one specific film).
 
 Account: Instagram @compandgrow, Zernio `6ad2b0ba41b89dd24d24a501`. **Never** @thescoutbrief (`6ad5bc58ea5889c95a4c443b`).
@@ -23,6 +25,7 @@ Account: Instagram @compandgrow, Zernio `6ad2b0ba41b89dd24d24a501`. **Never** @t
 | 4 | `researcher` | `FACTS.md` (claim → URL + quote, fiction disclaimer) | every real claim sourced; unverifiable ones dropped |
 | 5 | `scriptwriter` | `TREATMENT.md`, `audio/lines.json`, `audio/subs.json`, `captions/*.txt` | follows `format.json` (length, hook in 3 s, slot order) |
 | 6 | `producer` | `out/<slug>.mp4`, `.srt`, scene sources | stills checked first; duration within format |
+| 6b | `producer` (cards kit) | fact / game / reveal Reels from `data.js` | stills checked; no fiction in fact shorts |
 | 7 | `cutdown-editor` | `media/<YYYY>-w<WW>/<slug>-full.mp4` + 4 cuts, `cuts.json` | each cut opens on its hook, < 20 MB |
 | 8 | `reviewer` | `studio/films/<slug>/review.md` | PASS per file. FIX → back to 5/6/7, max 2 rounds, then escalate |
 | 9 | `publisher` | scheduled Zernio posts, repairs, `data/posts.json`, post log | PASS only; `validate_media` on every URL; no double-booking |

@@ -4,12 +4,29 @@
 **Target:** 2,500 followers by Jan 16, 2027. Stretch: 10,000 (needs one breakout Reel).
 **Pace line:** wk 2 ≥ 50 · wk 4 ≥ 200 · wk 6 ≥ 500 (decide: stretch still alive?) · wk 9 ≥ 1,200 · wk 13 ≥ 2,500.
 
-## Format
+## Strategy v3 (Nov 3, full control from Jazzy)
+Jazzy handed over the channel completely, including the type of content, with one goal: as much viewership as possible.
+Where we stood: 9 followers (flat since Oct 16), ~150-430 views per Reel, 0 follows from ~1,150 people reached, viewers leave 13-22 s into the films, game #1 got 0 comments (its answer was in the same video).
+
+**Daily posting, 4:28 pm PT (format v3):**
+| Day | Post | Kit |
+|---|---|---|
+| Sun | What-if film, **45-60 s** (question in the first 10 s, one history beat, fast trials, stamp) | film styles |
+| Mon | **"Sounds fake. It's real."** true, sourced engineering/science story, 18-30 s | cards (fact) |
+| Tue | Film cut (this_was_real) | cutdown.py |
+| Wed | **Real or fake?** game, answer **held back**: "ANSWER TOMORROW" | cards (game) |
+| Thu | The answer reveal | cards (reveal) |
+| Fri | "Sounds fake. It's real." | cards (fact) |
+| Sat | Film cut (stamp moment) | cutdown.py |
+Every Reel ends on a follow card; every caption ends with a follow line. Judge v3 after 7 Reels on reach, shares+saves per 1k, comments, follows.
+Launch posts (Nov 4-5): game "pigeon" (Wed 10:28), fact #1 ball lightning in a lab (Wed 16:28), its reveal (Thu 10:28).
+
+## Format (v1/v2, kept for the Sunday film)
 "What-if engineering briefings": a legendary impossible device told as a real engineering briefing on a whiteboard wall (Lemo-Opuscar *Engineering Briefing Board* style, 1080×1920). Real history and physics first, sourced in FACTS.md; then a fictional program with invented specs, trials and a clearance stamp. Played straight, no on-screen fiction label; captions lean on #whatif.
 
 ## Cadence (5 Reels/week, 4:28 pm PT unless the data says otherwise)
 - **Sun:** full film (90–120 s).
-- **Thu (from Nov 19; first one posted early, Sun Nov 1 10:28 am):** "Real or fake?" game Reel, 20–30 s: 3 devices, one real and sourced, viewers comment 1/2/3, reveal at the end (format v2, judged after 3).
+- (superseded by Strategy v3) **Thu:** "Real or fake?" game Reel, 20–30 s: 3 devices, one real and sourced, viewers comment 1/2/3, reveal at the end (format v2, judged after 3).
 - **Tue / Fri / Sat:** 15–35 s cutdowns from the latest film, each with a different hook (question, shocking number, "this was real", the stamp moment). End card: "FULL BRIEFING on @compandgrow".
 
 ## Style testing (Jazzy handed style decisions to Claude, Oct 16)
@@ -36,6 +53,8 @@
 9. Bermuda "vortex engine"
 10. Mind-reading helmet
 
+**Fact-short topic pool (true, sourced):** WWII/Cold War oddities (Project Pigeon, Habakkuk, bat bombs), lab science that sounds like sci-fi, failed megaprojects, record machines, weird patents. Avoid weapons-of-mass-harm detail and anything near the never-list.
+
 **Never:** real health/vaccine claims, real elections, real disasters blamed on a device, real named people as villains, club/brand logos.
 
 ## Post log
@@ -59,6 +78,9 @@ Media URLs: everything scheduled before Oct 26 was pinned to commits (7ccc99c, 5
 | Sun Nov 1 | LODESTONE full film (Halftone Dossier) | 6ad64867869d6987ab7db336 | media/2026-w44/lodestone-full.mp4 | scheduled · Zernio storage |
 | Tue Nov 3 | LODESTONE cut: "this was real" (1269 + Wilkins) | 6ad6486e5fcedf094d93f0a4 | media/2026-w45/lodestone-cut-real.mp4 | scheduled · Zernio storage |
 | Wed Nov 4 | LONGSHOT cut: 1934 claim (make-up) | 6ad314cbb3d7df3b1dac3494 | media/2026-w43/longshot-cut-claim.mp4 | ✗ deleted Oct 30 |
+| **Wed Nov 4, 10:28 am** | GAME "Real or fake? #2" (pigeon missile = REAL), answer held back | 6ae97a8e472661d9411e0158 | media/2026-w45/game-pigeon.mp4 | scheduled · Zernio storage |
+| **Wed Nov 4** | FACT #1 "Scientists made ball lightning in a lab" | 6ae97bf11f3f6ff1f2a8cbf2 | media/2026-w45/fact-01.mp4 | scheduled · Zernio storage |
+| **Thu Nov 5, 10:28 am** | REVEAL #2: Project Pigeon was real | 6ae97a90472661d9411e016c | media/2026-w45/reveal-pigeon.mp4 | scheduled · Zernio storage |
 | Thu Nov 5 | LODESTONE cut: question (why it stops) | 6ad648705fcedf094d93f0b8 | media/2026-w45/lodestone-cut-why.mp4 | scheduled · Zernio storage |
 | Fri Nov 6 | LODESTONE cut: number (3 / 11 / 40 days) | 6ad64872fe386d21a3f320a4 | media/2026-w45/lodestone-cut-trials.mp4 | scheduled · Zernio storage |
 | Sat Nov 7 | LODESTONE cut: stamp moment (catch → CLEARED) | 6ad64875fe386d21a3f320b3 | media/2026-w45/lodestone-cut-catch.mp4 | scheduled · Zernio storage |
