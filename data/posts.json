@@ -426,10 +426,12 @@
    "media": "media/2026-w45/game-pigeon.mp4",
    "media_url": "https://media.zernio.com/media/1793686138660_0699e1411362b64e_game-02-real-or-fake.mp4",
    "cdn_ref": null,
-   "status": "scheduled",
+   "status": "published",
    "segments": null,
    "format_version": 3,
-   "experiment": "v3 launch"
+   "experiment": "v3 launch",
+   "published_at": "2026-11-04T18:29:15Z",
+   "instagram_url": "https://www.instagram.com/reel/DfVGf3EAZx6/"
   },
   {
    "id": "fact-01",
@@ -444,10 +446,12 @@
    "media": "media/2026-w45/fact-01.mp4",
    "media_url": "https://media.zernio.com/media/1793686499978_df6b9a5a304854c2_fact-01-ball-lightning-lab.mp4",
    "cdn_ref": null,
-   "status": "scheduled",
+   "status": "published",
    "segments": null,
    "format_version": 3,
-   "experiment": "v3 launch"
+   "experiment": "v3 launch",
+   "published_at": "2026-11-05T00:29:22Z",
+   "instagram_url": "https://www.instagram.com/reel/DfVvsUSgYzD/"
   },
   {
    "id": "reveal-pigeon",
@@ -462,10 +466,12 @@
    "media": "media/2026-w45/reveal-pigeon.mp4",
    "media_url": "https://media.zernio.com/media/1793686139223_dff994c730a45b24_reveal-02-answer.mp4",
    "cdn_ref": null,
-   "status": "scheduled",
+   "status": "published",
    "segments": null,
    "format_version": 3,
-   "experiment": "v3 launch"
+   "experiment": "v3 launch",
+   "published_at": "2026-11-05T18:29:14Z",
+   "instagram_url": "https://www.instagram.com/reel/DfXrSs0D56L/"
   }
  ]
 }

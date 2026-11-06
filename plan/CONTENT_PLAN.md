@@ -78,9 +78,9 @@ Media URLs: everything scheduled before Oct 26 was pinned to commits (7ccc99c, 5
 | Sun Nov 1 | LODESTONE full film (Halftone Dossier) | 6ad64867869d6987ab7db336 | media/2026-w44/lodestone-full.mp4 | scheduled · Zernio storage |
 | Tue Nov 3 | LODESTONE cut: "this was real" (1269 + Wilkins) | 6ad6486e5fcedf094d93f0a4 | media/2026-w45/lodestone-cut-real.mp4 | scheduled · Zernio storage |
 | Wed Nov 4 | LONGSHOT cut: 1934 claim (make-up) | 6ad314cbb3d7df3b1dac3494 | media/2026-w43/longshot-cut-claim.mp4 | ✗ deleted Oct 30 |
-| **Wed Nov 4, 10:28 am** | GAME "Real or fake? #2" (pigeon missile = REAL), answer held back | 6ae97a8e472661d9411e0158 | media/2026-w45/game-pigeon.mp4 | scheduled · Zernio storage |
-| **Wed Nov 4** | FACT #1 "Scientists made ball lightning in a lab" | 6ae97bf11f3f6ff1f2a8cbf2 | media/2026-w45/fact-01.mp4 | scheduled · Zernio storage |
-| **Thu Nov 5, 10:28 am** | REVEAL #2: Project Pigeon was real | 6ae97a90472661d9411e016c | media/2026-w45/reveal-pigeon.mp4 | scheduled · Zernio storage |
+| **Wed Nov 4, 10:28 am** | GAME "Real or fake? #2" (pigeon missile = REAL), answer held back | 6ae97a8e472661d9411e0158 | media/2026-w45/game-pigeon.mp4 | published 10:29 am PT · https://www.instagram.com/reel/DfVGf3EAZx6/ |
+| **Wed Nov 4** | FACT #1 "Scientists made ball lightning in a lab" | 6ae97bf11f3f6ff1f2a8cbf2 | media/2026-w45/fact-01.mp4 | published 4:29 pm PT · https://www.instagram.com/reel/DfVvsUSgYzD/ |
+| **Thu Nov 5, 10:28 am** | REVEAL #2: Project Pigeon was real | 6ae97a90472661d9411e016c | media/2026-w45/reveal-pigeon.mp4 | published 10:29 am PT · https://www.instagram.com/reel/DfXrSs0D56L/ |
 | Thu Nov 5 | LODESTONE cut: question (why it stops) | 6ad648705fcedf094d93f0b8 | media/2026-w45/lodestone-cut-why.mp4 | scheduled · Zernio storage |
 | Fri Nov 6 | LODESTONE cut: number (3 / 11 / 40 days) | 6ad64872fe386d21a3f320a4 | media/2026-w45/lodestone-cut-trials.mp4 | scheduled · Zernio storage |
 | Sat Nov 7 | LODESTONE cut: stamp moment (catch → CLEARED) | 6ad64875fe386d21a3f320b3 | media/2026-w45/lodestone-cut-catch.mp4 | scheduled · Zernio storage |
