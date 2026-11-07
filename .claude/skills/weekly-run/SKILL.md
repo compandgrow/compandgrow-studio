@@ -4,7 +4,7 @@ description: Run the @compandgrow reel team — review last week's Reels, plan o
 ---
 # Weekly run — @compandgrow reel team
 
-**Format v3 (Nov 3, Jazzy gave full control incl. content type):** 7 posts a week. Sun film (45-60 s), Mon + Fri "Sounds fake. It's real." fact shorts, Tue + Sat film cuts, Wed Real-or-fake game (answer held back), Thu its reveal. Fact/game/reveal Reels use `studio/kits/cards` (~2 min render each), so even a run without a film render can fill 4 slots.
+**Format v3 (Nov 3, Jazzy gave full control incl. content type):** 7 posts a week. Sun film (75-100 s, v4), Mon + Fri "Sounds fake. It's real." fact shorts, Tue + Sat film cuts, Wed Real-or-fake game (answer held back), Thu the answer as a full fact short (v4). Every short opens on movement (kit motion opener). Fact/game/reveal Reels use `studio/kits/cards` (~2 min render each), so even a run without a film render can fill 4 slots.
 
 Arguments: none (full run), `review` (steps 0–1 only: performance + slots, no production), `cuts <film>` (cut and schedule an existing film), or `film <topic>` (make one specific film).
 

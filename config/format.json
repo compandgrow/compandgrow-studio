@@ -1,18 +1,18 @@
 {
- "version": 3,
- "updated": "2026-11-03",
- "why": "Nov 3: Jazzy handed over full control incl. content type, goal = max viewership. Data (9 followers flat, 0 follows from ~1,150 reached, viewers leave at 13-22 s, game #1 got 0 comments with the answer in-video): post daily, add true 'Sounds fake. It's real.' shorts, hold the game answer back a day, films 45-60 s, follow card on every Reel.",
+ "version": 4,
+ "updated": "2026-11-07",
+ "why": "Week-1 data (Nov 1-7): the 119 s LODESTONE film reached 340 with 42% skips and 24 s avg watch; every short (cuts, game, reveal, fact) reached 126-168 with 58-71% skips and 4-8 s watch. Shorts open on still text cards; the film opens on an animated device. v4: keep films ~90 s (question in 10 s), moving openers on shorts, reveal becomes a full fact short. Game #2 got the first game comment (answer held back) - keep.",
  "owner_note": "The performance-analyst may change anything in 'tunable' (one change per version, see .claude/agents/performance-analyst.md). Nothing in 'locked' may change without Jazzy.",
  "tunable": {
   "film": {
    "duration_s": {
     "target": [
-     45,
-     60
+     75,
+     100
     ],
-    "max": 75
+    "max": 110
    },
-   "spoken_words_max": 150,
+   "spoken_words_max": 240,
    "hook": {
     "payoff_within_s": 3,
     "max_words": 10,
@@ -46,7 +46,7 @@
     },
     {
      "slot": "outro",
-     "note": "series hook + follow: 'Next case Sunday. Follow @compandgrow.'"
+     "note": "pull-back + 'Next case Sunday. Follow @compandgrow.'"
     }
    ]
   },
@@ -189,10 +189,17 @@
      "note": "follow card"
     }
    ],
-   "rules": "100% true and sourced in FACTS.md (2 sources or 1 primary). Pick stories with a 'no way' reaction: odd WWII/Cold War engineering, lab science that sounds like sci-fi, failed megaprojects, record machines. Never-list applies."
+   "rules": "100% true and sourced in FACTS.md (2 sources or 1 primary). Pick stories with a 'no way' reaction: odd WWII/Cold War engineering, lab science that sounds like sci-fi, failed megaprojects, record machines. Never-list applies.",
+   "opener": "Frame 0 moves: kit hook scene has rotating rays, drifting specks, icon push-in and a text punch (studio/kits/cards fx). Never open on a still card."
   },
   "follow_cta": "Every Reel ends on a follow card ('FOLLOW @compandgrow' + why: next case / new round / new one every week). Captions end with a follow line.",
-  "trial_reels": "Not used while the account has < 500 followers: almost all viewers are already non-followers."
+  "trial_reels": "Not used while the account has < 500 followers: almost all viewers are already non-followers.",
+  "reveal": {
+   "name": "answer as a story",
+   "slot_day": "Thu",
+   "kit": "studio/kits/cards (mode fact)",
+   "rule": "The day after a game, post a full 'Sounds fake. It's real.' short about the REAL item (works on its own); first card says 'Yesterday's game: #N was real.' Fake items are named in the caption with the briefing they come from. No standalone stamp-only reveal Reels."
+  }
  },
  "locked": {
   "facts": "Every real-world claim is sourced in the film's FACTS.md (claim -> URL). The fictional program, specs and trials are invented and never attributed to real agencies, labs or people.",
@@ -225,7 +232,16 @@
    "from": "2026-11-03",
    "summary": "daily posting; Mon/Fri fact shorts, Wed game (answer held back), Thu reveal, Sun 45-60 s film, Tue/Sat cuts; follow card everywhere",
    "evidence": "learnings.md 2026-11-02 + channel stats 2026-11-03",
-   "judge_after_reels": 7
+   "judge_after_reels": 7,
+   "until": "2026-11-07"
+  },
+  {
+   "version": 4,
+   "from": "2026-11-07",
+   "summary": "films back to 75-100 s; moving opener on every short; Thu reveal = fact short about the real item",
+   "evidence": "channel stats 2026-11-07 (7 Reels since v3)",
+   "judge_after_reels": 7,
+   "first_test": "fact-02 Camp Century, Mon Nov 9 (moving opener) vs fact-01 (still opener: 126 reach, 64% skip, 3.9 s)"
   }
  ]
 }

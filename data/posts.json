@@ -472,6 +472,24 @@
    "experiment": "v3 launch",
    "published_at": "2026-11-05T18:29:14Z",
    "instagram_url": "https://www.instagram.com/reel/DfXrSs0D56L/"
+  },
+  {
+   "id": "fact-02",
+   "film": "fact-02",
+   "kind": "fact",
+   "hook_type": "fact",
+   "style": "cards",
+   "label": "Sounds fake #2: US Army city inside the ice (Camp Century) - first moving opener",
+   "slot_pt": "2026-11-09 16:28",
+   "scheduled_for": "2026-11-10T00:28:00Z",
+   "zernio_post": "6aef7e4e5e332bb5641a0f1f",
+   "media": "media/2026-w45/fact-02.mp4",
+   "media_url": "https://media.zernio.com/media/1794080251917_3272bba13671d7b6_fact-02-camp-century.mp4",
+   "cdn_ref": null,
+   "status": "scheduled",
+   "segments": null,
+   "format_version": 4,
+   "experiment": "moving opener vs fact-01 still opener"
   }
  ]
 }

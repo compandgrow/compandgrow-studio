@@ -16,8 +16,8 @@ Inputs: `studio/films/<slug>/PITCH.md`, `FACTS.md`, `config/format.json` → `tu
 4. `captions/<post_id>.txt` for the film and each cut (`<slug>-full`, `<slug>-cut-real`, `-cut-why`, `-cut-number`, `-cut-stamp`): first line per `format.json → caption.first_line`, 1–3 lines of body, a comment question, then hashtags (count per format; always `#whatif`).
 
 ## Rules
-- **Fact / game / reveal Reels** (cards kit): write `studio/films/<slug>/data.js` (see `studio/kits/cards/README.md` and the examples `fact-01`, `game-pigeon`, `reveal-pigeon`) + `captions/<slug>.txt`. Games end on "ANSWER TOMORROW" and never give the answer in the caption; the reveal Reel names the films the fakes come from. Card lines <= 10 words, one number per card.
-- **Films (v3):** 45-60 s, question within 10 s, one history beat, end on "Next case Sunday. Follow @compandgrow."
+- **Fact / game / reveal Reels** (cards kit): write `studio/films/<slug>/data.js` (see `studio/kits/cards/README.md` and the examples `fact-01`, `game-pigeon`, `reveal-pigeon`) + `captions/<slug>.txt`. Games end on "ANSWER TOMORROW" and never give the answer in the caption; (v4) the next-day answer is a full fact short about the real item, opening 'Yesterday's game: #N was real.', with the fakes named in its caption. Card lines <= 10 words, one number per card.
+- **Films (v4):** 75-100 s, question within 10 s, one history beat, end on "Next case Sunday. Follow @compandgrow."
 - Every caption ends with a follow line.
 - **Game Reel** (`format.json → tunable.game`, Thu slot): also write `studio/films/<slug>/game/` → `lines.json`, `subs.json`, `GAME.md` (the 3 devices, which one is real and its FACTS.md row, the fake ones' source films) and `captions/<slug>-game.txt` (first line = the question, never the answer). Pick a real device that is surprising but checkable; the researcher must have it in FACTS.md.
 - Every real claim in `text`, `subs` and captions must be a row in FACTS.md, worded no stronger than the source. Nothing from memory.

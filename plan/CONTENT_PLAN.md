@@ -4,6 +4,10 @@
 **Target:** 2,500 followers by Jan 16, 2027. Stretch: 10,000 (needs one breakout Reel).
 **Pace line:** wk 2 ≥ 50 · wk 4 ≥ 200 · wk 6 ≥ 500 (decide: stretch still alive?) · wk 9 ≥ 1,200 · wk 13 ≥ 2,500.
 
+## v4 adjustments (Nov 7, after week 1 of v3)
+Week-1 numbers: the LODESTONE film (119 s) reached 340, 42% skipped, 24 s average watch. Every short (cuts, game, reveal, fact) reached 126-168, 58-71% skipped, 4-8 s watch. Followers still 9. Game #2 (answer held back) got the first comment on a game.
+Changes: films stay ~75-100 s (question in the first 10 s; the 45-60 s plan is dropped); every short opens on movement (cards kit motion opener); Thursday's reveal becomes a full "Sounds fake. It's real." short about the real item. First test: fact #2 Camp Century, Mon Nov 9.
+
 ## Strategy v3 (Nov 3, full control from Jazzy)
 Jazzy handed over the channel completely, including the type of content, with one goal: as much viewership as possible.
 Where we stood: 9 followers (flat since Oct 16), ~150-430 views per Reel, 0 follows from ~1,150 people reached, viewers leave 13-22 s into the films, game #1 got 0 comments (its answer was in the same video).
@@ -11,11 +15,11 @@ Where we stood: 9 followers (flat since Oct 16), ~150-430 views per Reel, 0 foll
 **Daily posting, 4:28 pm PT (format v3):**
 | Day | Post | Kit |
 |---|---|---|
-| Sun | What-if film, **45-60 s** (question in the first 10 s, one history beat, fast trials, stamp) | film styles |
+| Sun | What-if film, **75-100 s** (v4; question in the first 10 s, one history beat, fast trials, stamp) | film styles |
 | Mon | **"Sounds fake. It's real."** true, sourced engineering/science story, 18-30 s | cards (fact) |
 | Tue | Film cut (this_was_real) | cutdown.py |
 | Wed | **Real or fake?** game, answer **held back**: "ANSWER TOMORROW" | cards (game) |
-| Thu | The answer reveal | cards (reveal) |
+| Thu | The answer, told as a full fact short about the real item (v4) | cards (fact) |
 | Fri | "Sounds fake. It's real." | cards (fact) |
 | Sat | Film cut (stamp moment) | cutdown.py |
 Every Reel ends on a follow card; every caption ends with a follow line. Judge v3 after 7 Reels on reach, shares+saves per 1k, comments, follows.
@@ -87,6 +91,7 @@ Media URLs: everything scheduled before Oct 26 was pinned to commits (7ccc99c, 5
 | Wed Nov 11 | HULL 7 cut: trials (make-up) | 6ad30ed20c1af006905b86dc | media/2026-w43/hull7-cut-trials.mp4 | ✗ deleted Oct 30 |
 | Wed Nov 18 | LONGSHOT cut: channel + trials (make-up) | 6ad314cedb2c0dea44ce36f7 | media/2026-w43/longshot-cut-trials.mp4 | ✗ deleted Oct 30 |
 | Sun Nov 8 | EMBER full film (board) | 6adf88babf063039d1e4f221 | media/2026-w45/ember-full.mp4 | scheduled · Zernio storage |
+| **Mon Nov 9** | FACT #2 "The US Army built a city inside the ice" (Camp Century), first moving opener | 6aef7e4e5e332bb5641a0f1f | media/2026-w45/fact-02.mp4 | scheduled · Zernio storage |
 | Tue Nov 10 | EMBER cut: "this was real" (2012 spectrum) | 6adf88bfbf063039d1e4f251 | media/2026-w46/ember-cut-real.mp4 | scheduled · Zernio storage |
 | Thu Nov 12 | EMBER cut: question (what if it never went out?) | 6adf88c3bf063039d1e4f28b | media/2026-w46/ember-cut-question.mp4 | scheduled · Zernio storage |
 | Fri Nov 13 | EMBER cut: number (lab 8 s → 8 s / 90 s / 6 h) | 6adf88c5bf063039d1e4f2a5 | media/2026-w46/ember-cut-number.mp4 | scheduled · Zernio storage |
