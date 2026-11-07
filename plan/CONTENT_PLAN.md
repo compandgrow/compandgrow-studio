@@ -4,6 +4,9 @@
 **Target:** 2,500 followers by Jan 16, 2027. Stretch: 10,000 (needs one breakout Reel).
 **Pace line:** wk 2 ≥ 50 · wk 4 ≥ 200 · wk 6 ≥ 500 (decide: stretch still alive?) · wk 9 ≥ 1,200 · wk 13 ≥ 2,500.
 
+## Brain-test trial (Jazzy's idea, Nov 7)
+Engineering brain tests replace the real-or-fake game for two weeks (Wed + Sat, Nov 15-28): gear direction, count the bolts, memory panel, quick pulley maths, follow the pipe. 12-25 s, timer on screen, "comment your answer", answer next day, follow card. Built in the cards kit (new `brain` mode). Judged after 4 tests on replays, comments, watch ratio and shares vs the real-or-fake games; the winner keeps the slot.
+
 ## v4 adjustments (Nov 7, after week 1 of v3)
 Week-1 numbers: the LODESTONE film (119 s) reached 340, 42% skipped, 24 s average watch. Every short (cuts, game, reveal, fact) reached 126-168, 58-71% skipped, 4-8 s watch. Followers still 9. Game #2 (answer held back) got the first comment on a game.
 Changes: films stay ~75-100 s (question in the first 10 s; the 45-60 s plan is dropped); every short opens on movement (cards kit motion opener); Thursday's reveal becomes a full "Sounds fake. It's real." short about the real item. First test: fact #2 Camp Century, Mon Nov 9.

@@ -107,12 +107,12 @@
     "Sun": "film",
     "Mon": "fact",
     "Tue": "cut",
-    "Wed": "game",
-    "Thu": "reveal",
+    "Wed": "brain_test",
+    "Thu": "fact (answer story)",
     "Fri": "fact",
-    "Sat": "cut"
+    "Sat": "brain_test"
    },
-   "note": "Adjust with analytics_get_best_time_to_post once 10+ Reels have data.",
+   "note": "v4 test (Nov 15-28): Wed + Sat engineering brain tests; real-or-fake game paused; Sat film cut dropped. Post the brain-test answer as a pinned comment the next day (or in the next day's caption if pinning isn't possible via Zernio).",
    "times": {
     "default": "16:28",
     "game": "16:28",
@@ -199,6 +199,48 @@
    "slot_day": "Thu",
    "kit": "studio/kits/cards (mode fact)",
    "rule": "The day after a game, post a full 'Sounds fake. It's real.' short about the REAL item (works on its own); first card says 'Yesterday's game: #N was real.' Fake items are named in the caption with the briefing they come from. No standalone stamp-only reveal Reels."
+  },
+  "brain_test": {
+   "name": "Engineering brain test",
+   "slot_days": [
+    "Wed",
+    "Sat"
+   ],
+   "kit": "studio/kits/cards (new mode 'brain' to build)",
+   "duration_s": {
+    "target": [
+     12,
+     25
+    ],
+    "max": 30
+   },
+   "types": [
+    "focus: which way does the last gear turn (chain of 5-9 gears)",
+    "count: how many bolts/rivets (flash 3-5 s)",
+    "memory: memorise a control panel 3 s, which switch changed",
+    "calc: simple pulley/lever/gear-ratio sum with a timer",
+    "track: follow the ball through pipes, which exit"
+   ],
+   "structure": [
+    {
+     "slot": "challenge",
+     "note": "frame 0 = the puzzle title + 'Only 10% get this' style hook, moving"
+    },
+    {
+     "slot": "puzzle",
+     "note": "the test itself with a visible countdown timer"
+    },
+    {
+     "slot": "lock",
+     "note": "'Comment your answer' + 3-2-1"
+    },
+    {
+     "slot": "end",
+     "note": "'Answer in the pinned comment / tomorrow · FOLLOW for the next test'"
+    }
+   ],
+   "rules": "Exactly one correct answer, computed in code and stated in FACTS.md (answer + working). No trick wording. Engineering visuals only (gears, pulleys, pipes, panels) so the audience matches the films. Never give the answer in the caption.",
+   "judge": "replays, comments, avg watch ratio and shares vs the real-or-fake games after 4 brain tests (2 weeks)"
   }
  },
  "locked": {
@@ -241,7 +283,8 @@
    "summary": "films back to 75-100 s; moving opener on every short; Thu reveal = fact short about the real item",
    "evidence": "channel stats 2026-11-07 (7 Reels since v3)",
    "judge_after_reels": 7,
-   "first_test": "fact-02 Camp Century, Mon Nov 9 (moving opener) vs fact-01 (still opener: 126 reach, 64% skip, 3.9 s)"
+   "first_test": "fact-02 Camp Century, Mon Nov 9 (moving opener) vs fact-01 (still opener: 126 reach, 64% skip, 3.9 s)",
+   "brain_test_trial": "Jazzy's idea (Nov 7): attention/memory/calc games. Trial Wed+Sat Nov 15-28, judged after 4."
   }
  ]
 }
