@@ -1,0 +1,39 @@
+[
+  {
+    "post_id": "lifter-cut-real",
+    "hook_type": "this_was_real",
+    "slot_pt": "2026-11-17 16:28",
+    "segments": [
+      "0:9.58",
+      "33.40:44.85"
+    ],
+    "duration_s": 23.2,
+    "first_line": "This foil triangle flies.",
+    "file": "media/2026-w47/lifter-cut-real.mp4",
+    "caption": "studio/films/lifter/captions/cut-real.txt",
+    "end_card": [
+      "FULL BRIEFING",
+      "on @compandgrow · FOLLOW"
+    ],
+    "note": "Made 2026-11-09 (format v4, 2 cuts/film; Sat stamp cut dropped). Seg 1 = a1-a4: device + claim ('This foil triangle flies. Nothing on it moves. No wings. No rotor. No fuel.') ending on the question 'So is it antigravity?'. Seg 2 = c9-c11: 'Not antigravity. Ion wind.' / 'A real plane has flown on it.' / '2018. No moving parts. A gym: about 60 m.' Stamp/verdict beat (84.83-90.68) left out: it repeats 'not antigravity' and brings in the fictional 3 km stall with no setup."
+  },
+  {
+    "post_id": "lifter-full",
+    "hook_type": "film",
+    "slot_pt": "2026-11-15",
+    "segments": [
+      "0:99.75"
+    ],
+    "duration_s": 99.75,
+    "first_line": "This foil triangle flies.",
+    "file": "media/2026-w46/lifter-full.mp4",
+    "note": "Reviewer fix 2026-11-09: re-encoded from studio/films/lifter/out/lifter.mp4 (master) with cutdown.py --full settings (crf 26, maxrate 1.1M, aac 112k) plus an orange FOLLOW @compandgrow chip (Archivo 800, 0xFE693F fill, dark text) over the plain @compandgrow line from 96.75 s to the end. studio/films/lifter/out/lifter-full.mp4 is the old no-FOLLOW encode.",
+    "version": 2,
+    "caption": "studio/films/lifter/captions/lifter-full.txt",
+    "end_card": [
+      "CASE CLOSED",
+      "NEXT FILE OPENS SUNDAY",
+      "FOLLOW @compandgrow"
+    ]
+  }
+]

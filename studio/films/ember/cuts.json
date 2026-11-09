@@ -1,0 +1,147 @@
+[
+  {
+    "post_id": "ember-cut-real",
+    "hook_type": "this_was_real",
+    "version": 3,
+    "slot_pt": "2026-11-10 16:28",
+    "segments": [
+      "0:7.85",
+      "22.45:46.72"
+    ],
+    "duration_s": 34.4,
+    "first_line": "A ball of fire, floating in the air.",
+    "file": "media/2026-w46/ember-cut-real-v3.mp4",
+    "caption": "studio/films/ember/captions/cut-real.txt",
+    "end_card": [
+      "FULL BRIEFING",
+      "on @compandgrow · FOLLOW"
+    ],
+    "cover_s": 6.6,
+    "note": "Reviewer fix 2026-11-09: v2 plus a 0-3 s hook overlay (frame 0 was a cropped ball on a blank page). Hook text burned 0.0-3.0 s: 'A BALL OF FIRE.' (cream) / 'THEN GONE.' (yellow), Alfa Slab One on a dark plate (0x111318 @0.90, orange top rule), y 715-1045, clear of the ball and subtitles. Seg 1 out point moved from 8.0 to 7.85 (voice ends ~7.1, '1638' starts ~8.0). GONE stamp lands 5.98 s; cover 6.6 s (stamp settled + '1 SECOND?' chip in). Built via a crf-10 cutdown.py intermediate then the overlay pass (crf 22). Not uploaded; the scheduled Zernio post still points at v1."
+  },
+  {
+    "post_id": "ember-cut-question",
+    "hook_type": "question",
+    "version": 3,
+    "slot_pt": "2026-11-12 16:28",
+    "segments": [
+      "0:7.85",
+      "65.59:75.60"
+    ],
+    "duration_s": 20.1,
+    "first_line": "A ball of fire, floating in the air.",
+    "file": "media/2026-w46/ember-cut-question-v3.mp4",
+    "caption": "studio/films/ember/captions/cut-question.txt",
+    "end_card": [
+      "FULL BRIEFING",
+      "on @compandgrow · FOLLOW"
+    ],
+    "cover_s": 6.6,
+    "note": "Reviewer fix 2026-11-09: in film order. Seg 1 = ball of fire / glows / 'Then it's gone.'; seg 2 = 'What if it never went out?' ... 'Draw power from its glow.' Hook text burned 0.0-3.0 s: 'A BALL OF FIRE.' (cream) / 'THEN GONE.' (yellow), Alfa Slab One on a dark plate (0x111318 @0.90, orange top rule), y 715-1045, clear of the ball and subtitles. Cut points checked on audio levels: seg 1 out 0.75 s after the voice, before '1638'; seg 2 in 0.07 s before 'What', out at 75.60 (voice ends ~75.3, the camera starts moving at 75.62, so the end card freezes on a sharp frame; 75.85 froze on motion blur). Not uploaded; the scheduled Zernio post still points at v1."
+  },
+  {
+    "post_id": "ember-cut-real",
+    "hook_type": "this_was_real",
+    "version": 2,
+    "slot_pt": "2026-11-10 16:28",
+    "segments": [
+      "0:8.0",
+      "22.45:46.72"
+    ],
+    "duration_s": 34.5,
+    "first_line": "A ball of fire, floating in the air.",
+    "file": "media/2026-w46/ember-cut-real-v2.mp4",
+    "end_card": [
+      "FULL BRIEFING",
+      "on @compandgrow · FOLLOW"
+    ],
+    "note": "Re-cut 2026-11-09: opens on the moving ball of fire + GONE stamp, then jumps over the 1638 Dartmoor beat to '2012... catch one on their spectrometer' through 'The ground burns.' Not uploaded; the scheduled Zernio post still points at v1."
+  },
+  {
+    "post_id": "ember-cut-real",
+    "hook_type": "this_was_real",
+    "version": 1,
+    "slot_pt": "2026-11-10 16:28",
+    "segments": [
+      "7.5:35.92"
+    ],
+    "duration_s": 30.6,
+    "first_line": "1638. A storm over Dartmoor, in England.",
+    "file": "media/2026-w46/ember-cut-real.mp4",
+    "end_card": [
+      "FULL BRIEFING",
+      "on @compandgrow"
+    ],
+    "note": "Superseded by v2. Segments recovered after the fact by aligning the cut's audio with ember-full.mp4 (±0.1 s)."
+  },
+  {
+    "post_id": "ember-cut-question",
+    "hook_type": "question",
+    "version": 2,
+    "slot_pt": "2026-11-12 16:28",
+    "segments": [
+      "65.59:75.85",
+      "7.85:22.35"
+    ],
+    "duration_s": 27.0,
+    "first_line": "What if it never went out?",
+    "file": "media/2026-w46/ember-cut-question-v2.mp4",
+    "end_card": [
+      "FULL BRIEFING",
+      "on @compandgrow · FOLLOW"
+    ],
+    "note": "Re-cut 2026-11-09 so the week's EMBER cuts don't all open on the same 7 s. Seg 1 = 'What if it never went out?' ... 'Draw power from its glow.' Seg 2 opens on a number: '1638. A storm over Dartmoor, in England.' ... 'For centuries, it was only stories.' (the Dartmoor beat no other v2 cut uses). Segments are out of film order, so cutdown.py was run on a near-lossless reordered intermediate (crf 10) to avoid an ffmpeg OOM; times are ember-full.mp4 times. Not uploaded; the scheduled Zernio post still points at v1."
+  },
+  {
+    "post_id": "ember-cut-question",
+    "hook_type": "question",
+    "slot_pt": "2026-11-12 16:28",
+    "segments": [
+      "0:7.2",
+      "62.1:75.6"
+    ],
+    "duration_s": 22.9,
+    "first_line": "A ball of fire, floating in the air.",
+    "file": "media/2026-w46/ember-cut-question.mp4",
+    "end_card": [
+      "FULL BRIEFING",
+      "on @compandgrow"
+    ],
+    "note": "Segments recovered by audio alignment (±0.1 s). Seg 2 = 'Up to 8 seconds.' (tail) ... 'Draw power from its glow.' Superseded by v2 (opened on the same ball-of-fire 7 s as real-v2 and stamp).",
+    "version": 1
+  },
+  {
+    "post_id": "ember-cut-number",
+    "hook_type": "number",
+    "slot_pt": "2026-11-13 16:28",
+    "segments": [
+      "48.9:62.1",
+      "75.4:88.4"
+    ],
+    "duration_s": 28.4,
+    "first_line": "In 2007, a team in Brazil",
+    "file": "media/2026-w46/ember-cut-number.mp4",
+    "end_card": [
+      "FULL BRIEFING",
+      "on @compandgrow"
+    ],
+    "note": "Segments recovered by audio alignment (±0.15 s). Seg 1 = 2007 Brazil lab (4 cm, 8 s); seg 2 = 'Draw power from its glow' tail, then 'Trial one. 8 seconds.' ... 6 hours 'Held.'"
+  },
+  {
+    "post_id": "ember-cut-stamp",
+    "hook_type": "stamp",
+    "slot_pt": "2026-11-14 16:28",
+    "segments": [
+      "0:7.2",
+      "88.1:107.29"
+    ],
+    "duration_s": 28.6,
+    "first_line": "A ball of fire, floating in the air.",
+    "file": "media/2026-w46/ember-cut-stamp.mp4",
+    "end_card": [
+      "FULL BRIEFING",
+      "on @compandgrow"
+    ],
+    "note": "Segments recovered by audio alignment (±0.1 s). Seg 2 = 'One side effect.' ... CLEARED ... 'Ember has to last all night.' to the end of the film."
+  }
+]

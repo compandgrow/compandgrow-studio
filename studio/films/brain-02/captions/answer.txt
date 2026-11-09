@@ -1,0 +1,2 @@
+Answer: 10 full turns.
+3 turns x 40 teeth = 120 teeth pass through the train, and 120 / 12 = 10; the 30-tooth gear B is an idler, it only changes direction (3 x 40/30 x 30/12 = 10).

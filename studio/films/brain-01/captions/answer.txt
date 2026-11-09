@@ -1,0 +1,2 @@
+Answer: CLOCKWISE (A).
+Meshing gears always turn opposite ways, so the direction flips at each of the 6 meshes between the yellow and the red gear; 6 flips is an even number, so the red gear turns the same way as the yellow one.

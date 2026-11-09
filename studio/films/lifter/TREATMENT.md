@@ -1,5 +1,7 @@
 format_version: 2 · experiment: question within 10 s + one dated beat before the physics (learnings rule 1); outro = follow reason, not a yes/no question (learnings "Outro" test)
 
+**Producer v4 trim (Nov 9):** the rendered film runs 99.75 s with 186 spoken words. Cut lines only, no new claims: b2, b3 (the patent label still shows No. 300,311 and "producing force or motion"; the holder's name is no longer said or shown), c2, c8, d3 (labels show them), and the spoken d2/e2/e4 (kept as short silent visual beats for the wave lift and the FLEW stamps). Times below are the old estimates. The measured line times are in out/timing.json.
+
 # STILLWING — treatment (style test: Exploded Teardown, film #6, Sun Nov 15)
 
 One object the whole way: a lifter cell (foil triangle, thin wire on top, air gap) on a dark graphite seamless. It flies, comes apart into its three parts, the missing fourth part turns out to be the air, then the same cell becomes STILLWING: the cells wave-lift into a tile, the tiles into a wing, and it closes again with its dimensions drawn on it. Labels follow the style's fixed structure (accent two-digit index · name · one spec line), on leader lines from a dot on the part; no tables beside the object. Accent colour (dimensions, indices, the emitter-wire glow): one warm orange. 241 spoken words, 39 lines. Estimate 105 s at 2.3 words/s; about 115–120 s with pauses (LODESTONE: 239 words ran 118 s). Times below are estimates. Re-time them from the TTS.

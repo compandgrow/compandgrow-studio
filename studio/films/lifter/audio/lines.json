@@ -36,26 +36,8 @@
   "speed": 0.95
  },
  {
-  "id": "b2",
-  "text": "For a way of producing force or motion.",
-  "voice": "bm_george",
-  "speed": 0.95
- },
- {
-  "id": "b3",
-  "text": "Its holder: Thomas Townsend Brown.",
-  "voice": "bm_george",
-  "speed": 0.95
- },
- {
   "id": "c1",
   "text": "Three parts.",
-  "voice": "bm_george",
-  "speed": 0.95
- },
- {
-  "id": "c2",
-  "text": "Thin wire. Air gap. Foil skirt.",
   "voice": "bm_george",
   "speed": 0.95
  },
@@ -90,12 +72,6 @@
   "speed": 0.95
  },
  {
-  "id": "c8",
-  "text": "The missing fourth part is the air.",
-  "voice": "bm_george",
-  "speed": 0.95
- },
- {
   "id": "c9",
   "text": "Not antigravity. Ion wind.",
   "voice": "bm_george",
@@ -120,18 +96,6 @@
   "speed": 0.95
  },
  {
-  "id": "d2",
-  "text": "Cells into a tile. Tiles into a wing.",
-  "voice": "bm_george",
-  "speed": 0.95
- },
- {
-  "id": "d3",
-  "text": "Wire: zero point one millimetres. Gap: thirty.",
-  "voice": "bm_george",
-  "speed": 0.95
- },
- {
   "id": "d4",
   "text": "Thirty kilovolts per cell. Zero moving parts.",
   "voice": "bm_george",
@@ -144,20 +108,8 @@
   "speed": 0.95
  },
  {
-  "id": "e2",
-  "text": "Sixty seconds on a tether. Flew.",
-  "voice": "bm_george",
-  "speed": 0.95
- },
- {
   "id": "e3",
   "text": "Trial two: sixty-four cells carry two kilos.",
-  "voice": "bm_george",
-  "speed": 0.95
- },
- {
-  "id": "e4",
-  "text": "Four minutes at two metres. Flew.",
   "voice": "bm_george",
   "speed": 0.95
  },
