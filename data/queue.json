@@ -3,20 +3,110 @@
  "window": "2026-11-09 .. 2026-11-22 PT, one post per day at 16:28 PT (00:28 UTC next day); format v4 days map",
  "zernio_check": "posts_list (50) + posts_list_failed (0 failed) + posts_get on every studio post, 2026-11-09. Zernio reachable.",
  "slots": [
-  {"slot_pt": "2026-11-09 16:28", "day": "Mon", "kind": "fact", "state": "filled", "post_id": "fact-02", "zernio_post": "6aef7e4e5e332bb5641a0f1f"},
-  {"slot_pt": "2026-11-10 16:28", "day": "Tue", "kind": "cut (this_was_real)", "state": "filled", "post_id": "ember-cut-real", "zernio_post": "6adf88bfbf063039d1e4f251", "note": "see repair: learnings ask for a re-cut opener before it posts"},
-  {"slot_pt": "2026-11-11 16:28", "day": "Wed", "kind": "fact (pre-trial fill-in; v4 map says brain_test, trial starts Nov 15)", "state": "open", "post_id": null},
-  {"slot_pt": "2026-11-12 16:28", "day": "Thu", "kind": "cut (question, pre-v4)", "state": "filled", "post_id": "ember-cut-question", "zernio_post": "6adf88c3bf063039d1e4f28b"},
-  {"slot_pt": "2026-11-13 16:28", "day": "Fri", "kind": "cut (number, pre-v4)", "state": "filled", "post_id": "ember-cut-number", "zernio_post": "6adf88c5bf063039d1e4f2a5"},
-  {"slot_pt": "2026-11-14 16:28", "day": "Sat", "kind": "cut (stamp, pre-v4)", "state": "filled", "post_id": "ember-cut-stamp", "zernio_post": "6adf88c7bf063039d1e4f2d5"},
-  {"slot_pt": "2026-11-15 16:28", "day": "Sun", "kind": "film", "state": "open", "post_id": null},
-  {"slot_pt": "2026-11-16 16:28", "day": "Mon", "kind": "fact", "state": "open", "post_id": null},
-  {"slot_pt": "2026-11-17 16:28", "day": "Tue", "kind": "cut (this_was_real)", "state": "open", "post_id": null},
-  {"slot_pt": "2026-11-18 16:28", "day": "Wed", "kind": "brain_test", "state": "open", "post_id": null},
-  {"slot_pt": "2026-11-19 16:28", "day": "Thu", "kind": "fact (answer story)", "state": "open", "post_id": null},
-  {"slot_pt": "2026-11-20 16:28", "day": "Fri", "kind": "fact", "state": "open", "post_id": null},
-  {"slot_pt": "2026-11-21 16:28", "day": "Sat", "kind": "brain_test", "state": "open", "post_id": null},
-  {"slot_pt": "2026-11-22 16:28", "day": "Sun", "kind": "film", "state": "open", "post_id": null}
+  {
+   "slot_pt": "2026-11-09 16:28",
+   "day": "Mon",
+   "kind": "fact",
+   "state": "filled",
+   "post_id": "fact-02",
+   "zernio_post": "6aef7e4e5e332bb5641a0f1f"
+  },
+  {
+   "slot_pt": "2026-11-10 16:28",
+   "day": "Tue",
+   "kind": "cut (this_was_real)",
+   "state": "filled",
+   "post_id": "ember-cut-real",
+   "zernio_post": "6adf88bfbf063039d1e4f251",
+   "note": "see repair: learnings ask for a re-cut opener before it posts"
+  },
+  {
+   "slot_pt": "2026-11-11 16:28",
+   "day": "Wed",
+   "kind": "fact (pre-trial fill-in; v4 map says brain_test, trial starts Nov 15)",
+   "state": "open",
+   "post_id": null
+  },
+  {
+   "slot_pt": "2026-11-12 16:28",
+   "day": "Thu",
+   "kind": "cut (question, pre-v4)",
+   "state": "filled",
+   "post_id": "ember-cut-question",
+   "zernio_post": "6adf88c3bf063039d1e4f28b"
+  },
+  {
+   "slot_pt": "2026-11-13 16:28",
+   "day": "Fri",
+   "kind": "cut (number, pre-v4)",
+   "state": "filled",
+   "post_id": "ember-cut-number",
+   "zernio_post": "6adf88c5bf063039d1e4f2a5"
+  },
+  {
+   "slot_pt": "2026-11-14 16:28",
+   "day": "Sat",
+   "kind": "cut (stamp, pre-v4)",
+   "state": "filled",
+   "post_id": "ember-cut-stamp",
+   "zernio_post": "6adf88c7bf063039d1e4f2d5"
+  },
+  {
+   "slot_pt": "2026-11-15 16:28",
+   "day": "Sun",
+   "kind": "film",
+   "state": "open",
+   "post_id": null
+  },
+  {
+   "slot_pt": "2026-11-16 16:28",
+   "day": "Mon",
+   "kind": "fact",
+   "state": "open",
+   "post_id": null
+  },
+  {
+   "slot_pt": "2026-11-17 16:28",
+   "day": "Tue",
+   "kind": "cut (this_was_real)",
+   "state": "open",
+   "post_id": null
+  },
+  {
+   "slot_pt": "2026-11-18 16:28",
+   "day": "Wed",
+   "kind": "brain_test",
+   "state": "open",
+   "post_id": null
+  },
+  {
+   "slot_pt": "2026-11-19 16:28",
+   "day": "Thu",
+   "kind": "fact (answer story)",
+   "state": "open",
+   "post_id": null
+  },
+  {
+   "slot_pt": "2026-11-20 16:28",
+   "day": "Fri",
+   "kind": "fact",
+   "state": "open",
+   "post_id": null
+  },
+  {
+   "slot_pt": "2026-11-21 16:28",
+   "day": "Sat",
+   "kind": "brain_test",
+   "state": "open",
+   "post_id": null
+  },
+  {
+   "slot_pt": "2026-11-22 16:28",
+   "day": "Sun",
+   "kind": "film",
+   "state": "open",
+   "post_id": null
+  }
  ],
  "make_priority": [
   "1. repair ember-cut-real (posts Tue Nov 10 16:28 PT) - optional re-cut, decide first",
@@ -31,26 +121,70 @@
   "10. film #7 weather-steering array (board) for Sun Nov 22"
  ],
  "make": {
-  "film": {"topic": "Antigravity 'lifter' (ionocraft) - STILLWING", "slug": "lifter", "style": "exploded-teardown", "for_slot": "2026-11-15 16:28", "status": "in progress: studio/films/lifter has PITCH, TREATMENT, FACTS, audio/lines.json + subs.json, captions, index.html, KIT; no audio/vo or out/ render yet. Kit studio/kits/exploded-teardown exists."},
-  "film_next": {"topic": "Weather-steering array (fictional program only; never tie to a real storm)", "slug": "weather-array", "style": "board", "for_slot": "2026-11-22 16:28", "status": "not started (topic queue #7; board per alternation, Satellite Briefing test is film #8)"},
+  "film": {
+   "topic": "Antigravity 'lifter' (ionocraft) - STILLWING",
+   "slug": "lifter",
+   "style": "exploded-teardown",
+   "for_slot": "2026-11-15 16:28",
+   "status": "in progress: studio/films/lifter has PITCH, TREATMENT, FACTS, audio/lines.json + subs.json, captions, index.html, KIT; no audio/vo or out/ render yet. Kit studio/kits/exploded-teardown exists."
+  },
+  "film_next": {
+   "topic": "Weather-steering array (fictional program only; never tie to a real storm)",
+   "slug": "weather-array",
+   "style": "board",
+   "for_slot": "2026-11-22 16:28",
+   "status": "not started (topic queue #7; board per alternation, Satellite Briefing test is film #8)"
+  },
   "cuts": [
-   {"film": "lifter", "hook_type": "this_was_real", "for_slot": "2026-11-17 16:28", "note": "v4: 2 cuts per film, Tue = this_was_real, Sat cut dropped. Caption draft exists: studio/films/lifter/captions/lifter-cut-real.txt. Open on the device or the payoff, not on a date+place card (learnings rule 2)."}
+   {
+    "film": "lifter",
+    "hook_type": "this_was_real",
+    "for_slot": "2026-11-17 16:28",
+    "note": "v4: 2 cuts per film, Tue = this_was_real, Sat cut dropped. Caption draft exists: studio/films/lifter/captions/lifter-cut-real.txt. Open on the device or the payoff, not on a date+place card (learnings rule 2)."
+   }
   ],
   "facts": [
-   {"for_slot": "2026-11-11 16:28", "id": "fact-03", "note": "Wed Nov 11 open; pre-trial fill-in with the proven fact kit. Alternative: pilot brain-01 here (would need the brain mode built in 2 days and makes 5 brain tests in the trial window)."},
-   {"for_slot": "2026-11-16 16:28", "id": "fact-04"},
-   {"for_slot": "2026-11-19 16:28", "id": "fact-05", "note": "Thu 'answer story' slot: game is paused, so a regular fact short; put brain-01's answer in its caption if it can't be pinned as a comment through Zernio."},
-   {"for_slot": "2026-11-20 16:28", "id": "fact-06"}
+   {
+    "for_slot": "2026-11-11 16:28",
+    "id": "fact-03",
+    "note": "Wed Nov 11 open; pre-trial fill-in with the proven fact kit. Alternative: pilot brain-01 here (would need the brain mode built in 2 days and makes 5 brain tests in the trial window)."
+   },
+   {
+    "for_slot": "2026-11-16 16:28",
+    "id": "fact-04"
+   },
+   {
+    "for_slot": "2026-11-19 16:28",
+    "id": "fact-05",
+    "note": "Thu 'answer story' slot: game is paused, so a regular fact short; put brain-01's answer in its caption if it can't be pinned as a comment through Zernio."
+   },
+   {
+    "for_slot": "2026-11-20 16:28",
+    "id": "fact-06"
+   }
   ],
   "brain_tests": [
-   {"for_slot": "2026-11-18 16:28", "id": "brain-01", "note": "needs the new cards kit mode 'brain' (studio/kits/cards). Answer computed in code + in FACTS.md; answer posted next day."},
-   {"for_slot": "2026-11-21 16:28", "id": "brain-02", "note": "answer next day (Sun Nov 22, the film day): pinned comment, not the film caption."}
+   {
+    "for_slot": "2026-11-18 16:28",
+    "id": "brain-01",
+    "note": "needs the new cards kit mode 'brain' (studio/kits/cards). Answer computed in code + in FACTS.md; answer posted next day."
+   },
+   {
+    "for_slot": "2026-11-21 16:28",
+    "id": "brain-02",
+    "note": "answer next day (Sun Nov 22, the film day): pinned comment, not the film caption."
+   }
   ],
   "game": null,
   "reveal": null
  },
  "repair": [
-  {"post_id": "ember-cut-real", "zernio_post": "6adf88bfbf063039d1e4f251", "reason": "Not failed. data/performance/learnings.md asks for a re-cut before it posts Tue Nov 10 16:28 PT: it opens on '1638. A storm over Dartmoor' (date+place opener, ~70% skip expected). Re-cut to open on the ball of fire / GONE stamp + '2012: scientists finally caught one', upload to Zernio storage, then posts_update_post with new media_items (keep scheduledFor 2026-11-11T00:28:00Z). If it can't be done in time, leave it as the 2nd test of rule 2."}
+  {
+   "post_id": "ember-cut-real",
+   "zernio_post": "6adf88bfbf063039d1e4f251",
+   "reason": "Not failed. data/performance/learnings.md asks for a re-cut before it posts Tue Nov 10 16:28 PT: it opens on '1638. A storm over Dartmoor' (date+place opener, ~70% skip expected). Re-cut to open on the ball of fire / GONE stamp + '2012: scientists finally caught one', upload to Zernio storage, then posts_update_post with new media_items (keep scheduledFor 2026-11-11T00:28:00Z). If it can't be done in time, leave it as the 2nd test of rule 2."
+  }
  ],
- "notes": "Filled 5/14 (Nov 9, 10, 12, 13, 14), open 9, failed 0. Zernio: no failed posts. Published since last run and updated in data/posts.json: lodestone-cut-real/why/trials/catch, ember-full (published_at = Zernio scheduledFor; Zernio returned no IG URLs). game-01, game-pigeon, fact-01, reveal-pigeon were already marked published. posts_list also shows football/NFL posts (and the 5 Oct 24-25 Reels already under not_ours); posts_list does not show the account, and they are presumably @thescoutbrief. Not ours, not counted. EMBER cuts Thu-Sat Nov 12-14 stay as scheduled (no double-booking). EMBER has used all 4 hook types, so the next cut is from lifter."
+ "notes": "Filled 5/14 (Nov 9, 10, 12, 13, 14), open 9, failed 0. Zernio: no failed posts. Published since last run and updated in data/posts.json: lodestone-cut-real/why/trials/catch, ember-full (published_at = Zernio scheduledFor; Zernio returned no IG URLs). game-01, game-pigeon, fact-01, reveal-pigeon were already marked published. posts_list also shows football/NFL posts (and the 5 Oct 24-25 Reels already under not_ours); posts_list does not show the account, and they are presumably @thescoutbrief. Not ours, not counted. EMBER cuts Thu-Sat Nov 12-14 stay as scheduled (no double-booking). EMBER has used all 4 hook types, so the next cut is from lifter.",
+ "run_result_2026_11_09": "All 8 new Reels + 2 EMBER repairs rendered and reviewer PASS, but none scheduled: Zernio storage upload host (*.r2.cloudflarestorage.com) refused by this session's egress proxy (403). Next run: upload + schedule (see posts.json status ready_not_scheduled). Sun Nov 22 film #7 not started; brain-02 answer due Nov 22."
 }

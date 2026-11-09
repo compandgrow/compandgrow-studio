@@ -54,12 +54,14 @@ Launch posts (Nov 4-5): game "pigeon" (Wed 10:28), fact #1 ball lightning in a l
 3. ~~TREMOR — Tesla earthquake machine~~ (scheduled Oct 25)
 4. ~~LODESTONE — perpetual magnet motor~~ (scheduled Nov 1; style test Halftone Dossier)
 5. ~~EMBER — ball-lightning power cell~~ (scheduled Nov 8; board style)
-6. Antigravity "lifter" (next: film #6, Exploded Teardown style test, Sun Nov 15)
+6. ~~Antigravity "lifter" — STILLWING~~ (rendered + PASS Nov 9 for Sun Nov 15; scheduling blocked, see Open work)
+7a. Next: film #7 weather-steering array for Sun Nov 22 (not started)
 7. Weather-steering array (fictional program only; never tie to a real storm)
 8. Time-slowing chamber
 9. Bermuda "vortex engine"
 10. Mind-reading helmet
 
+**Fact shorts used:** ball lightning, Camp Century, Project Pigeon, Kola borehole, Bagger 288, bat bombs, pitch drop.
 **Fact-short topic pool (true, sourced):** WWII/Cold War oddities (Project Pigeon, Habakkuk, bat bombs), lab science that sounds like sci-fi, failed megaprojects, record machines, weird patents. Avoid weapons-of-mass-harm detail and anything near the never-list.
 
 **Never:** real health/vaccine claims, real elections, real disasters blamed on a device, real named people as villains, club/brand logos.
@@ -99,10 +101,19 @@ Media URLs: everything scheduled before Oct 26 was pinned to commits (7ccc99c, 5
 | Thu Nov 12 | EMBER cut: question (what if it never went out?) | 6adf88c3bf063039d1e4f28b | media/2026-w46/ember-cut-question.mp4 | scheduled · Zernio storage |
 | Fri Nov 13 | EMBER cut: number (lab 8 s → 8 s / 90 s / 6 h) | 6adf88c5bf063039d1e4f2a5 | media/2026-w46/ember-cut-number.mp4 | scheduled · Zernio storage |
 | Sat Nov 14 | EMBER cut: stamp moment (static → CLEARED) | 6adf88c7bf063039d1e4f2d5 | media/2026-w46/ember-cut-stamp.mp4 | scheduled · Zernio storage |
+| Wed Nov 11 | FACT #4 Bagger 288 | — | media/2026-w46/fact-04.mp4 | READY (PASS), not scheduled: Zernio upload blocked Nov 9 |
+| Sun Nov 15 | STILLWING full film (exploded-teardown test #1, 99.75 s) | — | media/2026-w46/lifter-full.mp4 | READY (PASS), not scheduled |
+| Mon Nov 16 | FACT #3 Kola Superdeep Borehole | — | media/2026-w47/fact-03.mp4 | READY (PASS), not scheduled |
+| Tue Nov 17 | STILLWING cut: this was real | — | media/2026-w47/lifter-cut-real.mp4 | READY (PASS), not scheduled |
+| Wed Nov 18 | BRAIN TEST #1 gear chain (answer CLOCKWISE) | — | media/2026-w47/brain-01.mp4 | READY (PASS), not scheduled |
+| Thu Nov 19 | FACT #5 bat bombs (+ brain #1 answer in caption) | — | media/2026-w47/fact-05.mp4 | READY (PASS), not scheduled |
+| Fri Nov 20 | FACT #6 Pitch Drop Experiment | — | media/2026-w47/fact-06.mp4 | READY (PASS), not scheduled |
+| Sat Nov 21 | BRAIN TEST #2 gear ratio (answer 10 turns, due Nov 22) | — | media/2026-w47/brain-02.mp4 | READY (PASS), not scheduled |
 
 **Not ours:** 5 Reels went out on @compandgrow Oct 24–25 that this studio did not make or schedule (Tesla/J.P. Morgan "wrong timeline", Google Street View Wi-Fi, "Digital Twin" mind control, Soviet "Dead Hand", Ekranoplan). Off-format and conspiracy-flavoured; the "Digital Twin" one mentions voting. Raised with Jazzy Oct 26. Their numbers (15–46 s, 29–191 views) are kept out of style/hook comparisons.
 
 ## Open work
+- **Upload blocked (Nov 9):** this run's egress proxy refused Zernio's storage host (*.r2.cloudflarestorage.com, 403), so 8 reviewed Reels (Nov 11-21) and the EMBER v3 repairs (Tue Nov 10 / Thu Nov 12 posts 6adf88bf…f251, 6adf88c3…f28b) were NOT scheduled. Everything is rendered, reviewed (review.md) and archived in media/. Next run: upload + schedule (data/posts.json status ready_not_scheduled). Also: film #7 for Sun Nov 22, brain-02 answer due Nov 22, card-kit audio limiter (true peak) to bake into audio.py.
 - **Posting fix (Oct 30):** the Oct 26–29 posts (TREMOR film, TREMOR claim + lab cuts, HULL 7 hook cut) also FAILED with "Instagram couldn't fetch your media", even on live jsDelivr commits. Cause: Instagram can't reliably fetch jsDelivr URLs. All 15 pending posts (Oct 30 – Nov 18) were re-pointed to Zernio's own storage (media.zernio.com) the same day; new posts upload there via `studio/tools/zernio_upload.py`. Confirmed: the LODESTONE teaser (Oct 30) published first try from Zernio storage.
 - **Repo / CDN (Oct 26):** the studio already lives at **compandgrow/compandgrow-studio**; sexyjazzy/compandgrow-studio is only GitHub's redirect to it (pushes to the old URL land there; jsDelivr follows it). add_repo is still not available to these sessions, so the clone uses the old URL. The repo's history was replaced on Oct 19 (new root commit 7bec3b9, from a Scout Lens routine session that keeps committing logs here), so the old commits 7ccc99c / 50315d7 are gone and jsDelivr URLs pinned to them died. That is why all 5 posts of Oct 20–25 failed. Pending posts now use 7bec3b9, bfa88ac or 52d39e8 (all in the current history). **Never force-push or recreate this repo, and keep it public** while posts reference it (through Nov 18). Ask Jazzy to move the Scout Lens logs to their own repo.
 - jsDelivr sometimes 403s on a file and serves it on another commit ref (or a retry). Always `validate_media` every URL right before scheduling (it also warms the cache); if one 403s, try another commit ref.
