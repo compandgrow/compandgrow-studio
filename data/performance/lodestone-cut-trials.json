@@ -1,0 +1,51 @@
+{
+ "id": "lodestone-cut-trials",
+ "zernio_post": "6ad64872fe386d21a3f320a4",
+ "posted_at": "2026-11-07T00:29:24.612000Z",
+ "post_hour_pt": 16,
+ "post_weekday": "Fri",
+ "snapshot_at": "2026-11-09T16:56:52Z",
+ "hours_since_post": 64.5,
+ "data_age_h": 62.6,
+ "metrics": {
+  "views": 201,
+  "reach": 171,
+  "likes": 0,
+  "comments": 0,
+  "shares": 0,
+  "saves": 0,
+  "follows": 0,
+  "profile_views": 0,
+  "replays": 0,
+  "avg_watch_s": 8.09,
+  "video_s": 24,
+  "watch_ratio": 0.337,
+  "skip_rate": 58.1,
+  "completion_rate": null,
+  "engagements_per_1k_reach": 0.0,
+  "shares_saves_per_1k_reach": 0.0,
+  "follows_per_1k_reach": 0.0,
+  "retention_curve": null,
+  "url": "https://www.instagram.com/reel/Dfa5SJzDAmE/",
+  "last_updated": "2026-11-09T15:08:08Z",
+  "follows_source": "timeline (analytics follows=null; every timeline row follows=0)"
+ },
+ "features": {
+  "kind": "cut",
+  "film": "lodestone",
+  "hook_type": "number",
+  "style": "halftone-dossier",
+  "label": "LODESTONE cut: number (3 / 11 / 40 days)",
+  "first_line": "Trial one. Bare magnets.",
+  "words_in_first_3s": 4,
+  "first_line_has_number": true,
+  "first_line_is_question": false,
+  "segments": [
+   "17.8:40.4"
+  ],
+  "format_version": null,
+  "experiment": null,
+  "caption_first_line": null,
+  "segments_source": "inferred 2026-11-09 from a 1 fps contact sheet of the posted file vs lodestone.srt (posts.json has segments=null, no cuts.json)"
+ }
+}

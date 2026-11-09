@@ -218,10 +218,13 @@
    "zernio_post": "6ad6486e5fcedf094d93f0a4",
    "media": "media/2026-w45/lodestone-cut-real.mp4",
    "cdn_ref": null,
-   "status": "scheduled",
+   "status": "published",
    "segments": null,
    "format_version": null,
-   "media_url": "https://media.zernio.com/media/1793345639572_04db19e523024450_lodestone-cut-real.mp4"
+   "media_url": "https://media.zernio.com/media/1793345639572_04db19e523024450_lodestone-cut-real.mp4",
+   "published_at": "2026-11-04T00:27:21Z",
+   "instagram_url": null,
+   "note": "Status confirmed published via Zernio posts_get 2026-11-09; published_at = Zernio scheduledFor (actual publish time and IG URL not returned by Zernio)."
   },
   {
    "id": "longshot-cut-claim",
@@ -253,10 +256,13 @@
    "zernio_post": "6ad648705fcedf094d93f0b8",
    "media": "media/2026-w45/lodestone-cut-why.mp4",
    "cdn_ref": null,
-   "status": "scheduled",
+   "status": "published",
    "segments": null,
    "format_version": null,
-   "media_url": "https://media.zernio.com/media/1793345641147_b8fb073be44463dc_lodestone-cut-why.mp4"
+   "media_url": "https://media.zernio.com/media/1793345641147_b8fb073be44463dc_lodestone-cut-why.mp4",
+   "published_at": "2026-11-06T00:27:24Z",
+   "instagram_url": null,
+   "note": "Status confirmed published via Zernio posts_get 2026-11-09; published_at = Zernio scheduledFor (actual publish time and IG URL not returned by Zernio)."
   },
   {
    "id": "lodestone-cut-trials",
@@ -270,10 +276,13 @@
    "zernio_post": "6ad64872fe386d21a3f320a4",
    "media": "media/2026-w45/lodestone-cut-trials.mp4",
    "cdn_ref": null,
-   "status": "scheduled",
+   "status": "published",
    "segments": null,
    "format_version": null,
-   "media_url": "https://media.zernio.com/media/1793345641805_875ffd84b345dafb_lodestone-cut-trials.mp4"
+   "media_url": "https://media.zernio.com/media/1793345641805_875ffd84b345dafb_lodestone-cut-trials.mp4",
+   "published_at": "2026-11-07T00:27:26Z",
+   "instagram_url": null,
+   "note": "Status confirmed published via Zernio posts_get 2026-11-09; published_at = Zernio scheduledFor (actual publish time and IG URL not returned by Zernio)."
   },
   {
    "id": "lodestone-cut-catch",
@@ -287,10 +296,13 @@
    "zernio_post": "6ad64875fe386d21a3f320b3",
    "media": "media/2026-w45/lodestone-cut-catch.mp4",
    "cdn_ref": null,
-   "status": "scheduled",
+   "status": "published",
    "segments": null,
    "format_version": null,
-   "media_url": "https://media.zernio.com/media/1793345642625_854a13f8187705dc_lodestone-cut-catch.mp4"
+   "media_url": "https://media.zernio.com/media/1793345642625_854a13f8187705dc_lodestone-cut-catch.mp4",
+   "published_at": "2026-11-08T00:27:28Z",
+   "instagram_url": null,
+   "note": "Status confirmed published via Zernio posts_get 2026-11-09; published_at = Zernio scheduledFor (actual publish time and IG URL not returned by Zernio)."
   },
   {
    "id": "ember-full",
@@ -304,10 +316,13 @@
    "zernio_post": "6adf88babf063039d1e4f221",
    "media": "media/2026-w45/ember-full.mp4",
    "cdn_ref": null,
-   "status": "scheduled",
+   "status": "published",
    "segments": null,
    "format_version": null,
-   "media_url": "https://media.zernio.com/media/1793345643347_ab589dcbf9cc5cc8_ember-full.mp4"
+   "media_url": "https://media.zernio.com/media/1793345643347_ab589dcbf9cc5cc8_ember-full.mp4",
+   "published_at": "2026-11-09T00:28:00Z",
+   "instagram_url": null,
+   "note": "Status confirmed published via Zernio posts_get 2026-11-09; published_at = Zernio scheduledFor (actual publish time and IG URL not returned by Zernio)."
   },
   {
    "id": "ember-cut-real",
