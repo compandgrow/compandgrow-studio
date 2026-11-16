@@ -55,7 +55,7 @@ Launch posts (Nov 4-5): game "pigeon" (Wed 10:28), fact #1 ball lightning in a l
 4. ~~LODESTONE — perpetual magnet motor~~ (scheduled Nov 1; style test Halftone Dossier)
 5. ~~EMBER — ball-lightning power cell~~ (scheduled Nov 8; board style)
 6. ~~Antigravity "lifter" — STILLWING~~ (rendered + PASS Nov 9 for Sun Nov 15; scheduling blocked, see Open work)
-7a. Next: film #7 weather-steering array for Sun Nov 22 (not started)
+7a. Next: film #7 weather-steering array for Sun Nov 29 (not started; Nov 22 now carries STILLWING, which never posted)
 7. Weather-steering array (fictional program only; never tie to a real storm)
 8. Time-slowing chamber
 9. Bermuda "vortex engine"
@@ -101,18 +101,20 @@ Media URLs: everything scheduled before Oct 26 was pinned to commits (7ccc99c, 5
 | Thu Nov 12 | EMBER cut: question (what if it never went out?) | 6adf88c3bf063039d1e4f28b | media/2026-w46/ember-cut-question.mp4 | scheduled · Zernio storage |
 | Fri Nov 13 | EMBER cut: number (lab 8 s → 8 s / 90 s / 6 h) | 6adf88c5bf063039d1e4f2a5 | media/2026-w46/ember-cut-number.mp4 | scheduled · Zernio storage |
 | Sat Nov 14 | EMBER cut: stamp moment (static → CLEARED) | 6adf88c7bf063039d1e4f2d5 | media/2026-w46/ember-cut-stamp.mp4 | scheduled · Zernio storage |
-| Wed Nov 11 | FACT #4 Bagger 288 | — | media/2026-w46/fact-04.mp4 | READY (PASS), not scheduled: Zernio upload blocked Nov 9 |
-| Sun Nov 15 | STILLWING full film (exploded-teardown test #1, 99.75 s) | — | media/2026-w46/lifter-full.mp4 | READY (PASS), not scheduled |
-| Mon Nov 16 | FACT #3 Kola Superdeep Borehole | — | media/2026-w47/fact-03.mp4 | READY (PASS), not scheduled |
-| Tue Nov 17 | STILLWING cut: this was real | — | media/2026-w47/lifter-cut-real.mp4 | READY (PASS), not scheduled |
-| Wed Nov 18 | BRAIN TEST #1 gear chain (answer CLOCKWISE) | — | media/2026-w47/brain-01.mp4 | READY (PASS), not scheduled |
-| Thu Nov 19 | FACT #5 bat bombs (+ brain #1 answer in caption) | — | media/2026-w47/fact-05.mp4 | READY (PASS), not scheduled |
-| Fri Nov 20 | FACT #6 Pitch Drop Experiment | — | media/2026-w47/fact-06.mp4 | READY (PASS), not scheduled |
-| Sat Nov 21 | BRAIN TEST #2 gear ratio (answer 10 turns, due Nov 22) | — | media/2026-w47/brain-02.mp4 | READY (PASS), not scheduled |
+| Tue Nov 17 | FACT #4 Bagger 288 | — | media/2026-w46/fact-04.mp4 | READY (PASS), re-slotted Nov 16; not scheduled: upload host still blocked |
+| Sun Nov 22 | STILLWING full film (exploded-teardown test #1, 99.75 s) | — | media/2026-w46/lifter-full.mp4 | READY (PASS), re-slotted Nov 16; not scheduled: upload host still blocked |
+| Thu Nov 19 | FACT #3 Kola Superdeep Borehole (+ brain #1 answer) | — | media/2026-w47/fact-03.mp4 | READY (PASS), re-slotted Nov 16; not scheduled: upload host still blocked |
+| Tue Nov 24 | STILLWING cut: this was real | — | media/2026-w47/lifter-cut-real.mp4 | READY (PASS), re-slotted Nov 16; not scheduled: upload host still blocked |
+| Wed Nov 18 | BRAIN TEST #1 gear chain (answer CLOCKWISE) | — | media/2026-w47/brain-01.mp4 | READY (PASS), re-slotted Nov 16; not scheduled: upload host still blocked |
+| Fri Nov 20 | FACT #5 bat bombs | — | media/2026-w47/fact-05.mp4 | READY (PASS), re-slotted Nov 16; not scheduled: upload host still blocked |
+| Mon Nov 23 | FACT #6 Pitch Drop Experiment (+ brain #2 answer) | — | media/2026-w47/fact-06.mp4 | READY (PASS), re-slotted Nov 16; not scheduled: upload host still blocked |
+| Sat Nov 21 | BRAIN TEST #2 gear ratio (answer 10 turns) | — | media/2026-w47/brain-02.mp4 | READY (PASS), re-slotted Nov 16; not scheduled: upload host still blocked |
 
 **Not ours:** 5 Reels went out on @compandgrow Oct 24–25 that this studio did not make or schedule (Tesla/J.P. Morgan "wrong timeline", Google Street View Wi-Fi, "Digital Twin" mind control, Soviet "Dead Hand", Ekranoplan). Off-format and conspiracy-flavoured; the "Digital Twin" one mentions voting. Raised with Jazzy Oct 26. Their numbers (15–46 s, 29–191 views) are kept out of style/hook comparisons.
 
 ## Open work
+- **Upload still blocked (Nov 16, 2nd week):** the sandbox egress proxy again refused Zernio storage (late-media.*.r2.cloudflarestorage.com, 403 CONNECT, policy denial). Nothing scheduled; Nov 11, 15 and 16 slots went empty. Backlog of 8 PASSed Reels re-slotted Nov 17-24 (data/queue.json). Fix needs Jazzy: allow *.r2.cloudflarestorage.com in this environment's network settings, or open a live chat so Claude can hand over a Zernio browser upload link (expires after 1 h, so it can't be used by an unattended run). Still to make once posting works: brain-03 (Wed 25), fact-07 (Thu 26), fact-08 (Fri 27), brain-04 (Sat 28), film #7 (Sun 29).
+- **Week-6 check (Nov 27) will trigger:** 10 followers on Nov 16 vs pace ~264; 0 follows from ~3,070 reached across 18 Reels. Rethink format with Jazzy.
 - **Upload blocked (Nov 9):** this run's egress proxy refused Zernio's storage host (*.r2.cloudflarestorage.com, 403), so 8 reviewed Reels (Nov 11-21) and the EMBER v3 repairs (Tue Nov 10 / Thu Nov 12 posts 6adf88bf…f251, 6adf88c3…f28b) were NOT scheduled. Everything is rendered, reviewed (review.md) and archived in media/. Next run: upload + schedule (data/posts.json status ready_not_scheduled). Also: film #7 for Sun Nov 22, brain-02 answer due Nov 22, card-kit audio limiter (true peak) to bake into audio.py.
 - **Posting fix (Oct 30):** the Oct 26–29 posts (TREMOR film, TREMOR claim + lab cuts, HULL 7 hook cut) also FAILED with "Instagram couldn't fetch your media", even on live jsDelivr commits. Cause: Instagram can't reliably fetch jsDelivr URLs. All 15 pending posts (Oct 30 – Nov 18) were re-pointed to Zernio's own storage (media.zernio.com) the same day; new posts upload there via `studio/tools/zernio_upload.py`. Confirmed: the LODESTONE teaser (Oct 30) published first try from Zernio storage.
 - **Repo / CDN (Oct 26):** the studio already lives at **compandgrow/compandgrow-studio**; sexyjazzy/compandgrow-studio is only GitHub's redirect to it (pushes to the old URL land there; jsDelivr follows it). add_repo is still not available to these sessions, so the clone uses the old URL. The repo's history was replaced on Oct 19 (new root commit 7bec3b9, from a Scout Lens routine session that keeps committing logs here), so the old commits 7ccc99c / 50315d7 are gone and jsDelivr URLs pinned to them died. That is why all 5 posts of Oct 20–25 failed. Pending posts now use 7bec3b9, bfa88ac or 52d39e8 (all in the current history). **Never force-push or recreate this repo, and keep it public** while posts reference it (through Nov 18). Ask Jazzy to move the Scout Lens logs to their own repo.

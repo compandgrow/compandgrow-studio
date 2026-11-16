@@ -336,12 +336,13 @@
    "zernio_post": "6adf88bfbf063039d1e4f251",
    "media": "media/2026-w46/ember-cut-real.mp4",
    "cdn_ref": null,
-   "status": "scheduled",
+   "status": "published",
    "segments": null,
    "format_version": null,
    "media_url": "https://media.zernio.com/media/1793345644084_749efe1f3f399a7c_ember-cut-real.mp4",
    "pending_replacement": "media/2026-w46/ember-cut-real-v3.mp4 + studio/films/ember/captions/cut-real.txt",
-   "note": " | v3 re-cut passed review 2026-11-09 but could not be swapped in (Zernio upload blocked); posts with v1 unless repaired."
+   "note": " | v3 re-cut passed review 2026-11-09 but could not be swapped in (Zernio upload blocked); posts with v1 unless repaired. | Zernio status published (posts_get 2026-11-16); exact publish time/IG URL not returned by Zernio. Posted with the v1 file; v3 re-cut never swapped in.",
+   "published_at": "2026-11-11T00:28:00Z"
   },
   {
    "id": "hull7-cut-trials",
@@ -373,12 +374,13 @@
    "zernio_post": "6adf88c3bf063039d1e4f28b",
    "media": "media/2026-w46/ember-cut-question.mp4",
    "cdn_ref": null,
-   "status": "scheduled",
+   "status": "published",
    "segments": null,
    "format_version": null,
    "media_url": "https://media.zernio.com/media/1793345645609_21514241164e62b4_ember-cut-question.mp4",
    "pending_replacement": "media/2026-w46/ember-cut-question-v3.mp4 + studio/films/ember/captions/cut-question.txt",
-   "note": " | v3 re-cut passed review 2026-11-09 but could not be swapped in (Zernio upload blocked); posts with v1 unless repaired."
+   "note": " | v3 re-cut passed review 2026-11-09 but could not be swapped in (Zernio upload blocked); posts with v1 unless repaired. | Zernio status published (posts_get 2026-11-16); exact publish time/IG URL not returned by Zernio. Posted with the v1 file; v3 re-cut never swapped in.",
+   "published_at": "2026-11-13T00:28:00Z"
   },
   {
    "id": "ember-cut-number",
@@ -392,10 +394,12 @@
    "zernio_post": "6adf88c5bf063039d1e4f2a5",
    "media": "media/2026-w46/ember-cut-number.mp4",
    "cdn_ref": null,
-   "status": "scheduled",
+   "status": "published",
    "segments": null,
    "format_version": null,
-   "media_url": "https://media.zernio.com/media/1793345646345_a02b3a4382d4b2b9_ember-cut-number.mp4"
+   "media_url": "https://media.zernio.com/media/1793345646345_a02b3a4382d4b2b9_ember-cut-number.mp4",
+   "published_at": "2026-11-14T00:28:00Z",
+   "note": " | Zernio status published (posts_get 2026-11-16); exact publish time/IG URL not returned by Zernio."
   },
   {
    "id": "ember-cut-stamp",
@@ -409,10 +413,12 @@
    "zernio_post": "6adf88c7bf063039d1e4f2d5",
    "media": "media/2026-w46/ember-cut-stamp.mp4",
    "cdn_ref": null,
-   "status": "scheduled",
+   "status": "published",
    "segments": null,
    "format_version": null,
-   "media_url": "https://media.zernio.com/media/1793345647175_f1579f07ff8591df_ember-cut-stamp.mp4"
+   "media_url": "https://media.zernio.com/media/1793345647175_f1579f07ff8591df_ember-cut-stamp.mp4",
+   "published_at": "2026-11-15T00:28:00Z",
+   "note": " | Zernio status published (posts_get 2026-11-16); exact publish time/IG URL not returned by Zernio."
   },
   {
    "id": "longshot-cut-trials",
@@ -505,10 +511,12 @@
    "media": "media/2026-w45/fact-02.mp4",
    "media_url": "https://media.zernio.com/media/1794080251917_3272bba13671d7b6_fact-02-camp-century.mp4",
    "cdn_ref": null,
-   "status": "scheduled",
+   "status": "published",
    "segments": null,
    "format_version": 4,
-   "experiment": "moving opener vs fact-01 still opener"
+   "experiment": "moving opener vs fact-01 still opener",
+   "published_at": "2026-11-10T00:28:00Z",
+   "note": " | Zernio status published (posts_get 2026-11-16); exact publish time/IG URL not returned by Zernio."
   },
   {
    "id": "fact-04",
@@ -517,15 +525,15 @@
    "hook_type": "fact",
    "style": "cards",
    "label": "Sounds fake #4: Bagger 288 weighs 13,000 tonnes",
-   "slot_pt": "2026-11-11 16:28",
-   "scheduled_for": "2026-11-12T00:28:00Z",
+   "slot_pt": "2026-11-17 16:28",
+   "scheduled_for": "2026-11-18T00:28:00Z",
    "zernio_post": null,
    "media": "media/2026-w46/fact-04.mp4",
    "media_url": null,
    "caption": "studio/films/fact-04/captions/main.txt",
    "cdn_ref": null,
    "status": "ready_not_scheduled",
-   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com)",
+   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com) | Re-slotted 2026-11-16 by slot-planner (original date passed unscheduled; upload host still blocked).",
    "format_version": 4
   },
   {
@@ -535,15 +543,15 @@
    "hook_type": "film",
    "style": "exploded-teardown",
    "label": "STILLWING full film (exploded-teardown style test #1)",
-   "slot_pt": "2026-11-15 16:28",
-   "scheduled_for": "2026-11-16T00:28:00Z",
+   "slot_pt": "2026-11-22 16:28",
+   "scheduled_for": "2026-11-23T00:28:00Z",
    "zernio_post": null,
    "media": "media/2026-w46/lifter-full.mp4",
    "media_url": null,
    "caption": "studio/films/lifter/captions/lifter-full.txt",
    "cdn_ref": null,
    "status": "ready_not_scheduled",
-   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com)",
+   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com) | Re-slotted 2026-11-16 by slot-planner (original date passed unscheduled; upload host still blocked).",
    "format_version": 4
   },
   {
@@ -553,15 +561,15 @@
    "hook_type": "fact",
    "style": "cards",
    "label": "Sounds fake #3: Kola Superdeep Borehole",
-   "slot_pt": "2026-11-16 16:28",
-   "scheduled_for": "2026-11-17T00:28:00Z",
+   "slot_pt": "2026-11-19 16:28",
+   "scheduled_for": "2026-11-20T00:28:00Z",
    "zernio_post": null,
    "media": "media/2026-w47/fact-03.mp4",
    "media_url": null,
    "caption": "studio/films/fact-03/captions/main.txt",
    "cdn_ref": null,
    "status": "ready_not_scheduled",
-   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com)",
+   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com) | Re-slotted 2026-11-16 by slot-planner (original date passed unscheduled; upload host still blocked).",
    "format_version": 4
   },
   {
@@ -571,15 +579,15 @@
    "hook_type": "cut",
    "style": "exploded-teardown",
    "label": "STILLWING cut: this was real (2018 ion plane)",
-   "slot_pt": "2026-11-17 16:28",
-   "scheduled_for": "2026-11-18T00:28:00Z",
+   "slot_pt": "2026-11-24 16:28",
+   "scheduled_for": "2026-11-25T00:28:00Z",
    "zernio_post": null,
    "media": "media/2026-w47/lifter-cut-real.mp4",
    "media_url": null,
    "caption": "studio/films/lifter/captions/cut-real.txt",
    "cdn_ref": null,
    "status": "ready_not_scheduled",
-   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com)",
+   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com) | Re-slotted 2026-11-16 by slot-planner (original date passed unscheduled; upload host still blocked).",
    "format_version": 4
   },
   {
@@ -597,7 +605,7 @@
    "caption": "studio/films/brain-01/captions/main.txt",
    "cdn_ref": null,
    "status": "ready_not_scheduled",
-   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com)",
+   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com) | Re-slotted 2026-11-16 by slot-planner (original date passed unscheduled; upload host still blocked).",
    "format_version": 4
   },
   {
@@ -607,15 +615,15 @@
    "hook_type": "fact",
    "style": "cards",
    "label": "Sounds fake #5: bat bombs (caption carries brain-01 answer)",
-   "slot_pt": "2026-11-19 16:28",
-   "scheduled_for": "2026-11-20T00:28:00Z",
+   "slot_pt": "2026-11-20 16:28",
+   "scheduled_for": "2026-11-21T00:28:00Z",
    "zernio_post": null,
    "media": "media/2026-w47/fact-05.mp4",
    "media_url": null,
    "caption": "studio/films/fact-05/captions/main-with-answer.txt",
    "cdn_ref": null,
    "status": "ready_not_scheduled",
-   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com)",
+   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com) | Re-slotted 2026-11-16 by slot-planner (original date passed unscheduled; upload host still blocked).",
    "format_version": 4
   },
   {
@@ -625,15 +633,15 @@
    "hook_type": "fact",
    "style": "cards",
    "label": "Sounds fake #6: Pitch Drop Experiment",
-   "slot_pt": "2026-11-20 16:28",
-   "scheduled_for": "2026-11-21T00:28:00Z",
+   "slot_pt": "2026-11-23 16:28",
+   "scheduled_for": "2026-11-24T00:28:00Z",
    "zernio_post": null,
    "media": "media/2026-w47/fact-06.mp4",
    "media_url": null,
    "caption": "studio/films/fact-06/captions/main.txt",
    "cdn_ref": null,
    "status": "ready_not_scheduled",
-   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com)",
+   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com) | Re-slotted 2026-11-16 by slot-planner (original date passed unscheduled; upload host still blocked).",
    "format_version": 4
   },
   {
@@ -651,7 +659,7 @@
    "caption": "studio/films/brain-02/captions/main.txt",
    "cdn_ref": null,
    "status": "ready_not_scheduled",
-   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com)",
+   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com) | Re-slotted 2026-11-16 by slot-planner (original date passed unscheduled; upload host still blocked).",
    "format_version": 4
   }
  ]
