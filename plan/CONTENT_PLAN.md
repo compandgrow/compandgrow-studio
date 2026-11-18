@@ -4,6 +4,9 @@
 **Target:** 2,500 followers by Jan 16, 2027. Stretch: 10,000 (needs one breakout Reel).
 **Pace line:** wk 2 ≥ 50 · wk 4 ≥ 200 · wk 6 ≥ 500 (decide: stretch still alive?) · wk 9 ≥ 1,200 · wk 13 ≥ 2,500.
 
+## Posting gap Nov 15-17 (fixed Nov 18)
+The Nov 9 and Nov 16 runs made 8 Reels (all reviewer PASS) but could not upload them: the sandbox blocked Zernio's upload host. Nothing posted Nov 15-17. On Nov 18 the host was reachable; all 8 were uploaded and scheduled Nov 18-26 (see data/posts.json). If an upload is blocked again, the run must say so in the first line of its report.
+
 ## Brain-test trial (Jazzy's idea, Nov 7)
 Engineering brain tests replace the real-or-fake game for two weeks (Wed + Sat, Nov 15-28): gear direction, count the bolts, memory panel, quick pulley maths, follow the pipe. 12-25 s, timer on screen, "comment your answer", answer next day, follow card. Built in the cards kit (new `brain` mode). Judged after 4 tests on replays, comments, watch ratio and shares vs the real-or-fake games; the winner keeps the slot.
 

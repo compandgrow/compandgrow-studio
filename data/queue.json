@@ -2,7 +2,6 @@
  "generated_at": "2026-11-16T09:10:00-08:00",
  "window": "2026-11-16 .. 2026-11-29 PT, one post/day at 16:28 PT (00:28 UTC next day, PST); format v4 day map with Wed+Sat brain-test trial Nov 15-28",
  "zernio_check": "2026-11-16: posts_list (all, 50), posts_list status=scheduled (0), status=draft (0), posts_list_failed (0), posts_get on the 5 last-scheduled studio posts. Zernio reachable. Nothing from @compandgrow is scheduled in the window; nothing failed. @thescoutbrief posts in the list ignored.",
- "BLOCKED": "NOTHING CAN BE SCHEDULED FROM THIS SANDBOX until the Zernio storage upload host (*.r2.cloudflarestorage.com) is reachable (egress proxy 403 CONNECT, confirmed 2026-11-16) or Jazzy uploads the files via a Zernio browser upload link. Every slot below is therefore 'open' in Zernio even where a ready piece is assigned. Do not reuse jsDelivr URLs (failed on IG Oct 20-29).",
  "slots": [
   {
    "slot_pt": "2026-11-16 16:28",
@@ -131,16 +130,7 @@
    "piece_state": "NEEDS MAKING: film #7 weather-steering array (topic queue #7; fictional only, never tie to a real storm)"
   }
  ],
- "assigned_ready": [
-  "fact-04",
-  "brain-01",
-  "fact-03",
-  "fact-05",
-  "brain-02",
-  "lifter-full",
-  "fact-06",
-  "lifter-cut-real"
- ],
+ "assigned_ready": [],
  "make": {
   "film": {
    "topic": "Weather-steering array (fictional program only; never tie to a real storm or disaster)",
@@ -159,12 +149,8 @@
   ],
   "facts": [
    {
-    "for_slot": "2026-11-26 16:28",
-    "id": "fact-07"
-   },
-   {
     "for_slot": "2026-11-27 16:28",
-    "id": "fact-08"
+    "id": "fact-07"
    }
   ],
   "brain_tests": [
@@ -182,5 +168,5 @@
   "optional": "lifter-cut-stamp is not made and has no slot (v4 dropped the Sat cut; Sat is brain-test trial through Nov 28). Could run as an extra 10:28 post if wanted."
  },
  "repair": [],
- "notes": "Ember cuts (Nov 10/12/13/14) and fact-02 (Nov 9) confirmed published in Zernio; data/posts.json updated (ember-cut-real/question went out with v1 files; v3 re-cuts never swapped in). The 8 ready pieces were re-slotted in data/posts.json (slot_pt/scheduled_for) to Nov 17-24. Mon Nov 16 slot is lost unless Jazzy uploads today. Brain-test answers: pinned comment the next day (or next day's caption). Not committed."
+ "notes": "Ember cuts (Nov 10/12/13/14) and fact-02 (Nov 9) confirmed published in Zernio; data/posts.json updated (ember-cut-real/question went out with v1 files; v3 re-cuts never swapped in). The 8 ready pieces were re-slotted in data/posts.json (slot_pt/scheduled_for) to Nov 17-24. Mon Nov 16 slot is lost unless Jazzy uploads today. Brain-test answers: pinned comment the next day (or next day's caption). Not committed.\n\n2026-11-18 (manual session): upload egress works now (Default environment allows *.r2.cloudflarestorage.com). All 8 ready Reels uploaded to Zernio storage and scheduled 16:28 PT: brain-01 Nov 18, fact-03 Nov 19, fact-05 Nov 20 (brain-01 answer in caption), brain-02 Nov 21, lifter-full Nov 22 (brain-02 answer added to caption), fact-06 Nov 23, lifter-cut-real Nov 24 (captions/cut-real.txt), fact-04 Nov 26. Still to make: brain-03 Nov 25, fact-07 Nov 27, brain-04 Nov 28, weather film Nov 29. fact-08 dropped (Nov 26 now taken by fact-04). Nov 15-17 slots were lost (nothing posted)."
 }
