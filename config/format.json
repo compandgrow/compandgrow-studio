@@ -241,6 +241,13 @@
    ],
    "rules": "Exactly one correct answer, computed in code and stated in FACTS.md (answer + working). No trick wording. Engineering visuals only (gears, pulleys, pipes, panels) so the audience matches the films. Never give the answer in the caption.",
    "judge": "replays, comments, avg watch ratio and shares vs the real-or-fake games after 4 brain tests (2 weeks)"
+  },
+  "style_test_3d": {
+   "name": "3D motion + fast captions vs cards",
+   "weeks": "Nov 23 - Dec 6",
+   "build": "new kit studio/kits/motion3d: three.js scenes rendered frame by frame (seek(t), deterministic; Chromium WebGL with --use-angle=swiftshader). Real-looking machines in 3D (gears meshing, exploded views, camera fly-throughs), kinetic captions 1-2 words at a time synced to beats, a visual change every 1-1.5 s, hook payoff in the first 2 s. No AI video, no stock, no photos.",
+   "test": "pairs on the same topic type: 2 fact shorts and 2 brain tests per week in motion3d, the rest in cards. Judge after 2 weeks on skip rate, avg watch ratio, comments, shares+saves per 1k reach.",
+   "rule": "If motion3d beats cards on skip rate by 10+ points, it becomes the house style for shorts. If not, change topics/first lines next, not the look."
   }
  },
  "locked": {
@@ -284,7 +291,8 @@
    "evidence": "channel stats 2026-11-07 (7 Reels since v3)",
    "judge_after_reels": 7,
    "first_test": "fact-02 Camp Century, Mon Nov 9 (moving opener) vs fact-01 (still opener: 126 reach, 64% skip, 3.9 s)",
-   "brain_test_trial": "Jazzy's idea (Nov 7): attention/memory/calc games. Trial Wed+Sat Nov 15-28, judged after 4."
+   "brain_test_trial": "Jazzy's idea (Nov 7): attention/memory/calc games. Trial Wed+Sat Nov 15-28, judged after 4.",
+   "style_test_3d": "Planned Nov 18 after the Nov 9 moving-opener test showed no change (fact-02: 70% skip vs fact-01 64%)."
   }
  ]
 }

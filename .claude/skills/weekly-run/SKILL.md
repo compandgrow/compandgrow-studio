@@ -4,6 +4,10 @@ description: Run the @compandgrow reel team — review last week's Reels, plan o
 ---
 # Weekly run — @compandgrow reel team
 
+**Style test Nov 23 - Dec 6:** build `studio/kits/motion3d` (spec: config/format.json → tunable.style_test_3d) and make 2 fact shorts + 2 brain tests per week in it, the rest in cards. Render stills first; WebGL needs `--use-angle=swiftshader --enable-unsafe-swiftshader`. If the motion3d kit can't be finished in a run, ship the week in cards and say so.
+
+**If the Zernio upload is blocked (403 from the storage host), put that in the first line of the report to Jazzy.**
+
 **Brain-test trial (Nov 15-28):** Wed + Sat are engineering brain tests (config/format.json → tunable.brain_test). Add a `brain` mode to studio/kits/cards first (gear chain with direction arrows, count flash, memory panel, pulley sum, pipe maze; timer + 'comment your answer'). The correct answer is computed in code and written with its working in the piece's FACTS.md. Real-or-fake is paused for the trial.
 
 **Format v3 (Nov 3, Jazzy gave full control incl. content type):** 7 posts a week. Sun film (75-100 s, v4), Mon + Fri "Sounds fake. It's real." fact shorts, Tue + Sat film cuts, Wed Real-or-fake game (answer held back), Thu the answer as a full fact short (v4). Every short opens on movement (kit motion opener). Fact/game/reveal Reels use `studio/kits/cards` (~2 min render each), so even a run without a film render can fill 4 slots.
