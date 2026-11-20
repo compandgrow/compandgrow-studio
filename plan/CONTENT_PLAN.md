@@ -7,6 +7,9 @@
 ## Style test: 3D motion vs cards (Nov 23 - Dec 6)
 The moving opener (Nov 9) did not cut the skip rate (fact-02 70% vs fact-01 64%), so effects alone are not the fix. Next test: a new 3D motion kit (three.js, code-rendered, no AI video) with fast kinetic captions and a visual change every 1-1.5 s, against the current cards kit on the same topic types (2 fact shorts + 2 brain tests per week each). Judged after 2 weeks; the winner becomes the house style. Spec in config/format.json → tunable.style_test_3d.
 
+## Instagram disconnect Nov 18-20
+Meta invalidated Zernio's token for @compandgrow on Nov 18 11:38 UTC ("password changed or session reset for security"). brain-01 and fact-03 stuck in 'publishing'; Jazzy reconnected Nov 20 06:35 UTC (new token valid to Jan 19, 2027) and both posted within a minute (late, back-to-back). Weekly run: check accounts_get_account_health first; if the token is invalid, tell Jazzy in the report's first line.
+
 ## Posting gap Nov 15-17 (fixed Nov 18)
 The Nov 9 and Nov 16 runs made 8 Reels (all reviewer PASS) but could not upload them: the sandbox blocked Zernio's upload host. Nothing posted Nov 15-17. On Nov 18 the host was reachable; all 8 were uploaded and scheduled Nov 18-26 (see data/posts.json). If an upload is blocked again, the run must say so in the first line of its report.
 

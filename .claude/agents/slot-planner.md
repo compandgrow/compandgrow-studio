@@ -10,6 +10,7 @@ You are the Slot Planner for Instagram @compandgrow (Zernio account `6ad2b0ba41b
 Inputs: `config/format.json` → `tunable.posting` (days, time, timezone; Sun = full film, Thu = game Reel, Tue/Fri/Sat = cutdowns), `data/posts.json`, `plan/CONTENT_PLAN.md` (post log, topic queue, Open work).
 
 ## Steps
+0. `call_tool accounts_get_account_health {account_id}` first. If the token is invalid or the account inactive, stop scheduling and put "Reconnect @compandgrow in Zernio" in the first line of the run's report.
 1. Pull Zernio's truth: `posts_list` for the account (pending/scheduled and the last 14 days of published), and `posts_list_failed`. For every post in `data/posts.json`, update `status` (`scheduled` → `published` with `published_at` and the Instagram URL when known, or `failed`). A Zernio post that isn't in `data/posts.json` and wasn't made by this studio goes under `not_ours`; never count it.
 2. Build the slot grid: every posting day from tomorrow to +14 days (PT), with the slot time from `format.json`. Each slot is `filled` (a scheduled post exists), `failed` (needs the publisher to re-point or reschedule), or `open`.
 3. Decide the work for this run:

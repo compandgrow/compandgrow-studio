@@ -568,9 +568,11 @@
    "media_url": "https://media.zernio.com/media/1794988550778_ae79e3bddad3a49e_fact-03.mp4",
    "caption": "studio/films/fact-03/captions/main.txt",
    "cdn_ref": null,
-   "status": "scheduled",
-   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com) | Re-slotted 2026-11-16 by slot-planner (original date passed unscheduled; upload host still blocked).",
-   "format_version": 4
+   "status": "published",
+   "note": "delayed: posted on reconnect, 1 min after brain-01",
+   "format_version": 4,
+   "published_at": "2026-11-20T06:37:09Z",
+   "instagram_url": "https://www.instagram.com/reel/Df9BtoqlTFN/"
   },
   {
    "id": "lifter-cut-real",
@@ -604,9 +606,11 @@
    "media_url": "https://media.zernio.com/media/1794988507943_b1c5fb54d3799d0c_brain-01.mp4",
    "caption": "studio/films/brain-01/captions/main.txt",
    "cdn_ref": null,
-   "status": "scheduled",
-   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com) | Re-slotted 2026-11-16 by slot-planner (original date passed unscheduled; upload host still blocked).",
-   "format_version": 4
+   "status": "published",
+   "note": "delayed: Instagram token invalidated Nov 18 11:38Z, posted on reconnect",
+   "format_version": 4,
+   "published_at": "2026-11-20T06:36:22Z",
+   "instagram_url": "https://www.instagram.com/reel/Df9BnbEgiCd/"
   },
   {
    "id": "fact-05",
