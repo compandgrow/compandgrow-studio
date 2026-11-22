@@ -626,9 +626,11 @@
    "media_url": "https://media.zernio.com/media/1794988514946_b615f9577ebf2586_fact-05.mp4",
    "caption": "studio/films/fact-05/captions/main-with-answer.txt",
    "cdn_ref": null,
-   "status": "scheduled",
+   "status": "published",
    "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com) | Re-slotted 2026-11-16 by slot-planner (original date passed unscheduled; upload host still blocked).",
-   "format_version": 4
+   "format_version": 4,
+   "published_at": "2026-11-21T00:29:24Z",
+   "instagram_url": "https://www.instagram.com/reel/Df-8aUMEaUt/"
   },
   {
    "id": "fact-06",
@@ -662,9 +664,11 @@
    "media_url": "https://media.zernio.com/media/1794988518207_7a53eac063562c7d_brain-02.mp4",
    "caption": "studio/films/brain-02/captions/main.txt",
    "cdn_ref": null,
-   "status": "scheduled",
+   "status": "published",
    "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com) | Re-slotted 2026-11-16 by slot-planner (original date passed unscheduled; upload host still blocked).",
-   "format_version": 4
+   "format_version": 4,
+   "published_at": "2026-11-22T00:29:09Z",
+   "instagram_url": "https://www.instagram.com/reel/DgBhNGWEmcw/"
   }
  ]
 }
