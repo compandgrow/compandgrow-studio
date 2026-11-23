@@ -68,10 +68,11 @@
    "day": "Sun",
    "kind": "film",
    "state": "open",
-   "post_id": "film7-full",
+   "post_id": "time-chamber-full",
    "zernio_post": null,
    "style": "board (anchor) or next test style",
-   "piece_state": "TO MAKE: film #7 weather-steering array (topic queue 7). Not started. Caption carries brain-04 answer."
+   "piece_state": "TO MAKE: film #7 weather-steering array (topic queue 7). Not started. Caption carries brain-04 answer.",
+   "note": "film #7 switched to time-slowing chamber LONGHOUR (exploded-teardown test #2); weather array deferred pending Jazzy"
   },
   {
    "slot_pt": "2026-11-30 16:28",
@@ -88,7 +89,7 @@
    "day": "Tue",
    "kind": "cut",
    "state": "open",
-   "post_id": "film7-cut-real",
+   "post_id": "time-chamber-cut-real",
    "zernio_post": null,
    "style": "film #7 style",
    "piece_state": "TO MAKE: film #7 this_was_real cut (Tue hook per format.json)."

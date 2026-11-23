@@ -551,7 +551,7 @@
    "caption": "studio/films/lifter/captions/lifter-full.txt",
    "cdn_ref": null,
    "status": "published",
-   "note": "caption carries brain-02 answer (10 turns) | 2026-11-23 slot-planner: Zernio status published (scheduled 00:28Z, posted ~00:29Z); 1,188 views at 15 h (best Reel on the channel, from weekly-run brief). Local caption file does NOT contain the brain-02 answer; Zernio caption truncated in posts_get, unverified. IG URL not returned by Zernio.",
+   "note": "brain-02 answer moved to fact-06 caption (Nov 23) | 2026-11-23 slot-planner: Zernio status published (scheduled 00:28Z, posted ~00:29Z); 1,188 views at 15 h (best Reel on the channel, from weekly-run brief). Local caption file does NOT contain the brain-02 answer; Zernio caption truncated in posts_get, unverified. IG URL not returned by Zernio.",
    "format_version": 4,
    "published_at": "2026-11-23T00:29:00Z",
    "instagram_url": null
@@ -649,7 +649,7 @@
    "caption": "studio/films/fact-06/captions/main.txt",
    "cdn_ref": null,
    "status": "scheduled",
-   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com) | Re-slotted 2026-11-16 by slot-planner (original date passed unscheduled; upload host still blocked). | 2026-11-23 slot-planner: confirmed scheduled in Zernio.",
+   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com) | Re-slotted 2026-11-16 by slot-planner (original date passed unscheduled; upload host still blocked). | 2026-11-23 slot-planner: confirmed scheduled in Zernio. | 2026-11-23 weekly run: caption updated in Zernio to carry the brain-02 answer (10 turns); STILLWING caption did not.",
    "format_version": 4
   },
   {
