@@ -14,7 +14,9 @@ import { clamp, lerp, seg, ss, eio, eo, track } from '/core/lib.js';
 export { THREE, clamp, lerp, seg, ss, eio, eo };
 
 export const W = 1080, H = 1920;
-export const INK = '#f1efe9', DIM = 'rgba(241,239,233,.64)', ACC = '#ff6b3d', LINE = 'rgba(241,239,233,.78)';
+export const INK = '#f1efe9', DIM = 'rgba(241,239,233,.64)', LINE = 'rgba(241,239,233,.78)';
+export let ACC = '#ff6b3d';   // accent (labels, dimensions, stamps); a film may change it before boot with setAccent
+export const setAccent = c => { ACC = c; };
 export const SANS = '"Archivo", sans-serif', MONO = '"PlexMono", monospace';
 export const SAFE = { x0: 60, x1: 1020, y0: 230, y1: 1420, subY: 1500 };
 const KITURL = new URL('.', import.meta.url).href;

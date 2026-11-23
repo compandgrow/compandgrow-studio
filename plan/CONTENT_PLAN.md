@@ -64,13 +64,13 @@ Launch posts (Nov 4-5): game "pigeon" (Wed 10:28), fact #1 ball lightning in a l
 4. ~~LODESTONE — perpetual magnet motor~~ (scheduled Nov 1; style test Halftone Dossier)
 5. ~~EMBER — ball-lightning power cell~~ (scheduled Nov 8; board style)
 6. ~~Antigravity "lifter" — STILLWING~~ (rendered + PASS Nov 9 for Sun Nov 15; scheduling blocked, see Open work)
-7a. Next: film #7 weather-steering array for Sun Nov 29 (not started; Nov 22 now carries STILLWING, which never posted)
-7. Weather-steering array (fictional program only; never tie to a real storm)
-8. Time-slowing chamber
+6b. STILLWING published Nov 23 00:29Z: breakout (1,188 views at 15 h, 36% skip, best shares+saves).
+7. ~~Time-slowing chamber — LONGHOUR~~ (exploded-teardown test #2; rendered + PASS Nov 23 for Sun Nov 29; not scheduled: upload blocked)
+8. Weather-steering array (fictional program only; never tie to a real storm). Deferred Nov 23: comments likely to tie it to real storms / weather-control conspiracies — ask Jazzy first.
 9. Bermuda "vortex engine"
 10. Mind-reading helmet
 
-**Fact shorts used:** ball lightning, Camp Century, Project Pigeon, Kola borehole, Bagger 288, bat bombs, pitch drop.
+**Fact shorts used:** ball lightning, Camp Century, Project Pigeon, Kola borehole, Bagger 288, bat bombs, pitch drop, MIT ion-wind plane (fact-07), Gravity Probe B spheres (fact-08).
 **Fact-short topic pool (true, sourced):** WWII/Cold War oddities (Project Pigeon, Habakkuk, bat bombs), lab science that sounds like sci-fi, failed megaprojects, record machines, weird patents. Avoid weapons-of-mass-harm detail and anything near the never-list.
 
 **Never:** real health/vaccine claims, real elections, real disasters blamed on a device, real named people as villains, club/brand logos.
@@ -126,6 +126,9 @@ Media URLs: everything scheduled before Oct 26 was pinned to commits (7ccc99c, 5
 **Not ours:** 5 Reels went out on @compandgrow Oct 24–25 that this studio did not make or schedule (Tesla/J.P. Morgan "wrong timeline", Google Street View Wi-Fi, "Digital Twin" mind control, Soviet "Dead Hand", Ekranoplan). Off-format and conspiracy-flavoured; the "Digital Twin" one mentions voting. Raised with Jazzy Oct 26. Their numbers (15–46 s, 29–191 views) are kept out of style/hook comparisons.
 
 ## Open work
+- **Upload blocked again (Nov 23, 3rd time):** egress proxy refused Zernio storage (late-media.*.r2.cloudflarestorage.com, 403 "no rule or network setting allows this host"). 7 Reels rendered + reviewer PASS but NOT scheduled (data/posts.json status ready_not_scheduled): brain-03 (Wed Nov 25), fact-07 (Fri 27), brain-04 (Sat 28), LONGHOUR full (Sun 29), fact-08 (Mon 30), LONGHOUR cut-real (Tue Dec 1), LONGHOUR cut-stamp (no slot). Fix needs Jazzy: allow *.r2.cloudflarestorage.com for this scheduled task's environment. When it posts: put brain-03's answer (studio/films/brain-03/captions/answer.txt) into fact-04's caption (post 6afd5a73706dadb5ea2d3077, Thu Nov 26) — not done while brain-03 is unscheduled. brain-04's answer is in the LONGHOUR caption.
+- **motion3d style test not started (Nov 23):** kit not built this run; all 4 shorts shipped in cards. Test window Nov 23 - Dec 6 slips a week.
+- **Brain-02 answer** went out in fact-06's caption (Mon Nov 23), not STILLWING's.
 - **Upload blocked again (Nov 23):** presigned URLs were issued, but the PUT to late-media.613d73a46130ed0083c059a837d6511b.r2.cloudflarestorage.com failed: `Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)`. brain-03, fact-07, brain-04, fact-08 are committed (01c8f22) but not scheduled. brain-03's answer was held back from the fact-04 (Thu Nov 26, 6afd5a73…3077) caption, because its game isn't scheduled. Zernio currently holds only 3 scheduled posts (fact-06 Pitch Drop Mon Nov 23 6afd5a6c…31ce, lifter-cut-real Tue Nov 24 6afd5a70…305d, fact-04 Thu Nov 26 6afd5a73…3077). Note: fact-07 (MIT ion plane) repeats lifter-cut-real's 2018 ion-plane topic 3 days later; consider spacing them when re-slotting.
 - **Upload still blocked (Nov 16, 2nd week):** the sandbox egress proxy again refused Zernio storage (late-media.*.r2.cloudflarestorage.com, 403 CONNECT, policy denial). Nothing scheduled; Nov 11, 15 and 16 slots went empty. Backlog of 8 PASSed Reels re-slotted Nov 17-24 (data/queue.json). Fix needs Jazzy: allow *.r2.cloudflarestorage.com in this environment's network settings, or open a live chat so Claude can hand over a Zernio browser upload link (expires after 1 h, so it can't be used by an unattended run). Still to make once posting works: brain-03 (Wed 25), fact-07 (Thu 26), fact-08 (Fri 27), brain-04 (Sat 28), film #7 (Sun 29).
 - **Week-6 check (Nov 27) will trigger:** 10 followers on Nov 16 vs pace ~264; 0 follows from ~3,070 reached across 18 Reels. Rethink format with Jazzy.

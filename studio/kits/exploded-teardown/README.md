@@ -14,4 +14,4 @@ Measured: 0.45–1.6 s per frame single page; SwiftShader already uses both core
 
 A film imports `./kit/teardown.js`, builds its scene in `build()`, poses it in `update(t)` (returns the camera from `camTrack`),
 draws marks in `marks(t)` and calls `K.boot({ dur, build, update, marks, cam })`. Set `KIT` = `exploded-teardown` in the film folder.
-First used by `studio/films/lifter` (film #6, STILLWING).
+First used by `studio/films/lifter` (film #6, STILLWING, orange accent). `K.setAccent(c)` before `K.boot` changes the accent (labels, dimensions, stamps); `studio/films/time-chamber` (film #7, LONGHOUR) uses cyan `#5fd3ff`.

@@ -81,7 +81,7 @@ svg.append(f'<path d="M{cx} {yy + 14} V{yy + 60}" stroke="{INK}" stroke-width="8
 cw, ch, cy0 = 300, 170, yy + 60
 svg.append(f'<rect x="{cx - cw / 2}" y="{cy0}" width="{cw}" height="{ch}" rx="10" fill="#c99a5b" stroke="{INK}" stroke-width="6"/>'
            f'<path d="M{cx - cw / 2} {cy0} L{cx + cw / 2} {cy0 + ch} M{cx + cw / 2} {cy0} L{cx - cw / 2} {cy0 + ch}" stroke="{INK}" stroke-width="3" opacity=".35"/>'
-           f'<text x="{cx}" y="{cy0 + ch / 2 + 30}" text-anchor="middle" font-family="Alfa" font-size="86" fill="{INK}">{LOAD_KG} kg</text>')
+           f'<text x="{cx}" y="{cy0 + ch / 2 + 30}" text-anchor="middle" font-family="Alfa" font-size="68" fill="{INK}">{LOAD_KG} kg</text>')
 assert cx + cw / 2 < HAND['x'] - 40       # crate stays clear of the hand strand
 # hand grip + pull arrow + "? kg"
 hx, hy = HAND['x'], HAND['y']

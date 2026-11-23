@@ -3,36 +3,72 @@
     "post_id": "time-chamber-cut-real",
     "hook_type": "this_was_real",
     "slot_pt": "2026-12-01 16:28",
-    "lines": ["c1", "c2", "c3", "c4", "c5", "c6", "d1"],
-    "segments": ["14.0:43.1"],
-    "segments_note": "ESTIMATE from TREATMENT.md; producer re-times from out/timing.json (start 0.1 s before c1, end 0.6 s after d1).",
-    "duration_s": 26,
+    "lines": [
+      "c1",
+      "c2",
+      "c3",
+      "c4",
+      "c5",
+      "c6",
+      "d1"
+    ],
+    "segments": [
+      "12.65:38.20"
+    ],
+    "segments_note": "Cut 2026-11-23: 0.1 s before c1 to 0.26 s after d1 voice end (38.20 so d2's subtitle, on at 38.25, is not frozen under the end card); + 2.2 s end card.",
+    "duration_s": 27.8,
     "first_line": "Lift a clock about a foot. It runs faster.",
     "file": "media/2026-w49/time-chamber-cut-real.mp4",
     "caption": "studio/films/time-chamber/captions/time-chamber-cut-real.txt",
-    "end_card": ["FULL BRIEFING", "on @compandgrow · FOLLOW"],
+    "end_card": [
+      "FULL BRIEFING",
+      "on @compandgrow · FOLLOW"
+    ],
     "note": "Opens on device + claim, not a date (2010 only in the chip): tests learnings rule 6. Ends on the open question d1. Does not reuse the film's opening seconds (rule 7)."
   },
   {
     "post_id": "time-chamber-cut-stamp",
     "hook_type": "stamp",
     "slot_pt": "unscheduled (Sat cut dropped in v4; use when a cut slot opens)",
-    "lines": ["e3", "e4", "f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8"],
-    "segments": ["64.6:95.6"],
-    "segments_note": "ESTIMATE; re-time from out/timing.json. If over 35 s with the end card, drop f3 (cut ~77-79 s) as a second segment boundary.",
-    "duration_s": 28,
+    "lines": [
+      "e3",
+      "e4",
+      "f1",
+      "f2",
+      "f3",
+      "f4",
+      "f5",
+      "f6",
+      "f7",
+      "f8"
+    ],
+    "segments": [
+      "54.52:82.90"
+    ],
+    "segments_note": "Cut 2026-11-23: 0.1 s before e3 to 82.90 (f8 voice ends 82.25; subtitle fully off before the freeze; g1 starts 83.08); + 2.2 s end card.",
+    "duration_s": 30.6,
     "first_line": "Trial three: a volunteer. One day passes inside. Outside, a week.",
-    "file": "media/<week>/time-chamber-cut-stamp.mp4",
+    "file": "media/2026-w49/time-chamber-cut-stamp.mp4",
     "caption": "studio/films/time-chamber/captions/time-chamber-cut-stamp.txt",
-    "end_card": ["FULL BRIEFING", "on @compandgrow · FOLLOW"]
+    "end_card": [
+      "FULL BRIEFING",
+      "on @compandgrow · FOLLOW"
+    ]
   },
   {
     "post_id": "time-chamber-full",
     "hook_type": "film",
     "slot_pt": "2026-11-29 16:28",
-    "segments": ["0:end"],
+    "segments": [
+      "0:88.79"
+    ],
     "first_line": "This clock runs slow. Nobody touched it.",
     "caption": "studio/films/time-chamber/captions/time-chamber-full.txt",
-    "end_card": ["NEXT CASE SUNDAY", "FOLLOW @compandgrow"]
+    "end_card": [
+      "NEXT CASE SUNDAY",
+      "FOLLOW @compandgrow"
+    ],
+    "file": "media/2026-w48/time-chamber-full.mp4",
+    "duration_s": 88.8
   }
 ]

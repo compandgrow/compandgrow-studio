@@ -7,7 +7,7 @@ window.DATA = {
  beats: [
   {text: 'Blown up to Earth size, their highest mountains would be just a couple of metres high.', stat: 'MOST SPHERICAL MAN-MADE OBJECTS', size: 52},
   {text: 'Four quartz balls, ping-pong-ball size.', stat: '3.8 CM ACROSS'},
-  {text: 'Average miss from a perfect sphere:', stat: '1.8 × 10⁻⁷ OF THEIR WIDTH'},
+  {text: 'Average miss from a perfect sphere:', stat: '1.8 × 10<sup style="font-size:.72em;line-height:0">−7</sup> OF THEIR WIDTH'},
   {text: 'Their job: spin in space as gyroscopes.', stat: 'LAUNCHED 2004'}
  ],
  payoff: {title: 'THEY CAUGHT<br>EARTH DRAGGING<br>SPACE AND TIME.', size: 80, body: 'Its spin pulls space and time<br>around with it, as Einstein<br>predicted.<br><br><span style="font-size:34px;font-family:Mono;color:var(--yellow)">GRAVITY PROBE B · CONFIRMED 2011<br>(SPIN EFFECT TO ABOUT 20%)</span>', bodyTop: 840, dur: 4.8},
