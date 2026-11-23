@@ -1,172 +1,233 @@
 {
- "generated_at": "2026-11-16T09:10:00-08:00",
- "window": "2026-11-16 .. 2026-11-29 PT, one post/day at 16:28 PT (00:28 UTC next day, PST); format v4 day map with Wed+Sat brain-test trial Nov 15-28",
- "zernio_check": "2026-11-16: posts_list (all, 50), posts_list status=scheduled (0), status=draft (0), posts_list_failed (0), posts_get on the 5 last-scheduled studio posts. Zernio reachable. Nothing from @compandgrow is scheduled in the window; nothing failed. @thescoutbrief posts in the list ignored.",
+ "generated_at": "2026-11-23T09:00:00-08:00",
+ "window": "2026-11-23 .. 2026-12-06 PT, one post/day 16:28 PT (00:28 UTC next day, PST); format v4 day map (Wed+Sat brain-test trial through Nov 28); style test motion3d Nov 23 - Dec 6 (2 facts + 2 brain tests/week in motion3d, rest cards)",
+ "zernio_check": "2026-11-23: posts_list (50, unfiltered), posts_list_failed (0), posts_get on 6afd5a67..7d68 (published, sched 2026-11-23T00:28Z), 6afd5a6c..31ce, 6afd5a70..305d, 6afd5a73..3077 (scheduled 11-24/11-25/11-27 00:28Z). Zernio reachable. accounts_get_account_health NOT run: call_tool/search_tools not available to slot-planner this run; account posted successfully at 00:29Z Nov 23. Football posts in list belong to another account (not_ours/ignored).",
  "slots": [
-  {
-   "slot_pt": "2026-11-16 16:28",
-   "day": "Mon",
-   "kind": "fact",
-   "state": "open",
-   "post_id": null,
-   "zernio_post": null,
-   "piece_state": "MISSED: today's slot, nothing scheduled and nothing can be uploaded from this sandbox. If Jazzy browser-uploads before 16:28, fact-04 can go here and everything shifts back a day."
-  },
-  {
-   "slot_pt": "2026-11-17 16:28",
-   "day": "Tue",
-   "kind": "cut -> fact fill-in",
-   "state": "open",
-   "post_id": "fact-04",
-   "zernio_post": null,
-   "piece_state": "ready; Tue cut slot used for a fact because the only lifter cut must follow the film (end card points to the full briefing)"
-  },
-  {
-   "slot_pt": "2026-11-18 16:28",
-   "day": "Wed",
-   "kind": "brain_test",
-   "state": "open",
-   "post_id": "brain-01",
-   "zernio_post": null,
-   "piece_state": "ready (answer CLOCKWISE, pin next day)"
-  },
-  {
-   "slot_pt": "2026-11-19 16:28",
-   "day": "Thu",
-   "kind": "fact (answer story)",
-   "state": "open",
-   "post_id": "fact-03",
-   "zernio_post": null,
-   "piece_state": "ready; post brain-01 answer as pinned comment / in this caption"
-  },
-  {
-   "slot_pt": "2026-11-20 16:28",
-   "day": "Fri",
-   "kind": "fact",
-   "state": "open",
-   "post_id": "fact-05",
-   "zernio_post": null,
-   "piece_state": "ready"
-  },
-  {
-   "slot_pt": "2026-11-21 16:28",
-   "day": "Sat",
-   "kind": "brain_test",
-   "state": "open",
-   "post_id": "brain-02",
-   "zernio_post": null,
-   "piece_state": "ready"
-  },
-  {
-   "slot_pt": "2026-11-22 16:28",
-   "day": "Sun",
-   "kind": "film",
-   "state": "open",
-   "post_id": "lifter-full",
-   "zernio_post": null,
-   "piece_state": "ready (STILLWING, exploded-teardown test #1; never posted)"
-  },
   {
    "slot_pt": "2026-11-23 16:28",
    "day": "Mon",
    "kind": "fact",
-   "state": "open",
+   "state": "filled",
    "post_id": "fact-06",
-   "zernio_post": null,
-   "piece_state": "ready; brain-02 answer pinned"
+   "zernio_post": "6afd5a6c12dd14849e5731ce",
+   "style": "cards",
+   "piece_state": "scheduled 2026-11-24T00:28Z (Pitch Drop). Caption lacks brain-02 answer, see repair."
   },
   {
    "slot_pt": "2026-11-24 16:28",
    "day": "Tue",
-   "kind": "cut (this_was_real)",
-   "state": "open",
+   "kind": "cut",
+   "state": "filled",
    "post_id": "lifter-cut-real",
-   "zernio_post": null,
-   "piece_state": "ready"
+   "zernio_post": "6afd5a70706dadb5ea2d305d",
+   "style": "exploded-teardown",
+   "piece_state": "scheduled 2026-11-25T00:28Z (STILLWING this_was_real cut)"
   },
   {
    "slot_pt": "2026-11-25 16:28",
    "day": "Wed",
    "kind": "brain_test",
    "state": "open",
-   "post_id": null,
+   "post_id": "brain-03",
    "zernio_post": null,
-   "piece_state": "NEEDS MAKING: brain-03 (suggest type count or memory; 01/02 were focus-type gear tests - vary)"
+   "style": "motion3d",
+   "piece_state": "TO MAKE: brain test #3 (trial week 2; type not yet used, e.g. track/memory/count). Answer goes in Thu fact-04 caption or pinned comment."
   },
   {
    "slot_pt": "2026-11-26 16:28",
    "day": "Thu",
    "kind": "fact (answer story)",
-   "state": "open",
-   "post_id": null,
-   "zernio_post": null,
-   "piece_state": "NEEDS MAKING: fact-07 (+ brain-03 answer pinned)"
+   "state": "filled",
+   "post_id": "fact-04",
+   "zernio_post": "6afd5a73706dadb5ea2d3077",
+   "style": "cards",
+   "piece_state": "scheduled 2026-11-27T00:28Z (Bagger 288). Caption must gain brain-03 answer once brain-03 exists, see repair."
   },
   {
    "slot_pt": "2026-11-27 16:28",
    "day": "Fri",
    "kind": "fact",
    "state": "open",
-   "post_id": null,
+   "post_id": "fact-07",
    "zernio_post": null,
-   "piece_state": "NEEDS MAKING: fact-08"
+   "style": "motion3d",
+   "piece_state": "TO MAKE: fact short; suggest STILLWING follow-up #1 (true ion-wind / ionocraft history) per 5x-median rule (within 7 days of Nov 22)."
   },
   {
    "slot_pt": "2026-11-28 16:28",
    "day": "Sat",
    "kind": "brain_test",
    "state": "open",
-   "post_id": null,
+   "post_id": "brain-04",
    "zernio_post": null,
-   "piece_state": "NEEDS MAKING: brain-04 (4th and last trial test; trial judged after it)"
+   "style": "motion3d",
+   "piece_state": "TO MAKE: brain test #4 (last of trial). Answer in film #7 caption Sun Nov 29."
   },
   {
    "slot_pt": "2026-11-29 16:28",
    "day": "Sun",
    "kind": "film",
    "state": "open",
-   "post_id": null,
+   "post_id": "film7-full",
    "zernio_post": null,
-   "piece_state": "NEEDS MAKING: film #7 weather-steering array (topic queue #7; fictional only, never tie to a real storm)"
+   "style": "board (anchor) or next test style",
+   "piece_state": "TO MAKE: film #7 weather-steering array (topic queue 7). Not started. Caption carries brain-04 answer."
+  },
+  {
+   "slot_pt": "2026-11-30 16:28",
+   "day": "Mon",
+   "kind": "fact",
+   "state": "open",
+   "post_id": "fact-08",
+   "zernio_post": null,
+   "style": "cards",
+   "piece_state": "TO MAKE: fact short (cards side of style test)."
+  },
+  {
+   "slot_pt": "2026-12-01 16:28",
+   "day": "Tue",
+   "kind": "cut",
+   "state": "open",
+   "post_id": "film7-cut-real",
+   "zernio_post": null,
+   "style": "film #7 style",
+   "piece_state": "TO MAKE: film #7 this_was_real cut (Tue hook per format.json)."
+  },
+  {
+   "slot_pt": "2026-12-02 16:28",
+   "day": "Wed",
+   "kind": "brain_test (trial verdict pending)",
+   "state": "open",
+   "post_id": "brain-05",
+   "zernio_post": null,
+   "style": "motion3d",
+   "piece_state": "TO MAKE: brain test #5 if analyst keeps brain tests after the Nov 28 trial; else real-or-fake game-03 (answer held back)."
+  },
+  {
+   "slot_pt": "2026-12-03 16:28",
+   "day": "Thu",
+   "kind": "fact (answer story)",
+   "state": "open",
+   "post_id": "fact-09",
+   "zernio_post": null,
+   "style": "motion3d",
+   "piece_state": "TO MAKE: fact short carrying Wed answer (or game-03 reveal story)."
+  },
+  {
+   "slot_pt": "2026-12-04 16:28",
+   "day": "Fri",
+   "kind": "fact",
+   "state": "open",
+   "post_id": "fact-10",
+   "zernio_post": null,
+   "style": "motion3d",
+   "piece_state": "TO MAKE: fact short."
+  },
+  {
+   "slot_pt": "2026-12-05 16:28",
+   "day": "Sat",
+   "kind": "brain_test / cut",
+   "state": "open",
+   "post_id": "lifter-cut-stamp",
+   "zernio_post": null,
+   "style": "exploded-teardown",
+   "piece_state": "PROPOSED: STILLWING part-2 stamp cut (caption studio/films/lifter/captions/lifter-cut-stamp.txt exists, no media yet) as 5x-median follow-up after brain trial ends; otherwise brain-06. Wed brain answer must then go via pinned comment."
+  },
+  {
+   "slot_pt": "2026-12-06 16:28",
+   "day": "Sun",
+   "kind": "film",
+   "state": "open",
+   "post_id": "film8-full",
+   "zernio_post": null,
+   "style": "TBD",
+   "piece_state": "TO MAKE (next run is fine): film #8 time-slowing chamber (topic queue 8). Caption carries any Sat answer."
   }
  ],
- "assigned_ready": [],
  "make": {
   "film": {
-   "topic": "Weather-steering array (fictional program only; never tie to a real storm or disaster)",
-   "slug": "weather",
-   "style": "board",
-   "for_slot": "2026-11-29 16:28",
-   "style_note": "lifter was the exploded-teardown test, so per 'test every other film' #7 goes back to the board anchor; CONTENT_PLAN once paired the weather array with satellite-briefing (#8) - producer's call"
+   "topic": "Weather-steering array (fictional program only; never tie to a real storm)",
+   "slug": "film7",
+   "style": "board (anchor) unless style plan says a test film is due",
+   "for_slot": "2026-11-29 16:28"
+  },
+  "next_film": {
+   "topic": "Time-slowing chamber",
+   "slug": "film8",
+   "style": "TBD",
+   "for_slot": "2026-12-06 16:28",
+   "note": "get-ahead, can be next Monday's run"
   },
   "cuts": [
    {
-    "film": "weather",
+    "film": "film7",
     "hook_type": "this_was_real",
-    "for_slot": "2026-12-01 16:28",
-    "note": "outside window; Tue after film #7"
+    "for_slot": "2026-12-01 16:28"
+   },
+   {
+    "film": "lifter",
+    "hook_type": "stamp",
+    "for_slot": "2026-12-05 16:28",
+    "note": "STILLWING follow-up (5x median); Sat stamp per hook_order_by_day"
    }
   ],
   "facts": [
    {
+    "id": "fact-07",
     "for_slot": "2026-11-27 16:28",
-    "id": "fact-07"
+    "style": "motion3d",
+    "note": "suggest STILLWING/ion-wind follow-up topic"
+   },
+   {
+    "id": "fact-08",
+    "for_slot": "2026-11-30 16:28",
+    "style": "cards"
+   },
+   {
+    "id": "fact-09",
+    "for_slot": "2026-12-03 16:28",
+    "style": "motion3d",
+    "note": "answer story for Wed Dec 2"
+   },
+   {
+    "id": "fact-10",
+    "for_slot": "2026-12-04 16:28",
+    "style": "motion3d"
    }
   ],
   "brain_tests": [
    {
+    "id": "brain-03",
     "for_slot": "2026-11-25 16:28",
-    "id": "brain-03"
+    "style": "motion3d"
    },
    {
+    "id": "brain-04",
     "for_slot": "2026-11-28 16:28",
-    "id": "brain-04"
+    "style": "motion3d"
+   },
+   {
+    "id": "brain-05",
+    "for_slot": "2026-12-02 16:28",
+    "style": "motion3d",
+    "note": "or game-03 if the trial verdict restores real-or-fake"
    }
   ],
   "game": null,
   "reveal": null,
-  "optional": "lifter-cut-stamp is not made and has no slot (v4 dropped the Sat cut; Sat is brain-test trial through Nov 28). Could run as an extra 10:28 post if wanted."
+  "kit": "studio/kits/motion3d does not exist yet; must be built before brain-03 (due Wed Nov 25)."
  },
- "repair": [],
- "notes": "Ember cuts (Nov 10/12/13/14) and fact-02 (Nov 9) confirmed published in Zernio; data/posts.json updated (ember-cut-real/question went out with v1 files; v3 re-cuts never swapped in). The 8 ready pieces were re-slotted in data/posts.json (slot_pt/scheduled_for) to Nov 17-24. Mon Nov 16 slot is lost unless Jazzy uploads today. Brain-test answers: pinned comment the next day (or next day's caption). Not committed.\n\n2026-11-18 (manual session): upload egress works now (Default environment allows *.r2.cloudflarestorage.com). All 8 ready Reels uploaded to Zernio storage and scheduled 16:28 PT: brain-01 Nov 18, fact-03 Nov 19, fact-05 Nov 20 (brain-01 answer in caption), brain-02 Nov 21, lifter-full Nov 22 (brain-02 answer added to caption), fact-06 Nov 23, lifter-cut-real Nov 24 (captions/cut-real.txt), fact-04 Nov 26. Still to make: brain-03 Nov 25, fact-07 Nov 27, brain-04 Nov 28, weather film Nov 29. fact-08 dropped (Nov 26 now taken by fact-04). Nov 15-17 slots were lost (nothing posted)."
+ "repair": [
+  {
+   "post_id": "brain-02",
+   "zernio_post": "6afd5a64363422ec8e12b31c",
+   "reason": "Answer (10 turns: 3x40/12) was due Nov 22. posts.json says STILLWING caption carries it, but local lifter-full.txt does not and Zernio content is truncated. Publisher: check the live STILLWING caption; if missing, pin a comment on brain-02 now and/or add it to fact-06 caption (posts_update before 2026-11-24T00:28Z)."
+  },
+  {
+   "post_id": "fact-04",
+   "zernio_post": "6afd5a73706dadb5ea2d3077",
+   "reason": "Thu answer-story slot: add brain-03 answer line to caption (posts_update) after brain-03 is made, before 2026-11-27T00:28Z."
+  }
+ ],
+ "notes": "No failed posts. lifter-full published (posts.json updated). STILLWING best Reel (1,188 views at 15 h): 5x-median rule asks 2 follow-ups within 7 days + part-2 cut; only Fri Nov 27 is open inside 7 days, so fact-07 on ion wind + lifter-cut-stamp Sat Dec 5 (after brain trial). Week-6 check (~Nov 27): if <500 followers, rethink format with Jazzy."
 }

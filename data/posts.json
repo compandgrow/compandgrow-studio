@@ -533,7 +533,7 @@
    "caption": "studio/films/fact-04/captions/main.txt",
    "cdn_ref": null,
    "status": "scheduled",
-   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com) | Re-slotted 2026-11-16 by slot-planner (original date passed unscheduled; upload host still blocked).",
+   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com) | Re-slotted 2026-11-16 by slot-planner (original date passed unscheduled; upload host still blocked). | 2026-11-23 slot-planner: confirmed scheduled in Zernio.",
    "format_version": 4
   },
   {
@@ -550,9 +550,11 @@
    "media_url": "https://media.zernio.com/media/1794988521411_90a61ef4d36936cc_lifter-full.mp4",
    "caption": "studio/films/lifter/captions/lifter-full.txt",
    "cdn_ref": null,
-   "status": "scheduled",
-   "note": "caption carries brain-02 answer (10 turns)",
-   "format_version": 4
+   "status": "published",
+   "note": "caption carries brain-02 answer (10 turns) | 2026-11-23 slot-planner: Zernio status published (scheduled 00:28Z, posted ~00:29Z); 1,188 views at 15 h (best Reel on the channel, from weekly-run brief). Local caption file does NOT contain the brain-02 answer; Zernio caption truncated in posts_get, unverified. IG URL not returned by Zernio.",
+   "format_version": 4,
+   "published_at": "2026-11-23T00:29:00Z",
+   "instagram_url": null
   },
   {
    "id": "fact-03",
@@ -589,7 +591,7 @@
    "caption": "studio/films/lifter/captions/cut-real.txt",
    "cdn_ref": null,
    "status": "scheduled",
-   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com) | Re-slotted 2026-11-16 by slot-planner (original date passed unscheduled; upload host still blocked).",
+   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com) | Re-slotted 2026-11-16 by slot-planner (original date passed unscheduled; upload host still blocked). | 2026-11-23 slot-planner: confirmed scheduled in Zernio.",
    "format_version": 4
   },
   {
@@ -647,7 +649,7 @@
    "caption": "studio/films/fact-06/captions/main.txt",
    "cdn_ref": null,
    "status": "scheduled",
-   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com) | Re-slotted 2026-11-16 by slot-planner (original date passed unscheduled; upload host still blocked).",
+   "note": "reviewer PASS 2026-11-09; Zernio storage upload blocked by session egress proxy (403 to *.r2.cloudflarestorage.com) | Re-slotted 2026-11-16 by slot-planner (original date passed unscheduled; upload host still blocked). | 2026-11-23 slot-planner: confirmed scheduled in Zernio.",
    "format_version": 4
   },
   {
