@@ -1,0 +1,35 @@
+# LONGHOUR — facts and fiction
+
+LONGHOUR is a fictional program. The time-slowing chamber, the "mass ring", the cabin clock spec (-1 s per day), the five-part teardown, the three trials (1 s, 1 h, 1 day inside = 1 week outside), the volunteer and the "CLEARED: ONE-WAY TRIP TO THE FUTURE" clearance are invented for the film and are not attributed to any real agency, lab or person (not NIST, JILA, USNO, NASA, MIT or any named scientist). Real names (NIST, Science) appear only in the stat chip of the real beat, never next to LONGHOUR.
+
+## Safe on screen (numbers)
+- **33 cm** (or "about 1 foot"), **2010**, **NIST**, **Science** — the one dated beat
+- "about **90 billionths of a second** over a **79-year** lifetime" (if a second number is wanted)
+- Physics line: "Gravity slows time. Stronger gravity, slower clocks." (plain wording of NIST's line)
+- Cut / game material: **1971**, **-59 ns** eastward, **+273 ns** westward; GPS **about 38 microseconds a day**; JILA **1 mm** (**2022**)
+
+## Verified claims
+
+| Claim in the film | Source (URL + exact line) |
+|---|---|
+| 2010: two aluminium-ion optical clocks; raising one by 33 cm (about 1 foot) made it run faster | NIST news, Sept 2010 — https://www.nist.gov/news-events/news/2010/09/nist-pair-aluminum-atomic-clocks-reveal-einsteins-relativity-personal : "measured this effect at a more down-to-earth scale of 33 centimeters, or about 1 foot"; "a height one-third of a meter (about a foot)". National Geographic, 25 Sep 2010 — https://www.nationalgeographic.com/science/article/100922-science-space-time-einstein-relativity-aging-gravity-earth : "lifting one clock by only about a foot (33 centimeters) above the other" … "the higher clock ticks slightly faster." |
+| Published in Science, 24 Sep 2010 (Chou, Hume, Rosenband, Wineland) | NIST release: "Described in the Sept. 24 issue of Science"; reference "C.W. Chou, D.B. Hume, T. Rosenband and D.J. Wineland. Optical Clocks and Relativity. Science. Sept. 24, 2010." ADS — https://ui.adsabs.harvard.edu/abs/2010Sci...329.1630C : "Optical Clocks and Relativity", Science 329, 1630, DOI 10.1126/science.1192720; abstract: "We can now also detect time dilation due to a change in height near Earth's surface of less than 1 meter." |
+| Adds up to about 90 billionths of a second over a 79-year lifetime | NIST: "adding up to approximately 90 billionths of a second over a 79-year lifetime"; Nat Geo: "approximately 90 billionths of a second over a 79-year lifetime" |
+| You age faster standing higher (staircase line) | NIST: "you age faster when you stand a couple of steps higher on a staircase"; Nat Geo: "you'll age slightly faster standing on a staircase than you do on the floor below" |
+| Same experiment also saw motion slow a clock, at walking/running speeds (< 10 m/s) | ADS abstract: "We observed time dilation from relative speeds of less than 10 meters per second." NIST: "speeds equivalent to several meters per second" |
+| Physics beat: gravity slows time; clocks in stronger gravity (lower down) tick slower | NIST Taking Measure blog — https://www.nist.gov/blogs/taking-measure/putting-einstein-test-worlds-most-accurate-clocks : "atomic clocks tick faster when moving and slower in stronger gravity"; "The deeper you are in a gravitational potential, Einstein argued, the more slowly time passes for you." |
+| Hafele–Keating, Oct 1971: cesium atomic clocks flown around the world on regular airliners, east then west, compared with clocks at the US Naval Observatory. East: lost 59 ns; west: gained 273 ns (predicted -40 and +275) | HyperPhysics (Georgia State) — https://hyperphysics.gsu.edu/hbase/Relativ/airtim.html : "In October 1971, Hafele and Keating flew cesium beam atomic clocks around the world twice on regularly scheduled commercial airline flights, once to the East and once to the West"; measured "-59 +/- 10 ns" (east), "+ 273 +/- 7 ns" (west). Wikipedia — https://en.wikipedia.org/wiki/Hafele%E2%80%93Keating_experiment : "took four cesium-beam atomic clocks aboard commercial airliners" and "compared the clocks in motion to stationary clocks at the United States Naval Observatory"; same −59 ±10 / +273 ±7 ns, citing Hafele & Keating, Science 177, 168–170 (14 Jul 1972) |
+| GPS satellite clocks gain about 38 microseconds a day vs the ground (about +45 from weaker gravity, about −7 from speed) and are corrected | GPS World (Misra, 9 Oct 2023) — https://www.gpsworld.com/inside-the-box-gps-and-relativity/ : "A GPS satellite clock will gain about 38 microseconds per day over a clock at rest at mean sea level." Ashby, Physics Today 55(5) 41 (May 2002) — https://physicstoday.aip.org/features/relativity-and-the-global-positioning-system : net fractional offset 4.4645 × 10⁻¹⁰, applied as a negative frequency offset (× 86 400 s = 38.6 µs/day; our arithmetic, so say "about 38") |
+| Uncorrected, GPS would be off by kilometres within a day | Ashby, Physics Today: "satellite clock errors building up in just one day would cause navigational errors of more than 11 km". GPS World: range errors "up to about 11 kilometers between daily uploads". Safe wording: "kilometres off within a day" (or "more than 10 km a day") |
+| 2022: JILA clocks measured time running at different rates across about 1 mm | NIST news, 16 Feb 2022 — https://www.nist.gov/node/1693351 : "JILA Atomic Clocks Measure Einstein's General Relativity at Millimeter Scale"; clocks "separated by just a millimeter or the width of a sharp pencil tip, tick at different rates"; "time dilation, at the smallest scale ever"; Nature, Feb 17 2022 issue (Bothwell et al., "Resolving the gravitational redshift across a millimetre-scale atomic sample") |
+| Story-physics for the catch: the one who sits in slower time ages less and comes out "ahead" in time (forward only) | UNSW Einsteinlight, twin paradox — https://newt.phys.unsw.edu.au/einsteinlight/jw/module4_twin_paradox.htm : "she will arrive having aged less than Joe"; "he will have aged 8 years and Jane will have aged 6 years when they are reunited." Use only inside the LONGHOUR fiction, not as a stated fact line. |
+
+## Game row (if the game returns Dec 2)
+| Real device | What · year · who · number |
+|---|---|
+| Atomic clocks flown around the world to test time | Cesium-beam atomic clocks on commercial airliners · October 1971 · Joseph Hafele and Richard Keating, compared with US Naval Observatory clocks · eastward clocks 59 ns behind, westward 273 ns ahead (sources: HyperPhysics + Wikipedia/Science 1972, rows above) |
+
+## Dropped
+- **"Your head is older than your feet" as NIST's line / headline** — not in the NIST 2010 release (or Nat Geo). Use NIST's own staircase line instead.
+- **"Inside, nothing feels slow" as a physics fact** — no fetched source says it in those words; it is standard relativity, but keep it as the narrator's line inside the LONGHOUR fiction, not as a sourced claim with a chip.
+- **"Walking speed" for the motion result** — not in the sources; if the motion result is used, say "under 10 metres per second".

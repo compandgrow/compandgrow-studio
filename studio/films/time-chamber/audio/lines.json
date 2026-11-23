@@ -1,0 +1,164 @@
+[
+ {
+  "id": "a1",
+  "text": "This clock runs slow.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "a2",
+  "text": "Nobody touched it.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "a3",
+  "text": "Its twin, outside, keeps perfect time.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "b1",
+  "text": "Broken? Or is time slower in there?",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "b2",
+  "text": "Take it apart.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c1",
+  "text": "Lift a clock about a foot. It runs faster.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c2",
+  "text": "Measured, with two atomic clocks.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c3",
+  "text": "Stand a couple of steps higher, and you age faster.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c4",
+  "text": "Over seventy-nine years, that adds up to about ninety billionths of a second.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c5",
+  "text": "Gravity slows time.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "c6",
+  "text": "Stronger gravity, slower clocks.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "d1",
+  "text": "Longhour asks: what if you made the gravity?",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "d2",
+  "text": "A sealed cabin. A dense ring spins around it.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "d3",
+  "text": "Spec: the cabin clock loses one second a day.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "e1",
+  "text": "Trial one. Twenty-four hours. One second behind.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "e2",
+  "text": "Trial two. Ring at full speed. One hour behind.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "e3",
+  "text": "Trial three: a volunteer.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "e4",
+  "text": "One day passes inside. Outside, a week.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "f1",
+  "text": "One catch.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "f2",
+  "text": "Inside, nothing feels slow.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "f3",
+  "text": "Her watch, her pulse, her thoughts. All slow together.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "f4",
+  "text": "She gets no extra time.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "f5",
+  "text": "She just steps out into the future.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "f6",
+  "text": "There is no way back.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "f7",
+  "text": "Longhour is cleared.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "f8",
+  "text": "As a one-way trip to the future.",
+  "voice": "bm_george",
+  "speed": 0.95
+ },
+ {
+  "id": "g1",
+  "text": "Next case Sunday. Follow comp and grow.",
+  "voice": "bm_george",
+  "speed": 0.95
+ }
+]

@@ -11,7 +11,7 @@ Four modes, chosen by `mode` in the piece's `data.js` (`window.DATA = {...}`):
 | `brain` | Engineering brain test: moving challenge opener (tag + title + puzzle), puzzle card with countdown ring, "COMMENT YOUR ANSWER" 3-2-1, "ANSWER TOMORROW" follow card | 12-25 s (hook 2.6 + timer + 0.4 + 3.6 + 3.2) |
 
 Examples: `studio/films/brain-01/` (gear direction), `studio/films/brain-02/` (gear-ratio calc), `studio/films/game-pigeon/data.js`, `studio/films/reveal-pigeon/data.js`, `studio/films/fact-01/data.js`.
-Icons are SVG `<g id>` defs in `index.html` (ship, carrier, tower, wheel, lamp, pigeon, icecity, bagger, drill, bat, funnel, ...); add new ones there (flat shapes, 260x230 box, #111318 5px outline, no logos or real photos).
+Icons are SVG `<g id>` defs in `index.html` (ship, carrier, tower, wheel, lamp, pigeon, icecity, bagger, drill, bat, funnel, ionplane, sphere, ...); add new ones there (flat shapes, 260x230 box, #111318 5px outline, no logos or real photos).
 Icon parts can move on their own (hook + every card): put `data-a` on an element inside the def: `spin cx cy deg/s`, `flap cx cy deg hz`, `bob px hz`, `drip cx cy period` (slow stretch), `dash px/s` (moving stroke dashes). Fact beats take an optional `size` (h2 px) for long lines; payoff takes `size`, `bodyTop`, `dur`.
 
 Card transitions are a push: the next card slides in during the last 0.3 s of the current one (`XF` in index.html), so there is no empty navy gap; timeline and audio stamps are unchanged (whoosh centred on the push).
